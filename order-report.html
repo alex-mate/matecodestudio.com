@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — Order Report Automation | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: Order Report Automation — an automated reporting workflow that cleans exports, calculates KPIs, and produces consistent weekly/monthly summaries."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">Order Report Automation</h1>
+
+          <p class="case-lead">
+            A reporting workflow that turns messy order exports into consistent
+            KPI summaries — automated cleaning, validation, and export-ready
+            outputs designed to reduce manual work and errors.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">Automation</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Reporting</span>
+            <span class="tag">Exports</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html"
+              >Automate my reports</a
+            >
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY STRIP -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Automation workflow</p>
+            </div>
+            <div>
+              <p class="sum-k">Input</p>
+              <p class="sum-v">CSV exports (orders/items)</p>
+            </div>
+            <div>
+              <p class="sum-k">Output</p>
+              <p class="sum-v">KPIs + clean files</p>
+            </div>
+            <div>
+              <p class="sum-k">Focus</p>
+              <p class="sum-v">Accuracy + repeatability</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/order-report-automation/01.jpg"
+              alt="Order Report Automation UI preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Many businesses rely on exported spreadsheets for reporting — but
+              exports often contain inconsistent formats, missing fields,
+              duplicated values, and mixed date/time patterns. That leads to
+              manual cleanup, calculation mistakes, and reports that are hard to
+              reproduce accurately each week.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              This automation pipeline ingests raw exports, validates key
+              fields, normalises formats, and generates clean KPI summaries. The
+              goal is simple: run the workflow, get reliable reports — without
+              spending hours fixing spreadsheets.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>Import multiple CSV exports (orders, items, fees, etc.)</li>
+              <li>Data validation with clear “what failed” feedback</li>
+              <li>Standardised dates, currencies, and numeric formats</li>
+              <li>
+                Automatic KPI calculations (revenue, orders, units, top SKUs)
+              </li>
+              <li>Export clean outputs (summary + cleaned dataset)</li>
+              <li>Designed to run repeatedly with consistent results</li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture</h2>
+            <p class="subhead">
+              Built like a small product: separate stages, clear outputs,
+              predictable file naming, and a structure that can scale into an
+              API or dashboard later.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Pipeline stages</h3>
+                <ul class="list">
+                  <li>Ingest (load exports)</li>
+                  <li>Validate (required fields)</li>
+                  <li>Clean (types, dates, currency)</li>
+                  <li>Transform (join datasets)</li>
+                  <li>Summarise (KPIs)</li>
+                  <li>Export (clean outputs)</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Typical KPIs</h3>
+                <ul class="list">
+                  <li>Total revenue</li>
+                  <li>Total orders</li>
+                  <li>Units sold</li>
+                  <li>Average order value</li>
+                  <li>Top products/SKUs</li>
+                  <li>Refund/fee notes (optional)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A repeatable reporting workflow that reduces manual cleanup and
+              improves accuracy. The foundation is designed to be extended into
+              a dashboard later — without rewriting the pipeline.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO (optional) -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Short demo (optional)</h2>
+          <p class="subhead">
+            Add a quick walkthrough showing the process: upload exports → run
+            automation → export report.
+          </p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/order-report-automation/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/order-report-automation/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (6 photos default — add more anytime) -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Screens</h2>
+          <p class="subhead">
+            Screens across input → validation → KPI outputs → export. Add more
+            images by duplicating the buttons below.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/01.jpg"
+                alt="Screen 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/02.jpg"
+                alt="Screen 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/03.jpg"
+                alt="Screen 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/04.jpg"
+                alt="Screen 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/05.jpg"
+                alt="Screen 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/order-report-automation/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/order-report-automation/06.jpg"
+                alt="Screen 06"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Want reporting you can trust?</h2>
+          <p class="subhead">
+            If your exports are messy or you’re spending too much time inside
+            spreadsheets, I can automate the workflow and deliver clean,
+            repeatable reporting.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://wa.me/440000000000"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <img id="lbImg" alt="Expanded gallery image" />
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Lightbox gallery
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbClose = document.getElementById("lbClose");
+
+      document.querySelectorAll(".g-item").forEach((b) => {
+        b.addEventListener("click", () => {
+          const src = b.getAttribute("data-full");
+          lbImg.src = src;
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+      }
+
+      lbClose.addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>

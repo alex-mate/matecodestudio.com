@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — CSV Cleaner Toolkit | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: CSV Cleaner Toolkit — a utility toolkit that cleans, validates, and standardises messy CSV files for reporting, analytics, and automation."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">CSV Cleaner Toolkit</h1>
+
+          <p class="case-lead">
+            A lightweight toolkit for cleaning, validating, and standardising
+            CSV files — designed for analytics pipelines, reporting workflows,
+            and automation systems where clean input data is critical.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">Data Cleaning</span>
+            <span class="tag">Validation</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Utilities</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Clean my data</a>
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Utility toolkit</p>
+            </div>
+            <div>
+              <p class="sum-k">Input</p>
+              <p class="sum-v">Raw CSV files</p>
+            </div>
+            <div>
+              <p class="sum-k">Output</p>
+              <p class="sum-v">Clean, validated CSVs</p>
+            </div>
+            <div>
+              <p class="sum-k">Use cases</p>
+              <p class="sum-v">Analytics • Reporting • Imports</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/csv-cleaner-toolkit/01.jpg"
+              alt="CSV Cleaner Toolkit preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              CSV files are everywhere — but rarely clean. Inconsistent headers,
+              mixed date formats, empty rows, duplicated records, and broken
+              encodings create friction for analytics and automation workflows.
+              Manual fixes don’t scale.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              The CSV Cleaner Toolkit provides a predictable cleaning pipeline:
+              load → validate → standardise → export. It ensures that every file
+              entering a system follows clear rules before being used
+              downstream.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>Automatic header normalisation</li>
+              <li>Date, number, and currency standardisation</li>
+              <li>Duplicate detection and removal</li>
+              <li>Empty row and invalid value filtering</li>
+              <li>Schema validation with clear error output</li>
+              <li>Batch processing support</li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture</h2>
+            <p class="subhead">
+              The toolkit is designed as composable steps — each transformation
+              is explicit, testable, and reusable across projects.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Pipeline steps</h3>
+                <ul class="list">
+                  <li>Loader</li>
+                  <li>Validator</li>
+                  <li>Cleaner</li>
+                  <li>Standardiser</li>
+                  <li>Exporter</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Typical rules</h3>
+                <ul class="list">
+                  <li>Required columns</li>
+                  <li>Type enforcement</li>
+                  <li>Allowed value ranges</li>
+                  <li>Encoding checks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A reliable data-cleaning layer that removes guesswork. Downstream
+              systems receive consistent, validated files, reducing bugs,
+              reporting errors, and manual intervention.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Toolkit demo (optional)</h2>
+          <p class="subhead">Optional walkthrough: raw CSV → cleaned output.</p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/csv-cleaner-toolkit/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/csv-cleaner-toolkit/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Screens & outputs</h2>
+          <p class="subhead">
+            Input files, validation output, and cleaned exports.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/01.jpg"
+                alt="Screen 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/02.jpg"
+                alt="Screen 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/03.jpg"
+                alt="Screen 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/04.jpg"
+                alt="Screen 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/05.jpg"
+                alt="Screen 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/csv-cleaner-toolkit/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/csv-cleaner-toolkit/06.jpg"
+                alt="Screen 06"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Tired of fixing CSVs manually?</h2>
+          <p class="subhead">
+            If messy imports are slowing your analytics or automation, I can
+            build a cleaning pipeline tailored to your data rules.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://wa.me/440000000000" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

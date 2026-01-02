@@ -1,172 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mate Solutions | Mate Code Studio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-    <!-- TOP BAR: LOGO + NAV -->
-    <header class="top-bar container">
-        <div class="logo-wrap">
-            <img src="https://i.postimg.cc/kXTTg3vp/new-banner.png"
-                 alt="Mate Solutions logo"
-                 class="logo-img">
-            <div class="logo-text">
-                <span class="logo-main">Mate Solutions</span>
-                <span class="logo-sub">MATE CODE STUDIO</span>
+    <title>Services — Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Mate Code Studio services: web applications, desktop apps, automation systems, database structures, bug fixes & refactoring."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Use your main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html" class="active">Services</a>
+          <a href="contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="page-hero">
+        <div class="page-hero-bg"></div>
+
+        <div class="container page-hero-inner">
+          <p class="eyebrow">Services</p>
+
+          <h1 class="page-title">
+            Engineering-first builds,<br />
+            designed for real usage<br />
+            and long-term maintainability.
+          </h1>
+
+          <p class="page-lead">
+            I help individuals and small businesses ship clean software: web
+            apps, desktop tools, automation systems, and reliable data
+            foundations. If you care about structure and clarity, you’ll feel
+            the difference.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Contact Options</a>
+            <a class="btn secondary" href="projects.html">See Work</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES LIST ================= -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Core services</p>
+          <h2 class="h2">What I can do for you</h2>
+          <p class="subhead">
+            Practical services with a clear outcome. Each one is delivered with
+            clean structure and a professional finish.
+          </p>
+
+          <div class="svc-grid">
+            <article class="svc">
+              <h3>Web Applications</h3>
+              <p class="muted">
+                Flask-based apps with authentication, dashboards, CRUD
+                workflows, and clean UI structure.
+              </p>
+              <ul class="list">
+                <li>Dashboards & internal tools</li>
+                <li>Auth, roles & permissions</li>
+                <li>Exports (CSV/PDF) & reporting</li>
+              </ul>
+            </article>
+
+            <article class="svc">
+              <h3>Desktop Apps (PySide6)</h3>
+              <p class="muted">
+                Real desktop software when you don’t want “a website in a
+                browser”. Clean navigation, local storage, and modern UI.
+              </p>
+              <ul class="list">
+                <li>Windows-ready desktop apps</li>
+                <li>Local database + fast UI flows</li>
+                <li>Packaging for delivery</li>
+              </ul>
+            </article>
+
+            <article class="svc">
+              <h3>Automation Systems</h3>
+              <p class="muted">
+                Reduce repetitive work and eliminate mistakes with custom
+                automation and reporting.
+              </p>
+              <ul class="list">
+                <li>Data cleanup & transformations</li>
+                <li>Reports & scheduled exports</li>
+                <li>File workflows & pipelines</li>
+              </ul>
+            </article>
+
+            <article class="svc">
+              <h3>Database Structures</h3>
+              <p class="muted">
+                Clean relational schemas designed around real workflows, built
+                for analytics and stability.
+              </p>
+              <ul class="list">
+                <li>Schema design (tables, relations)</li>
+                <li>Validation & integrity rules</li>
+                <li>Analytics-ready structure</li>
+              </ul>
+            </article>
+
+            <article class="svc">
+              <h3>Bug Fixes & Refactoring</h3>
+              <p class="muted">
+                Find the cause, fix it properly, and leave your codebase cleaner
+                than before.
+              </p>
+              <ul class="list">
+                <li>Debugging & root-cause analysis</li>
+                <li>Refactoring messy logic</li>
+                <li>Performance improvements</li>
+              </ul>
+            </article>
+
+            <article class="svc">
+              <h3>UI Polish & Structure</h3>
+              <p class="muted">
+                Make your product feel premium: spacing, typography, component
+                structure, responsiveness.
+              </p>
+              <ul class="list">
+                <li>Responsive layout fixes</li>
+                <li>Design system consistency</li>
+                <li>Premium “finish” pass</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DELIVERABLES ================= -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Deliverables</p>
+          <h2 class="h2">What you receive</h2>
+          <p class="subhead">
+            Clear handover. Clean structure. You won’t be left with a mystery
+            project.
+          </p>
+
+          <div class="deliver-grid">
+            <div class="deliver">
+              <h3>Clean codebase</h3>
+              <p class="muted">
+                Readable structure, naming consistency, and maintainable
+                modules.
+              </p>
             </div>
+
+            <div class="deliver">
+              <h3>Documentation</h3>
+              <p class="muted">
+                Setup steps, usage notes, and clear “how it works” explanations.
+              </p>
+            </div>
+
+            <div class="deliver">
+              <h3>Stable data design</h3>
+              <p class="muted">
+                Database tables and relationships designed for long-term growth.
+              </p>
+            </div>
+
+            <div class="deliver">
+              <h3>Professional UI finish</h3>
+              <p class="muted">
+                Spacing, typography, interactions, and responsive polish.
+              </p>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Contact Options</a>
+            <a class="btn secondary" href="projects.html">See Results</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PACKAGES ================= -->
+      <section class="section section-contrast">
+        <div class="container">
+          <p class="eyebrow">Packages</p>
+          <h2 class="h2">Engagement options</h2>
+          <p class="subhead">
+            Choose the level that fits your project. Pricing can be fixed or
+            hourly depending on scope.
+          </p>
+
+          <div class="pricing">
+            <article class="price-card">
+              <p class="price-tier">Starter</p>
+              <h3>Quick Fix / Small Feature</h3>
+              <p class="muted">
+                Ideal for bug fixes, small UI polish, minor automation, or a
+                single feature.
+              </p>
+              <ul class="list">
+                <li>Clear diagnosis + fix</li>
+                <li>Clean handover notes</li>
+                <li>Short turnaround</li>
+              </ul>
+              <a class="btn secondary" href="contact.html">Request starter</a>
+            </article>
+
+            <article class="price-card featured">
+              <p class="price-tier">Standard</p>
+              <h3>System Build / Upgrade</h3>
+              <p class="muted">
+                Best for structured work: modules, database design, dashboards,
+                desktop app flows.
+              </p>
+              <ul class="list">
+                <li>Architecture + data design</li>
+                <li>Iterative delivery</li>
+                <li>UI polish included</li>
+              </ul>
+              <a class="btn primary" href="contact.html">Request standard</a>
+            </article>
+
+            <article class="price-card">
+              <p class="price-tier">Premium</p>
+              <h3>Full Product Delivery</h3>
+              <p class="muted">
+                For end-to-end builds: planning, implementation, polish,
+                documentation, support.
+              </p>
+              <ul class="list">
+                <li>Full delivery workflow</li>
+                <li>Documentation + handover</li>
+                <li>Support & refinements</li>
+              </ul>
+              <a class="btn secondary" href="contact.html">Request premium</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2">Questions, answered</h2>
+          <p class="subhead">
+            Clear expectations upfront — no confusion later.
+          </p>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>Do you offer fixed pricing or hourly?</summary>
+              <p class="muted">
+                Both. Small tasks are often fixed. Larger projects may be fixed
+                with milestones, or hourly depending on scope clarity.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What do you need from me to start?</summary>
+              <p class="muted">
+                A short description of the goal, who will use it, and any
+                existing code or examples. If you don’t have that yet, I’ll help
+                you clarify it.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you work with an existing codebase?</summary>
+              <p class="muted">
+                Yes — debugging, refactoring, improving structure, and adding
+                features are common requests.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do you deliver desktop apps?</summary>
+              <p class="muted">
+                PySide6 apps can be packaged for Windows delivery, with local
+                database support where needed.
+              </p>
+            </details>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Contact Options</a>
+            <a class="btn secondary" href="projects.html">See Work</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FINAL CTA ================= -->
+      <section class="section section-soft">
+        <div class="container final">
+          <h2 class="h2">Ready to start?</h2>
+          <p class="subhead">
+            Choose how you want to contact me — form, email, WhatsApp, GitHub,
+            or LinkedIn.
+          </p>
+          <a class="btn primary" href="contact.html">Contact Options</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER (same style as before) ================= -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
         </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-  <!--SERVICES-->
-   <main class="page services-page">
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
 
-        <!-- HERO / INTRO -->
-        <section class="section services-header fade-up">
-            <h1>Services</h1>
-            <p class="sub">
-                I help freelancers, small businesses and individuals with simple, well-structured
-                software solutions — from automation scripts to clean landing pages.
-            </p>
-        </section>
+          <div>
+            <p class="footer-head">Links</p>
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-        <!-- SERVICES GRID -->
-        <section class="section services-grid-container fade-up">
-            <div class="services-grid">
-
-                <!-- SERVICE 1 -->
-                <article class="service-card">
-                    <h2>Python Automation Scripts</h2>
-                    <p class="service-summary">
-                        Custom scripts that save you time by automating repetitive tasks on your computer.
-                    </p>
-                    <ul class="service-features">
-                        <li>File and folder organization</li>
-                        <li>CSV / Excel clean-up and formatting</li>
-                        <li>Simple reports and data exports</li>
-                    </ul>
-                    <p class="service-price">Ideal for: freelancers, solo business owners</p>
-                    <div class="service-tags">
-                        <span>Python</span>
-                        <span>Automation</span>
-                        <span>Productivity</span>
-                    </div>
-                </article>
-
-                <!-- SERVICE 2 -->
-                <article class="service-card">
-                    <h2>Excel & Data Cleanup</h2>
-                    <p class="service-summary">
-                        Help with messy spreadsheets: cleaning, structuring and preparing data so it’s
-                        actually usable.
-                    </p>
-                    <ul class="service-features">
-                        <li>Remove duplicates and fix formats</li>
-                        <li>Create formulas and summaries</li>
-                        <li>Basic dashboards and overviews</li>
-                    </ul>
-                    <p class="service-price">Ideal for: reports, budgeting, small teams</p>
-                    <div class="service-tags">
-                        <span>Excel</span>
-                        <span>CSV</span>
-                        <span>Python</span>
-                    </div>
-                </article>
-
-                <!-- SERVICE 3 -->
-                <article class="service-card">
-                    <h2>Website Fixes (HTML / CSS / JS)</h2>
-                    <p class="service-summary">
-                        Small fixes and improvements for existing websites to make them cleaner and easier to use.
-                    </p>
-                    <ul class="service-features">
-                        <li>Fix layout and spacing issues</li>
-                        <li>Update text, colours or sections</li>
-                        <li>Add small interactive elements</li>
-                    </ul>
-                    <p class="service-price">Ideal for: existing sites that need polishing</p>
-                    <div class="service-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                </article>
-
-                <!-- SERVICE 4 -->
-                <article class="service-card">
-                    <h2>Landing Page Builds</h2>
-                    <p class="service-summary">
-                        Simple, focused landing pages designed to present one offer clearly and professionally.
-                    </p>
-                    <ul class="service-features">
-                        <li>Modern section-based layout</li>
-                        <li>Responsive on desktop and mobile</li>
-                        <li>Clear calls-to-action</li>
-                    </ul>
-                    <p class="service-price">Ideal for: one product, one service, or portfolios</p>
-                    <div class="service-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Responsive</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- HOW IT WORKS -->
-        <section class="section services-process fade-up">
-            <h2>How working together looks</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <span class="step-badge">1</span>
-                    <h3>Quick chat</h3>
-                    <p>We discuss what you need, your goals, and what’s realistic for a first version.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-badge">2</span>
-                    <h3>Plan & estimate</h3>
-                    <p>I suggest a simple plan, timeline and price based on the complexity of the work.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-badge">3</span>
-                    <h3>Build & refine</h3>
-                    <p>I build the solution, share a preview, and we make small adjustments if needed.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="section services-cta fade-up">
-            <div class="cta-inner-min">
-                <h2>Have something in mind?</h2>
-                <p>
-                    Tell me what you’re trying to build or fix, even if it’s just an idea. We’ll start small
-                    and keep it simple.
-                </p>
-                <a href="contact.html" class="btn primary">Contact Me</a>
-            </div>
-        </section>
-
-    </main>
-  <!-- FOOTER -->
-    <footer class="site-footer">
-        <p>&copy; 2025 Alex Mate · Mate Solutions · Mate Code Studio</p>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
     </footer>
-</body>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    </script>
+  </body>
 </html>

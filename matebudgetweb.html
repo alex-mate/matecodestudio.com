@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — MateBudget | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: MateBudget — a personal budgeting web app with analytics, categories, exports, and a maintainable architecture."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">MateBudget — Budgeting App</h1>
+
+          <p class="case-lead">
+            A personal budgeting platform designed for clarity: fast transaction
+            entry, meaningful categories, analytics dashboards, and exports —
+            built with a maintainable structure that scales cleanly.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Exports</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html"
+              >Build something similar</a
+            >
+            <a class="btn secondary" href="projects.html">Back to projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY STRIP -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Web application</p>
+            </div>
+            <div>
+              <p class="sum-k">Focus</p>
+              <p class="sum-v">Maintainable structure + analytics</p>
+            </div>
+            <div>
+              <p class="sum-k">Core features</p>
+              <p class="sum-v">
+                Transactions • Categories • Dashboards • Exports
+              </p>
+            </div>
+            <div>
+              <p class="sum-k">Delivery</p>
+              <p class="sum-v">Iterative builds + handover notes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img src="assets/case-studies/matebudget/01.png" alt="MateBudget UI preview" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Most budgeting tools fail in one of two ways: the workflow is too
+              slow for daily use, or the system becomes hard to maintain once
+              analytics, categories, and exports are added. The goal was a
+              platform that feels simple to use — while keeping a clean codebase
+              underneath.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              MateBudget is a structured budgeting web app that keeps the daily
+              flow fast: add transactions, review totals, track categories, and
+              view analytics. The backend and data model were designed from day
+              one to support reporting and future upgrades.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>Fast transaction entry with categories and notes</li>
+              <li>
+                Monthly overview: income, expenses, savings, and remaining
+                balance
+              </li>
+              <li>Analytics view for trends and category breakdown</li>
+              <li>Export-ready data (CSV/PDF ready structure)</li>
+              <li>
+                Scalable structure: routes separated, predictable templates,
+                clean helpers
+              </li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture & database</h2>
+            <p class="subhead">
+              Designed to stay readable as features grow — predictable modules,
+              consistent naming, and a relational structure built for analytics.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Modules</h3>
+                <ul class="list">
+                  <li>auth (login/session)</li>
+                  <li>transactions (CRUD + filters)</li>
+                  <li>dashboard (monthly totals + summaries)</li>
+                  <li>analytics (charts + breakdowns)</li>
+                  <li>utils (formatters, validators)</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Database tables</h3>
+                <ul class="list">
+                  <li>users</li>
+                  <li>accounts</li>
+                  <li>transactions</li>
+                  <li>categories</li>
+                  <li>monthly_summary</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A budgeting system that’s simple to use daily, while staying
+              maintainable as features expand. The structure supports future
+              additions like recurring transactions, multi-account net worth,
+              and deeper reporting without rewriting everything.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO (optional) -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Short demo (optional)</h2>
+          <p class="subhead">
+            Add a short walkthrough video to show the flow. (Works on GitHub
+            Pages.)
+          </p>
+
+          <div class="video-wrap">
+            <!-- Put your file here: assets/case-studies/matebudget/demo.mp4 -->
+            <video controls preload="metadata" poster="assets/case-studies/matebudget/02.png">
+              <source
+                src="../assets/case-studies/matebudget/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (11 photos) -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Screens</h2>
+          <p class="subhead">
+            Selected screens across the core workflow: dashboard, transactions,
+            analytics, and exports.
+          </p>
+
+          <div class="gallery">
+            <button class="g-item" data-full="assets/case-studies/matebudget/01.png">
+              <img src="assets/case-studies/matebudget/01.png" alt="Screen 01" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/02.png">
+              <img src="assets/case-studies/matebudget/02.png" alt="Screen 02" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/03.png">
+              <img src="assets/case-studies/matebudget/03.png" alt="Screen 03" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/04.png">
+              <img src="assets/case-studies/matebudget/04.png" alt="Screen 04" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/05.png">
+              <img src="assets/case-studies/matebudget/05.png" alt="Screen 05" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/06.png">
+              <img src="assets/case-studies/matebudget/06.png" alt="Screen 06" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/07.png">
+              <img src="assets/case-studies/matebudget/07.png" alt="Screen 07" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/08.png">
+              <img src="assets/case-studies/matebudget/08.png" alt="Screen 08" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/09.png">
+              <img src="assets/case-studies/matebudget/09.png" alt="Screen 09" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/10.png">
+              <img src="assets/case-studies/matebudget/10.png" alt="Screen 10" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/11.png">
+              <img src="assets/case-studies/matebudget/11.png" alt="Screen 11" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/12.png">
+              <img src="assets/case-studies/matebudget/12.png" alt="Screen 11" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/13.png">
+              <img src="assets/case-studies/matebudget/13.png" alt="Screen 11" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="assets/case-studies/matebudget/14.png">
+              <img src="assets/case-studies/matebudget/14.png" alt="Screen 11" loading="lazy" />
+            </button>
+            <button class="g-item" data-full="1assets/case-studies/matebudget/15.png"">
+              <img src="assets/case-studies/matebudget/15.png" alt="Screen 11" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Want a build with this level of structure?</h2>
+          <p class="subhead">
+            Send your goal + timeline. I’ll reply with next steps and a clear
+            plan.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Contact Options</a>
+            <a class="btn secondary" href="services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://wa.me/440000000000"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <img id="lbImg" alt="Expanded gallery image" />
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Lightbox gallery
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbClose = document.getElementById("lbClose");
+
+      document.querySelectorAll(".g-item").forEach((b) => {
+        b.addEventListener("click", () => {
+          const src = b.getAttribute("data-full");
+          lbImg.src = src;
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+      }
+
+      lbClose.addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>

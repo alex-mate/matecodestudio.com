@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — Inventory Manager Desktop | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: Inventory Manager Desktop — a structured desktop application for tracking stock, movements, and alerts using a reliable local database."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">Inventory Manager — Desktop App</h1>
+
+          <p class="case-lead">
+            A desktop inventory management system designed for clarity and
+            control: track stock levels, movements, and alerts using a clean
+            interface and a reliable local database.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">PySide6</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Inventory</span>
+            <span class="tag">Desktop UX</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html"
+              >Build my inventory system</a
+            >
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Desktop application</p>
+            </div>
+            <div>
+              <p class="sum-k">Use case</p>
+              <p class="sum-v">Stock & inventory tracking</p>
+            </div>
+            <div>
+              <p class="sum-k">Core features</p>
+              <p class="sum-v">Items • Movements • Alerts</p>
+            </div>
+            <div>
+              <p class="sum-k">Storage</p>
+              <p class="sum-v">Local SQLite database</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/inventory-manager-desktop/01.jpg"
+              alt="Inventory Manager Desktop preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Many small businesses still track inventory in spreadsheets,
+              leading to mismatched stock counts, unclear movement history, and
+              no early warnings when items run low. A desktop-first tool was
+              needed for speed, offline access, and clarity.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              Inventory Manager is a PySide6 desktop application that tracks
+              items, stock movements (in/out/adjustments), and alerts — all
+              backed by a local SQLite database. The focus is reliability,
+              predictability, and ease of use.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>Item management with SKU, name, and category</li>
+              <li>Stock movement tracking (in / out / adjustments)</li>
+              <li>Automatic stock level calculation</li>
+              <li>Low-stock alerts based on thresholds</li>
+              <li>History view for audits and reviews</li>
+              <li>Designed for future exports and reports</li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture</h2>
+            <p class="subhead">
+              Inventory systems fail when data rules aren’t enforced. This app
+              separates UI, business logic, and data access to ensure stock
+              counts always remain consistent.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>App structure</h3>
+                <ul class="list">
+                  <li>ui/ (pages, dialogs)</li>
+                  <li>services/ (stock logic)</li>
+                  <li>db/ (queries, migrations)</li>
+                  <li>models/ (entities)</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Database tables</h3>
+                <ul class="list">
+                  <li>items</li>
+                  <li>categories</li>
+                  <li>stock_movements</li>
+                  <li>stock_levels (derived)</li>
+                  <li>alert_rules</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A dependable inventory tool that replaces spreadsheets, reduces
+              stock errors, and provides clear visibility into item history. The
+              architecture supports future features like reports and
+              multi-location stock.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Desktop walkthrough (optional)</h2>
+          <p class="subhead">
+            Optional demo showing item creation, stock movements, and alerts.
+          </p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/inventory-manager-desktop/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/inventory-manager-desktop/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Screens</h2>
+          <p class="subhead">
+            Item lists, stock movements, alerts, and history views.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/01.jpg"
+                alt="Screen 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/02.jpg"
+                alt="Screen 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/03.jpg"
+                alt="Screen 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/04.jpg"
+                alt="Screen 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/05.jpg"
+                alt="Screen 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/06.jpg"
+                alt="Screen 06"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/07.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/07.jpg"
+                alt="Screen 07"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/inventory-manager-desktop/08.jpg"
+            >
+              <img
+                src="../assets/case-studies/inventory-manager-desktop/08.jpg"
+                alt="Screen 08"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Need control over your inventory?</h2>
+          <p class="subhead">
+            If stock tracking is critical to your business, I can build a
+            desktop or web-based inventory system tailored to your workflow.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://wa.me/440000000000" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — Invoice PDF Generator | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: Invoice PDF Generator — a reliable system for generating clean, branded PDF invoices with structured data and repeatable output."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">Invoice PDF Generator</h1>
+
+          <p class="case-lead">
+            A structured invoice generation system that produces consistent,
+            professional PDF invoices from clean data — designed to integrate
+            into apps, dashboards, or automation workflows.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">PDF Generation</span>
+            <span class="tag">Templates</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Branding</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html"
+              >Generate invoices like this</a
+            >
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">PDF automation</p>
+            </div>
+            <div>
+              <p class="sum-k">Input</p>
+              <p class="sum-v">Structured invoice data</p>
+            </div>
+            <div>
+              <p class="sum-k">Output</p>
+              <p class="sum-v">Branded PDF invoices</p>
+            </div>
+            <div>
+              <p class="sum-k">Use cases</p>
+              <p class="sum-v">Billing • Reports • Exports</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/invoice-pdf-generator/01.jpg"
+              alt="Invoice PDF Generator preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Invoices are often generated manually or inconsistently, leading
+              to formatting issues, missing information, and brand
+              inconsistency. Scaling billing workflows requires a system that
+              generates reliable PDFs automatically — every time.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              This system takes structured invoice data and renders clean,
+              branded PDF documents using reusable templates. It’s designed to
+              plug into web apps, desktop tools, or automation pipelines with
+              minimal friction.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>Template-driven PDF generation (consistent layout)</li>
+              <li>Support for line items, totals, tax, and notes</li>
+              <li>Branding-ready (logo, colors, footer text)</li>
+              <li>Deterministic output (same input → same PDF)</li>
+              <li>Easy integration into existing systems</li>
+              <li>Extensible for multi-currency and localization</li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture</h2>
+            <p class="subhead">
+              The system separates data preparation from rendering logic,
+              ensuring templates stay clean and invoice rules remain
+              predictable.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Core components</h3>
+                <ul class="list">
+                  <li>invoice_builder</li>
+                  <li>template_engine</li>
+                  <li>pdf_renderer</li>
+                  <li>validators</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Typical data model</h3>
+                <ul class="list">
+                  <li>invoice</li>
+                  <li>invoice_items</li>
+                  <li>customer</li>
+                  <li>company_profile</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A reliable invoice generation system that removes manual work,
+              ensures brand consistency, and scales cleanly as billing volume
+              grows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Invoice generation demo (optional)</h2>
+          <p class="subhead">
+            Optional walkthrough: input data → generated PDF preview.
+          </p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/invoice-pdf-generator/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/invoice-pdf-generator/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Invoice samples</h2>
+          <p class="subhead">
+            Different invoice layouts, data variations, and branding examples.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/01.jpg"
+                alt="Invoice 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/02.jpg"
+                alt="Invoice 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/03.jpg"
+                alt="Invoice 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/04.jpg"
+                alt="Invoice 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/05.jpg"
+                alt="Invoice 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/06.jpg"
+                alt="Invoice 06"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/invoice-pdf-generator/07.jpg"
+            >
+              <img
+                src="../assets/case-studies/invoice-pdf-generator/07.jpg"
+                alt="Invoice 07"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Need automated, professional invoices?</h2>
+          <p class="subhead">
+            If invoicing is slowing you down or looks inconsistent, I can build
+            a PDF generation system tailored to your workflow.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://wa.me/440000000000" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

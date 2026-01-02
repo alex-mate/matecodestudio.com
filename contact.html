@@ -1,75 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Mate Solutions</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--TOP BAR: LOGO + NAV-->
-    <header class="top-bar container">
-        <div class="logo-wrap">
-            <img src="https://i.postimg.cc/kXTTg3vp/new-banner.png"
-                 alt="Mate Solutions logo"
-                 class="logo-img">
-            <div class="logo-text">
-                <span class="logo-main">Mate Solutions</span>
-                <span class="logo-sub">MATE CODE STUDIO</span>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <title>Contact — Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Contact Mate Code Studio via form, email, WhatsApp, GitHub, or LinkedIn."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html" class="nav-cta active">Contact</a>
         </nav>
+      </div>
     </header>
-    <!-- CONTACT FORM-->
-    <main class="page">
-        <section class="section fade-up">
-            <div class="section-header">
-                <h2>Contact</h2>
-                <p class="sub">
-                    Tell me a bit about your project or idea and I’ll get back to you during my business hours.
-                </p>
-            </div>
 
-            <form id="contactForm" class="contact-form">
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="page-hero">
+        <div class="page-hero-bg"></div>
+
+        <div class="container page-hero-inner">
+          <p class="eyebrow">Contact</p>
+
+          <h1 class="page-title">
+            Choose the contact method<br />
+            that’s easiest for you.
+          </h1>
+
+          <p class="page-lead">
+            I reply with clear next steps. For the fastest start, include: your
+            goal, your timeline, and any existing code/screenshots. You can
+            contact me via form, email, WhatsApp, GitHub, or LinkedIn.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#form">Send a message</a>
+            <a class="btn secondary" href="#options">Contact options</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= OPTIONS ================= -->
+      <section id="options" class="section">
+        <div class="container">
+          <p class="eyebrow">Options</p>
+          <h2 class="h2">Contact methods</h2>
+          <p class="subhead">
+            Pick what fits your workflow. If you’re not sure, use the form and
+            I’ll guide the next steps.
+          </p>
+
+          <div class="contact-grid">
+            <!-- Email -->
+            <article class="contact-card">
+              <div class="contact-top">
+                <h3>Email</h3>
+                <span class="contact-badge">Recommended</span>
+              </div>
+              <p class="muted">
+                Best for project details, files, and structured communication.
+              </p>
+
+              <div class="contact-value">
+                <code id="emailValue">alex@matecodestudio.com</code>
+                <button class="mini-btn" type="button" data-copy="#emailValue">
+                  Copy
+                </button>
+              </div>
+
+              <div class="contact-actions">
+                <a
+                  class="btn secondary"
+                  href="mailto:alex@matecodestudio.com?subject=Mate%20Code%20Studio%20—%20Project%20Inquiry"
+                >
+                  Email me
+                </a>
+              </div>
+            </article>
+
+            <!-- WhatsApp -->
+            <article class="contact-card">
+              <div class="contact-top">
+                <h3>WhatsApp</h3>
+                <span class="contact-badge">Fast</span>
+              </div>
+              <p class="muted">
+                Quick questions, short updates, or starting a conversation
+                instantly.
+              </p>
+
+              <div class="contact-value">
+                <code id="waValue">+44 0000 000000</code>
+                <button class="mini-btn" type="button" data-copy="#waValue">
+                  Copy
+                </button>
+              </div>
+
+              <div class="contact-actions">
+                <!-- Replace number: remove spaces and +, use country code -->
+                <a
+                  class="btn secondary"
+                  href="https://wa.me/440000000000"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WhatsApp me
+                </a>
+              </div>
+            </article>
+
+            <!-- GitHub -->
+            <article class="contact-card">
+              <div class="contact-top">
+                <h3>GitHub</h3>
+                <span class="contact-badge">Technical</span>
+              </div>
+              <p class="muted">
+                Great for code review, repo sharing, issues, and collaboration.
+              </p>
+
+              <div class="contact-value">
+                <code>github.com/yourusername</code>
+              </div>
+
+              <div class="contact-actions">
+                <a
+                  class="btn secondary"
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- LinkedIn -->
+            <article class="contact-card">
+              <div class="contact-top">
+                <h3>LinkedIn</h3>
+                <span class="contact-badge">Professional</span>
+              </div>
+              <p class="muted">
+                Professional introductions, network connections, and business
+                messages.
+              </p>
+
+              <div class="contact-value">
+                <code>linkedin.com/in/yourprofile</code>
+              </div>
+
+              <div class="contact-actions">
+                <a
+                  class="btn secondary"
+                  href="https://linkedin.com/in/yourprofile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open LinkedIn
+                </a>
+              </div>
+            </article>
+
+            <!-- Schedule / Availability -->
+            <article class="contact-card">
+              <div class="contact-top">
+                <h3>Availability</h3>
+                <span class="contact-badge">Response</span>
+              </div>
+              <p class="muted">
+                I usually respond within <strong>24 hours</strong>. For urgent
+                issues, WhatsApp is best.
+              </p>
+
+              <div class="contact-value">
+                <code>Mon–Fri • UK Time</code>
+              </div>
+
+              <div class="contact-actions">
+                <a class="btn secondary" href="#form">Use form</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FORM ================= -->
+      <section id="form" class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Message</p>
+          <h2 class="h2">Send a project message</h2>
+          <p class="subhead">
+            Keep it short — I’ll ask clarifying questions if needed. If you have
+            a repo, include the link.
+          </p>
+
+          <div class="form-wrap">
+            <!-- GitHub Pages: use Formspree (recommended) -->
+            <!-- Replace action URL with your Formspree endpoint -->
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xyzzabcd"
+              method="POST"
+            >
+              <div class="form-row">
                 <label>
-                    Name
-                    <input type="text" name="name" required>
+                  Name
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
                 </label>
 
                 <label>
-                    Email
-                    <input type="email" name="email" required>
+                  Email
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    required
+                  />
+                </label>
+              </div>
+
+              <label>
+                What do you need built / fixed?
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Example: I need a Flask dashboard with login, a SQLite database, and monthly reports. Timeline: 2 weeks."
+                  required
+                ></textarea>
+              </label>
+
+              <div class="form-row">
+                <label>
+                  Budget range (optional)
+                  <input
+                    name="budget"
+                    type="text"
+                    placeholder="Example: £100–£300"
+                  />
                 </label>
 
                 <label>
-                    Message
-                    <textarea name="message" rows="5" required></textarea>
+                  Timeline (optional)
+                  <input
+                    name="timeline"
+                    type="text"
+                    placeholder="Example: This week / 2 weeks / flexible"
+                  />
                 </label>
+              </div>
 
-                <button type="submit" class="btn primary">Send Message</button>
+              <!-- Formspree extras -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message — Mate Code Studio"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <!-- Optional redirect:
+        <input type="hidden" name="_next" value="https://matecodestudio.com/thank-you.html">
+        -->
 
-                <p id="formMessage" class="form-message"></p>
+              <button class="btn primary" type="submit">Send message</button>
+              <p class="muted form-note">
+                Prefer email? Send directly to
+                <strong>alex@matecodestudio.com</strong>.
+              </p>
             </form>
-        </section>
+
+            <aside class="form-side">
+              <p class="side-title">What to include</p>
+              <ul class="side-list">
+                <li>Your goal + who will use it</li>
+                <li>What “done” looks like</li>
+                <li>Any screenshots / links / repo</li>
+                <li>Timeline + budget range (optional)</li>
+              </ul>
+
+              <div class="side-card">
+                <p class="side-card-title">Fastest route</p>
+                <p class="muted">
+                  Email + a clear description helps me reply with a plan
+                  immediately.
+                </p>
+                <a
+                  class="btn secondary"
+                  href="mailto:alex@matecodestudio.com?subject=Mate%20Code%20Studio%20—%20Project%20Inquiry"
+                >
+                  Email me
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FINAL CTA ================= -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">You’ll get a clear reply.</h2>
+          <p class="subhead">
+            I’ll respond with next steps, questions (if needed), and an outline
+            of the simplest path to deliver.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn primary"
+              href="mailto:alex@matecodestudio.com?subject=Mate%20Code%20Studio%20—%20Project%20Inquiry"
+              >Email</a
+            >
+            <a class="btn secondary" href="#options">See options</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- JS file -->
-    <script src="script.js"></script>
-     <!--FOOTER -->
-    <footer class="site-footer">
-        <p>&copy; 2025 Alex Mate · Mate Solutions · Mate Code Studio</p>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://wa.me/440000000000"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
     </footer>
-</body>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Copy buttons
+      document.querySelectorAll("[data-copy]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const selector = btn.getAttribute("data-copy");
+          const el = document.querySelector(selector);
+          if (!el) return;
+          const text = el.textContent.trim();
+
+          try {
+            await navigator.clipboard.writeText(text);
+            const original = btn.textContent;
+            btn.textContent = "Copied";
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.textContent = original;
+              btn.classList.remove("copied");
+            }, 900);
+          } catch {
+            // fallback
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            btn.textContent = "Copied";
+            setTimeout(() => (btn.textContent = "Copy"), 900);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — MateBudget Desktop | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: MateBudget Desktop — a PySide6 desktop budgeting app with local SQLite storage, clean navigation, and a maintainable architecture."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">MateBudget Desktop</h1>
+
+          <p class="case-lead">
+            A desktop-first budgeting experience built with PySide6 — designed
+            for people who want an actual app (not a browser tab). Clean
+            navigation, local storage, and a structure that scales.
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">Python</span>
+            <span class="tag">PySide6</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Desktop UX</span>
+            <span class="tag">Packaging</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html"
+              >Build something similar</a
+            >
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY STRIP -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Desktop application</p>
+            </div>
+            <div>
+              <p class="sum-k">Goal</p>
+              <p class="sum-v">Native UX + local storage</p>
+            </div>
+            <div>
+              <p class="sum-k">Core features</p>
+              <p class="sum-v">Transactions • Categories • Monthly totals</p>
+            </div>
+            <div>
+              <p class="sum-k">Delivery</p>
+              <p class="sum-v">Prototype → iterative polish</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/matebudget-desktop/01.jpg"
+              alt="MateBudget Desktop preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Some users prefer a true desktop app: faster access, local data,
+              and no browser dependency. The challenge was to keep the same
+              “clean workflow” feeling as a web app, but deliver it with a
+              native UI and a local database.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              MateBudget Desktop is a PySide6 application with a structured
+              navigation system, predictable screens, and a SQLite database
+              underneath. It’s designed to support future features such as
+              analytics views, multi-account support, and export tools.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>
+                Desktop navigation with clear “sections” (Dashboard /
+                Transactions / Analytics)
+              </li>
+              <li>Local SQLite storage for fast access and offline usage</li>
+              <li>Transaction entry designed for speed (minimal friction)</li>
+              <li>
+                Monthly overview: totals, savings targets, remaining balance
+              </li>
+              <li>
+                Foundation for future features (charts, exports, multi-account)
+              </li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture & database</h2>
+            <p class="subhead">
+              Desktop apps can become messy quickly if the UI logic and data
+              logic get mixed. This project uses separation: UI components,
+              services/helpers, and database access layers.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Structure (example)</h3>
+                <ul class="list">
+                  <li>ui/ (pages, widgets)</li>
+                  <li>services/ (business rules)</li>
+                  <li>db/ (queries, models)</li>
+                  <li>utils/ (validators, formatters)</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Database tables</h3>
+                <ul class="list">
+                  <li>transactions</li>
+                  <li>categories</li>
+                  <li>monthly_totals</li>
+                  <li>settings</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A desktop app foundation that feels modern and structured — with
+              local storage, clear navigation, and a clean architecture that
+              supports future upgrades without rewrites.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO (optional) -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Short demo (optional)</h2>
+          <p class="subhead">
+            Add a short walkthrough video to show the desktop flow (screens +
+            navigation).
+          </p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/matebudget-desktop/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/matebudget-desktop/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (8 photos by default — add more if you want) -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Screens</h2>
+          <p class="subhead">
+            A quick look at the UI structure and flow. Add or remove images any
+            time.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/01.jpg"
+                alt="Screen 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/02.jpg"
+                alt="Screen 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/03.jpg"
+                alt="Screen 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/04.jpg"
+                alt="Screen 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/05.jpg"
+                alt="Screen 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/06.jpg"
+                alt="Screen 06"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/07.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/07.jpg"
+                alt="Screen 07"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/matebudget-desktop/08.jpg"
+            >
+              <img
+                src="../assets/case-studies/matebudget-desktop/08.jpg"
+                alt="Screen 08"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Need a desktop tool for your business?</h2>
+          <p class="subhead">
+            If you want a real application experience with clean structure and
+            reliable data, send a message and I’ll outline the simplest path to
+            deliver.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://wa.me/440000000000"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <img id="lbImg" alt="Expanded gallery image" />
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Lightbox gallery
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbClose = document.getElementById("lbClose");
+
+      document.querySelectorAll(".g-item").forEach((b) => {
+        b.addEventListener("click", () => {
+          const src = b.getAttribute("data-full");
+          lbImg.src = src;
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+      }
+
+      lbClose.addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>

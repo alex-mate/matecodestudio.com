@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study — Database Architecture Kit | Mate Code Studio</title>
+    <meta
+      name="description"
+      content="Case study: Database Architecture Kit — reusable relational schema patterns designed for real workflows, integrity, and analytics-ready reporting."
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">Mate Code Studio</span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          Menu
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="../index.html">Home</a>
+          <a href="../aboutme.html">About</a>
+          <a href="../projects.html" class="active">Projects</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="case-hero">
+        <div class="case-hero-bg"></div>
+
+        <div class="container case-hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1 class="case-title">Database Architecture Kit</h1>
+
+          <p class="case-lead">
+            A reusable relational schema foundation built for real workflows —
+            clean relationships, integrity rules, and analytics-ready reporting
+            tables. Designed to scale without turning into a “database mess.”
+          </p>
+
+          <div class="deliverables">
+            <span class="tag">SQL</span>
+            <span class="tag">Schema Design</span>
+            <span class="tag">Integrity</span>
+            <span class="tag">Reporting</span>
+            <span class="tag">Analytics-ready</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Design my database</a>
+            <a class="btn secondary" href="../projects.html"
+              >Back to projects</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY STRIP -->
+      <section class="section">
+        <div class="container">
+          <div class="case-summary">
+            <div>
+              <p class="sum-k">Project type</p>
+              <p class="sum-v">Data architecture</p>
+            </div>
+            <div>
+              <p class="sum-k">Use cases</p>
+              <p class="sum-v">Orders • Inventory • CRM</p>
+            </div>
+            <div>
+              <p class="sum-k">Focus</p>
+              <p class="sum-v">Consistency + integrity</p>
+            </div>
+            <div>
+              <p class="sum-k">Outputs</p>
+              <p class="sum-v">Schema + reporting layer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO IMAGE -->
+      <section class="section section-soft">
+        <div class="container">
+          <div class="case-image">
+            <img
+              src="../assets/case-studies/database-architecture-kit/01.jpg"
+              alt="Database Architecture Kit schema preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="section">
+        <div class="container case-content">
+          <div class="case-block">
+            <h2 class="h2">The problem</h2>
+            <p class="subhead">
+              Many systems start with a few tables, then features are added
+              quickly — and suddenly there’s duplication, inconsistent naming,
+              unclear relationships, and reporting becomes painful. The goal
+              here was to define a clean data foundation that stays consistent
+              as the product grows.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">The solution</h2>
+            <p class="subhead">
+              The Database Architecture Kit provides proven schema patterns you
+              can reuse across projects: products, orders, customers, inventory
+              movements, and a reporting layer designed for analytics. It’s
+              built for correctness first — then for performance and reporting.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Key features</h2>
+            <ul class="list">
+              <li>
+                Clear entity design: products, variants/SKUs, customers, orders,
+                items
+              </li>
+              <li>
+                Integrity rules to prevent broken relationships and “ghost rows”
+              </li>
+              <li>
+                Normalized structure for predictable updates and clean joins
+              </li>
+              <li>Optional reporting tables for fast dashboards</li>
+              <li>
+                Scales across use cases: e-commerce, internal tools, inventory
+                systems
+              </li>
+              <li>
+                Designed to support auditing: timestamps, status changes,
+                traceable history
+              </li>
+            </ul>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Architecture</h2>
+            <p class="subhead">
+              This kit separates operational tables (day-to-day transactions)
+              from reporting tables (pre-aggregated metrics for dashboards).
+              That avoids slow queries and keeps your UI fast.
+            </p>
+
+            <div class="case-grid">
+              <div class="case-card">
+                <h3>Core entities</h3>
+                <ul class="list">
+                  <li>products</li>
+                  <li>skus / variants</li>
+                  <li>customers</li>
+                  <li>orders</li>
+                  <li>order_items</li>
+                  <li>inventory_movements</li>
+                </ul>
+              </div>
+
+              <div class="case-card">
+                <h3>Reporting layer (examples)</h3>
+                <ul class="list">
+                  <li>metrics_daily</li>
+                  <li>metrics_monthly</li>
+                  <li>top_skus</li>
+                  <li>stock_alerts</li>
+                  <li>profit_summary</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <h2 class="h2">Outcome</h2>
+            <p class="subhead">
+              A schema foundation that makes future work easier: adding features
+              doesn’t break reporting, analytics queries stay readable, and the
+              system remains consistent across modules and teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO (optional) -->
+      <section class="section section-soft">
+        <div class="container">
+          <p class="eyebrow">Video</p>
+          <h2 class="h2">Schema walkthrough (optional)</h2>
+          <p class="subhead">
+            Add a short walkthrough video showing entities, relationships, and
+            reporting tables.
+          </p>
+
+          <div class="video-wrap">
+            <video
+              controls
+              preload="metadata"
+              poster="../assets/case-studies/database-architecture-kit/02.jpg"
+            >
+              <source
+                src="../assets/case-studies/database-architecture-kit/demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="h2">Schemas & screens</h2>
+          <p class="subhead">
+            Entity diagrams, relationships, and reporting views. Add as many as
+            you want.
+          </p>
+
+          <div class="gallery">
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/01.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/01.jpg"
+                alt="Screen 01"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/02.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/02.jpg"
+                alt="Screen 02"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/03.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/03.jpg"
+                alt="Screen 03"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/04.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/04.jpg"
+                alt="Screen 04"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/05.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/05.jpg"
+                alt="Screen 05"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/06.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/06.jpg"
+                alt="Screen 06"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/07.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/07.jpg"
+                alt="Screen 07"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="g-item"
+              data-full="../assets/case-studies/database-architecture-kit/08.jpg"
+            >
+              <img
+                src="../assets/case-studies/database-architecture-kit/08.jpg"
+                alt="Screen 08"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section section-contrast">
+        <div class="container final">
+          <h2 class="h2">Need a database that won’t collapse later?</h2>
+          <p class="subhead">
+            If your app needs clean data, reporting, and long-term
+            maintainability, I can design the schema and structure it properly
+            from day one.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="../contact.html">Contact Options</a>
+            <a class="btn secondary" href="../services.html">Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <div>
+              <p class="footer-title">Mate Code Studio</p>
+              <p class="footer-sub">Independent Software Engineering Studio</p>
+            </div>
+          </div>
+          <p class="footer-text">
+            Building clean, maintainable software — web apps, desktop apps,
+            automation, and reliable data structures.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <p class="footer-head">Pages</p>
+            <a href="../index.html">Home</a>
+            <a href="../aboutme.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../services.html">Services</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+
+          <div>
+            <p class="footer-head">Links</p>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://wa.me/440000000000"
+              target="_blank"
+              rel="noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
+        <p class="muted">Charcoal & Copper System</p>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <img id="lbImg" alt="Expanded gallery image" />
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const btn = document.querySelector(".menu-btn");
+      const nav = document.querySelector("[data-nav]");
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Lightbox gallery
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbClose = document.getElementById("lbClose");
+
+      document.querySelectorAll(".g-item").forEach((b) => {
+        b.addEventListener("click", () => {
+          const src = b.getAttribute("data-full");
+          lbImg.src = src;
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeLb() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+      }
+
+      lbClose.addEventListener("click", closeLb);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLb();
+      });
+    </script>
+  </body>
+</html>
