@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budgeting App Case Study | MateCodeStudio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow"></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-title">MateCodeStudio</span>
+          <span class="brand-subtitle">Alex Mate</span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            🌙
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section case-hero">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Case study</p>
+            <h1>Budgeting App</h1>
+            <p class="section-intro">
+              This project was built around a practical goal: helping users
+              track their finances more clearly and more confidently.
+            </p>
+            <p class="section-intro">
+              I wanted to create something more structured and more useful than
+              a spreadsheet, while keeping the experience simple enough to stay
+              practical.
+            </p>
+            <p class="mono-line">Python · Flask · SQLite · JavaScript</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container case-layout">
+          <article class="case-block reveal">
+            <h2>The problem</h2>
+            <p>
+              Personal finance tracking often becomes fragmented. A user may
+              have multiple accounts, irregular expenses, and no clear picture
+              of where money is going.
+            </p>
+            <p>
+              Spreadsheets can work at first, but over time they usually become
+              harder to maintain, harder to read, and less useful for making
+              decisions.
+            </p>
+          </article>
+
+          <article class="case-block reveal">
+            <h2>The solution</h2>
+            <p>
+              I built a Flask-based web application that allows users to manage
+              accounts, record transactions, and review financial activity in
+              one place.
+            </p>
+            <p>
+              The goal was not just to store numbers, but to make those numbers
+              easier to understand.
+            </p>
+          </article>
+
+          <article class="case-block reveal">
+            <h2>What the app includes</h2>
+            <ul class="bullet-list">
+              <li>Account management</li>
+              <li>Income and expense tracking</li>
+              <li>Transaction history</li>
+              <li>Dashboard overview</li>
+            </ul>
+          </article>
+
+          <article class="case-block reveal">
+            <h2>What I learned</h2>
+            <p>
+              This project helped me improve my understanding of Flask
+              application structure, database thinking, user workflows, and how
+              to turn a practical idea into a more complete product.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Screens</p>
+            <h2>Project screenshots</h2>
+          </div>
+
+          <div class="case-gallery reveal">
+            <img
+              src="images/budgetingapp/login.png"
+              alt="Budgeting App login page"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/register.png"
+              alt="Budgeting App register page"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/home.png"
+              alt="Budgeting App home page"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/profile.png"
+              alt="Budgeting App profile page"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/add expense.png"
+              alt="Budgeting App add transactions"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/transactions.png"
+              alt="Budgeting App  transactions"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/yearly overview.png"
+              alt="Budgeting App  yearly overview"
+              class="lightbox-img"
+            />
+            <img
+              src="images/budgetingapp/budget set up.png"
+              alt="Budgeting App  budget set up"
+              class="lightbox-img"
+            />
+          </div>
+
+          <div class="hero-actions case-actions reveal">
+            <a
+              href="https://github.com/alex-mate/Budgeting-app"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noreferrer"
+              >View code</a
+            >
+            <a href="index.html" class="btn btn-secondary">Back to portfolio</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container">
+          <div class="cta-card reveal">
+            <h2>
+              This project represents the kind of software I want to keep
+              building.
+            </h2>
+            <p>
+              Practical, structured, and centered around solving real user
+              problems.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 MateCodeStudio · Alex Mate</p>
+      </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+      <button
+        id="lightboxClose"
+        class="lightbox-close"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+      <img id="lightboxImg" src="" alt="Expanded project image" />
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

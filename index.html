@@ -1,451 +1,820 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Mate Code Studio — Software Engineering Studio</title>
+    <title>Alex Mate | MateCodeStudio</title>
     <meta
       name="description"
-      content="Mate Code Studio builds clean, maintainable web apps, desktop software, automation systems, and reliable database structures."
+      content="Alex Mate — building MateCodeStudio through real projects, practical software, and continuous growth."
     />
 
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <meta name="theme-color" content="#111111" />
-
-    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
   <body>
-    <!-- ================= HEADER ================= -->
-    <header class="header">
-      <div class="container header-inner">
-        <a href="index.html" class="brand">
-          <span class="brand-mark">M</span>
-          <span class="brand-name">Mate Code Studio</span>
+    <div class="cursor-glow"></div>
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand">
+          <span class="brand-title">MateCodeStudio</span>
+          <span class="brand-subtitle">Alex Mate</span>
         </a>
 
-        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
-          Menu
-        </button>
-
-        <nav class="nav" data-nav>
-          <a href="index.html" class="active">Home</a>
-          <a href="aboutme.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html" class="nav-cta">Contact</a>
+        <nav class="nav">
+          <a href="#story">Story</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            🌙
+          </button>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- ================= HERO (KEEP AS IS) ================= -->
-      <section class="hero">
+    <main id="top">
+      <section class="hero section">
         <div class="hero-bg"></div>
 
-        <div class="container hero-content">
-          <p class="hero-eyebrow">Independent Software Engineering Studio</p>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="badge">Building MateCodeStudio</p>
 
-          <h1 class="hero-title">
-            Software that remains<br />
-            understandable,<br />
-            reliable, and usable<br />
-            years after delivery.
-          </h1>
+            <h1>
+              I’m building MateCodeStudio through real projects, structured
+              learning, and practical software.
+            </h1>
 
-          <p class="hero-description">
-            Mate Code Studio designs and builds web applications, desktop
-            software, and automation tools with a focus on clarity,
-            maintainability, and long-term value. No shortcuts. No disposable
-            code.
-          </p>
+            <p class="hero-text">
+              I’m Alex Mate — a developer focused on building clean,
+              maintainable web applications and practical automation tools.
+            </p>
 
-          <div class="hero-actions">
-            <a href="projects.html" class="btn primary">View Work</a>
-            <a href="services.html" class="btn secondary">What We Build</a>
+            <p class="hero-text">
+              MateCodeStudio is the brand I’m building around that work. It
+              represents the direction I’m moving in: solving real problems with
+              structured software, improving through every project, and creating
+              a body of work that is both technically credible and
+              professionally presented.
+            </p>
+
+            <p class="hero-text">
+              Right now I’m deepening my backend skills, strengthening my
+              frontend presentation, and building portfolio projects that
+              reflect the kind of developer I’m becoming: thoughtful, reliable,
+              and focused on software that stays clear as it grows.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Explore my work</a>
+              <a href="#contact" class="btn btn-secondary">Work with me</a>
+              <a
+                href="/assets/Cv.Mate Alex.pdf"
+                class="btn btn-secondary"
+                download
+                >Download CV</a
+              >
+            </div>
+
+            <div class="hero-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Web Apps</span>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/alex-mate-2426813a2/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="bi bi-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <a
+                href="https://github.com/alex-mate"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="bi bi-github"></i>
+                <span>GitHub</span>
+              </a>
+
+              <a
+                href="https://www.fiverr.com/matecode_studio?public_mode=true"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Fiverr"
+              >
+                <i class="bi bi-briefcase-fill"></i>
+                <span>Fiverr</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal">
+            <div class="glass-card">
+              <p class="eyebrow">At the moment</p>
+              <h3>What I’m focused on now</h3>
+              <ul class="bullet-list">
+                <li>Building MateCodeStudio into a serious developer brand</li>
+                <li>Learning Node.js and Express through The Odin Project</li>
+                <li>Completing the full FreeCodeCamp curriculum</li>
+                <li>
+                  Improving my portfolio through stronger case studies and
+                  project presentation
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="story" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">My story</p>
+            <h2>
+              MateCodeStudio is where my learning, project work, and long-term
+              developer path come together.
+            </h2>
+            <p class="section-intro">
+              This portfolio is not here to simply display projects. It’s here
+              to show direction.
+            </p>
+            <p class="section-intro">
+              I’m building MateCodeStudio as the place where practical software,
+              continuous learning, and real-world problem solving meet. My goal
+              is to create work that feels professional, thoughtful, and
+              genuinely useful — not just technically functional.
+            </p>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-card reveal">
+              <h3>What MateCodeStudio means to me</h3>
+              <p>
+                MateCodeStudio is the identity I’m building around my software
+                work. It reflects the way I want to grow: through real projects,
+                strong fundamentals, and a clear focus on building things that
+                solve useful problems.
+              </p>
+            </div>
+
+            <div class="story-card reveal">
+              <h3>What I’m learning now</h3>
+              <p>
+                At the moment, I’m focused on JavaScript, Node.js and Express
+                through The Odin Project, while continuing through the full
+                FreeCodeCamp curriculum to strengthen both frontend and backend
+                confidence.
+              </p>
+            </div>
+
+            <div class="story-card reveal">
+              <h3>What I’ve completed</h3>
+              <p>
+                I completed Harvard’s CS50 to build stronger foundations in
+                programming, problem solving, and computer science thinking. It
+                gave me the structure and discipline to move beyond tutorials
+                and into real project work.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= ABOUT SNIPPET ================= -->
-      <section class="section">
+      <section id="certificates" class="section">
         <div class="container">
-          <div class="split">
-            <div>
-              <p class="eyebrow">About</p>
-              <h2 class="h2">
-                A small studio with an engineering-first mindset.
-              </h2>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Learning</p>
+            <h2>Learning backed by real progress</h2>
+            <p class="section-intro">
+              I want the learning side of my journey to be visible and
+              verifiable.
+            </p>
+            <p class="section-intro">
+              The courses below are part of how I built my foundations, and they
+              continue to shape the way I approach problem solving, software
+              structure, and long-term growth as a developer.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>CS50x — Harvard</h3>
+              <p>
+                CS50 gave me a strong introduction to computer science
+                fundamentals, programming logic, and problem solving. It helped
+                shift my mindset from “trying code” to learning how to think
+                like a developer.
+              </p>
+              <a
+                href="https://courses.edx.org/certificates/462cd806f9fe49c7b8d437a1f8d09835?_gl=1*19jjz40*_gcl_au*MTgyMDIxNzU2OS4xNzcyNzk2NzQx*_ga*MTk1NDAxMDQ5MS4xNzcyNzk2NzQx*_ga_D3KS4KMDT0*czE3NzI3OTY3NDEkbzEkZzEkdDE3NzI3OTY3NDgkajUzJGwwJGgw"
+                target="_blank"
+                rel="noreferrer"
+                class="text-link"
+              >
+                Verify certificate ↗
+              </a>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>FreeCodeCamp</h3>
+              <p>
+                I’m continuing through the full FreeCodeCamp curriculum to
+                reinforce frontend development, JavaScript understanding,
+                accessibility, and project-based confidence.
+              </p>
+              <a
+                href="https://www.freecodecamp.org/fcc-8a82393c-d31c-4433-ba45-1410617c1e04"
+                target="_blank"
+                rel="noreferrer"
+                class="text-link"
+              >
+                View profile ↗
+              </a>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>The Odin Project</h3>
+              <p>
+                The Odin Project is helping me deepen my JavaScript and backend
+                skills so I can build more complete applications with stronger
+                architecture and real-world structure.
+              </p>
+              <a
+                href="https://github.com/alex-mate"
+                target="_blank"
+                rel="noreferrer"
+                class="text-link"
+              >
+                View progress ↗
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Featured project</p>
+            <h2>
+              A project that represents the kind of software I want to keep
+              building
+            </h2>
+            <p class="section-intro">
+              This is the strongest project in my portfolio so far because it
+              reflects the kind of work I care most about: practical software
+              built around a clear, real-world need.
+            </p>
+          </div>
+
+          <div class="featured-project reveal">
+            <div class="project-carousel" data-carousel="budgeting">
+              <div class="carousel-track">
+                <img
+                  src="images/budgetingapp/home.png"
+                  alt="Budgeting App dashboard screenshot"
+                  class="lightbox-img carousel-slide active"
+                />
+                <img
+                  src="images/budgetingapp/profile.png"
+                  alt="Budgeting App accounts screenshot"
+                  class="lightbox-img carousel-slide"
+                />
+                <img
+                  src="images/budgetingapp/transactions.png"
+                  alt="Budgeting App transactions screenshot"
+                  class="lightbox-img carousel-slide"
+                />
+              </div>
+
+              <div class="carousel-controls">
+                <button class="carousel-btn prev" type="button">←</button>
+                <div class="carousel-dots"></div>
+                <button class="carousel-btn next" type="button">→</button>
+              </div>
             </div>
 
-            <div class="body-lg">
+            <div class="featured-copy">
+              <h3>Budgeting App</h3>
               <p>
-                I’m <strong>Alex</strong>, founder of
-                <strong>Mate Code Studio</strong>. I build software the way I’d
-                want to inherit it: clear structure, predictable behavior, and a
-                codebase that stays readable as it grows.
+                Many people struggle to clearly understand their finances when
+                transactions are spread across multiple accounts and categories.
+                Spreadsheets can help at first, but over time they often become
+                harder to manage and less useful as a decision-making tool.
               </p>
-              <p class="muted">
-                If you want systems that are calm to use and calm to maintain,
-                you’re in the right place.
+              <p>
+                I built this Flask application to make personal finance tracking
+                more structured, more readable, and more practical. The goal was
+                not just to store transactions, but to give users a clearer view
+                of their financial activity in one place.
               </p>
-
-              <div class="inline-actions">
-                <a class="text-link" href="aboutme.html"
-                  >Read more about me →</a
+              <p>
+                This project helped me grow not only in Flask and SQLite, but
+                also in the way I think about software design, user problems,
+                and how to build something that can evolve over time instead of
+                staying as a one-off prototype.
+              </p>
+              <ul class="bullet-list">
+                <li>Account management</li>
+                <li>Income and expense tracking</li>
+                <li>Transaction history</li>
+                <li>Spending overview dashboard</li>
+              </ul>
+              <p class="mono-line">Python · Flask · SQLite · JavaScript</p>
+              <div class="hero-actions">
+                <a href="budgeting-app.html" class="btn btn-primary"
+                  >Read case study</a
+                >
+                <a
+                  href="https://github.com/alex-mate/Budgeting-app"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-secondary"
+                  >View code</a
                 >
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ================= WHAT WE BUILD (DETAILED) ================= -->
-      <section class="section section-soft">
-        <div class="container">
-          <p class="eyebrow">Capabilities</p>
-          <h2 class="h2">What we build</h2>
-          <p class="subhead">
-            Practical systems for real usage — web, desktop, automation, and
-            strong data foundations.
-          </p>
+          <div class="section-heading reveal" style="margin-top: 64px">
+            <p class="eyebrow">Other projects</p>
+            <h2>Other projects that sharpened my skills</h2>
+            <p class="section-intro">
+              Alongside larger projects, I build smaller tools and experiments
+              to strengthen my development process, improve technical fluency,
+              and explore how different kinds of software should be structured
+              and presented.
+            </p>
+          </div>
 
-          <div class="cap-grid">
-            <article class="cap-item">
-              <h3>Python Applications</h3>
-              <p class="muted">
-                Internal tools, client utilities, and business apps built for
-                speed, stability, and clean UX. Desktop builds available
-                (PySide6) when you need a true app experience.
+          <div class="project-gallery">
+            <article class="project-card reveal">
+              <div class="project-thumb-wrap">
+                <img
+                  src="images/project-automation.jpg"
+                  alt="Automation project preview"
+                  class="project-thumb lightbox-img"
+                />
+              </div>
+              <h3>Automation Tool</h3>
+              <p>
+                A Python-based utility focused on reducing repetitive work and
+                turning manual steps into a cleaner, repeatable workflow.
               </p>
-              <ul class="list">
-                <li>Desktop apps (PySide6)</li>
-                <li>Automation scripts & pipelines</li>
-                <li>Data processing & reporting</li>
-              </ul>
             </article>
 
-            <article class="cap-item">
-              <h3>Database Structures</h3>
-              <p class="muted">
-                Clean relational schemas that make reporting easier and future
-                features safer. Designed around real workflows, not guesswork.
+            <article class="project-card reveal">
+              <div class="project-thumb-wrap">
+                <img
+                  src="images/project-landing.jpg"
+                  alt="Landing page project preview"
+                  class="project-thumb lightbox-img"
+                />
+              </div>
+              <h3>Landing Page Build</h3>
+              <p>
+                A responsive frontend project built to improve layout thinking,
+                hierarchy, and the ability to present software and ideas more
+                clearly.
               </p>
-              <ul class="list">
-                <li>SQLite / relational schema design</li>
-                <li>Data integrity & validation patterns</li>
-                <li>Analytics-ready tables</li>
-              </ul>
             </article>
 
-            <article class="cap-item">
-              <h3>Web Platforms</h3>
-              <p class="muted">
-                Maintainable web apps with clear routes, templates, and a logic
-                layer that stays organized. Built for long-term iteration — not
-                a one-off demo.
+            <article class="project-card reveal">
+              <div class="project-thumb-wrap">
+                <img
+                  src="images/project-portfolio.jpg"
+                  alt="Portfolio website preview"
+                  class="project-thumb lightbox-img"
+                />
+              </div>
+              <h3>Portfolio Website</h3>
+              <p>
+                This portfolio is part of the work too. It is designed to
+                communicate not just what I’ve built, but how I think, what I’m
+                learning, and where I’m going.
               </p>
-              <ul class="list">
-                <li>Flask apps (auth, dashboards, CRUD)</li>
-                <li>Clean UI systems & responsive layouts</li>
-                <li>Export / reporting (PDF/CSV)</li>
-              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ================= TECH STACK ================= -->
-      <section class="section">
+      <section id="services" class="section">
         <div class="container">
-          <p class="eyebrow">Tech</p>
-          <h2 class="h2">Tools & technologies</h2>
-          <p class="subhead">
-            Focused stack — chosen for reliability, maintainability, and
-            shipping quickly without chaos.
-          </p>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Services</p>
+            <h2>How I can help</h2>
+            <p class="section-intro">
+              I’m building MateCodeStudio around practical services that solve
+              real technical problems.
+            </p>
+            <p class="section-intro">
+              Whether that means fixing an issue, building a clean interface, or
+              creating a useful tool, my focus is always on delivering work that
+              is clear, reliable, and easier to maintain.
+            </p>
+          </div>
 
-          <div class="stack">
-            <div class="stack-group">
-              <p class="stack-title">Backend</p>
-              <div class="chips">
-                <span class="chip">Python</span>
-                <span class="chip">Flask</span>
-                <span class="chip">Jinja</span>
-                <span class="chip">SQL</span>
-                <span class="chip">SQLite</span>
-              </div>
-            </div>
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>Python debugging</h3>
+              <p>
+                Fixing broken scripts, backend issues, and Flask-related
+                problems in a way that not only resolves the error, but leaves
+                the code clearer afterward.
+              </p>
+            </article>
 
-            <div class="stack-group">
-              <p class="stack-title">Desktop</p>
-              <div class="chips">
-                <span class="chip">PySide6</span>
-                <span class="chip">Local DB</span>
-                <span class="chip">Packaging</span>
-              </div>
-            </div>
+            <article class="info-card reveal">
+              <h3>Flask web apps</h3>
+              <p>
+                Building structured Flask applications with clean routing,
+                database support, and a practical focus on usability and
+                maintainability.
+              </p>
+            </article>
 
-            <div class="stack-group">
-              <p class="stack-title">Frontend</p>
-              <div class="chips">
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">Responsive UI</span>
-                <span class="chip">Design Systems</span>
-              </div>
-            </div>
+            <article class="info-card reveal">
+              <h3>Landing pages</h3>
+              <p>
+                Creating responsive pages with strong layout, modern
+                presentation, and clear visual hierarchy for businesses,
+                products, and personal brands.
+              </p>
+            </article>
 
-            <div class="stack-group">
-              <p class="stack-title">Delivery</p>
-              <div class="chips">
-                <span class="chip">Git</span>
-                <span class="chip">GitHub</span>
-                <span class="chip">Documentation</span>
-                <span class="chip">Iterative releases</span>
-              </div>
-            </div>
+            <article class="info-card reveal">
+              <h3>Automation tools</h3>
+              <p>
+                Building scripts and small tools that reduce repetitive work and
+                make simple workflows faster, cleaner, and more reliable.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- ================= PROCESS (MORE DETAILED) ================= -->
-      <section class="section section-contrast">
+      <section id="skills" class="section">
         <div class="container">
-          <p class="eyebrow">Process</p>
-          <h2 class="h2">How we work</h2>
-          <p class="subhead">
-            A structured workflow that keeps delivery predictable and the
-            codebase clean.
-          </p>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Technologies I use right now</h2>
+            <p class="section-intro">I want this section to feel honest.</p>
+            <p class="section-intro">
+              These ratings reflect where I am today, not where I want to
+              pretend to be. My focus is on real progress — building stronger
+              skills through practical work, consistent learning, and repeated
+              application.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h3>Python</h3>
+              <div class="stars">★★★☆☆</div>
+              <p>
+                Used for backend logic, Flask applications, scripting,
+                debugging, and automation.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>HTML</h3>
+              <div class="stars">★★★★☆</div>
+              <p>
+                Used to build semantic, accessible structure for modern web
+                interfaces.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>CSS</h3>
+              <div class="stars">★★★★☆</div>
+              <p>
+                Used for responsive layouts, UI styling, and stronger visual
+                presentation.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>JavaScript</h3>
+              <div class="stars">★★★☆☆</div>
+              <p>
+                Used for interactive behavior, front-end logic, and as the
+                foundation for deeper backend work with Node.js.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>SQLite</h3>
+              <div class="stars">★★★★☆</div>
+              <p>
+                Used for storing structured relational data in smaller
+                applications and practical project builds.
+              </p>
+            </article>
+
+            <article class="skill-card reveal">
+              <h3>Node.js</h3>
+              <div class="stars">★★★☆☆</div>
+              <p>
+                Current backend learning focus as I move deeper into
+                JavaScript-based server development with Express.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="credibility" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why work with me</p>
+            <h2>Why clients should work with me</h2>
+            <p class="section-intro">
+              I want clients and employers to feel that I care about more than
+              simply making something work once.
+            </p>
+            <p class="section-intro">
+              I care about understanding the actual problem, communicating
+              clearly, and building software in a way that stays useful,
+              readable, and easier to improve over time.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>Clean code mindset</h3>
+              <p>
+                I care about readability and maintainability, not just fast
+                fixes that create bigger problems later.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>Real projects over tutorials</h3>
+              <p>
+                I focus on practical software that solves real problems instead
+                of relying on empty portfolio filler.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>Continuous improvement</h3>
+              <p>
+                I’m actively improving through structured learning, real
+                projects, and steady iteration — which means the quality of my
+                work keeps moving forward.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>Clear communication</h3>
+              <p>
+                Before building anything, I want to understand the problem
+                properly so the solution is actually useful, not just
+                technically possible.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Process</p>
+            <h2>How I work</h2>
+            <p class="section-intro">
+              Even while growing as a developer, I care a lot about process.
+            </p>
+            <p class="section-intro">
+              Good process reduces confusion, improves communication, and keeps
+              projects easier to maintain. I try to approach work in a way that
+              keeps both the code and the thinking behind it structured.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>1. Understand</h3>
+              <p>
+                I start by understanding the real problem, not just the visible
+                symptoms.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>2. Structure</h3>
+              <p>
+                I think about what kind of solution fits the project best
+                instead of overcomplicating it.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>3. Build</h3>
+              <p>
+                I focus on writing code that works, but also remains readable
+                and maintainable afterward.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>4. Improve</h3>
+              <p>
+                I look at how the project can grow over time, not just how to
+                finish the first version.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Journey</p>
+            <h2>Developer journey</h2>
+            <p class="section-intro">
+              I want this portfolio to show progress, not perfection.
+            </p>
+            <p class="section-intro">
+              This is the path I’m actively building through MateCodeStudio —
+              from strong foundations, into stronger projects, and toward real
+              software work that is both practical and professional.
+            </p>
+          </div>
 
           <div class="timeline">
-            <div class="step">
-              <div class="step-num">01</div>
-              <div class="step-body">
-                <h3>Discovery & scope</h3>
-                <p class="muted">
-                  We clarify objectives, users, constraints, and success
-                  criteria. Then we define scope and milestones.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">Requirements</span>
-                  <span class="tag">Milestones</span>
-                  <span class="tag">Scope boundaries</span>
-                </div>
-              </div>
+            <div class="timeline-item reveal">
+              <h3>2025</h3>
+              <p>
+                I started learning programming and completed Harvard’s CS50,
+                which helped me build stronger foundations in problem solving,
+                software logic, and computer science thinking.
+              </p>
             </div>
 
-            <div class="step">
-              <div class="step-num">02</div>
-              <div class="step-body">
-                <h3>Architecture & data design</h3>
-                <p class="muted">
-                  We design the system structure early: routes/modules, database
-                  schema, and key flows. This prevents “patchwork” builds later.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">System plan</span>
-                  <span class="tag">DB schema</span>
-                  <span class="tag">Core flows</span>
-                </div>
-              </div>
+            <div class="timeline-item reveal">
+              <h3>2026</h3>
+              <p>
+                I began shaping MateCodeStudio into a real developer brand and
+                focused more seriously on project-building, freelance readiness,
+                and creating work that feels more professional and complete.
+              </p>
             </div>
 
-            <div class="step">
-              <div class="step-num">03</div>
-              <div class="step-body">
-                <h3>Build & iterate</h3>
-                <p class="muted">
-                  A clean first version ships quickly. Feedback loops refine UX,
-                  performance, and edge cases.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">Working build</span>
-                  <span class="tag">Refinements</span>
-                  <span class="tag">QA fixes</span>
-                </div>
-              </div>
+            <div class="timeline-item reveal">
+              <h3>Present</h3>
+              <p>
+                I’m continuing through The Odin Project and FreeCodeCamp while
+                improving my portfolio, building stronger case studies, and
+                preparing for both freelance opportunities and software roles.
+              </p>
             </div>
-
-            <div class="step">
-              <div class="step-num">04</div>
-              <div class="step-body">
-                <h3>Handover & support</h3>
-                <p class="muted">
-                  Clear handover with documentation, setup notes, and support
-                  options. You’re not left with a mystery project.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">Docs</span>
-                  <span class="tag">Deployment notes</span>
-                  <span class="tag">Support</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn primary" href="services.html">See Services</a>
-            <a class="btn secondary" href="contact.html">Contact Options</a>
           </div>
         </div>
       </section>
 
-      <!-- ================= RECENT PROJECTS (SHOWCASE 3) ================= -->
-      <section class="section">
+      <section id="contact" class="section cta-section">
         <div class="container">
-          <p class="eyebrow">Recent work</p>
-          <h2 class="h2">Projects</h2>
-          <p class="subhead">
-            A small selection — built with structure, real workflows, and
-            long-term maintainability in mind.
-          </p>
+          <div class="cta-card reveal">
+            <p class="eyebrow">Contact Me</p>
+            <h2>Let’s build something useful together.</h2>
+            <p>
+              If you need help with a project, a bug, a landing page, or a tool
+              that should be simpler than it is right now, send me a message.
+            </p>
+            <p>
+              I’m building MateCodeStudio through real work, real learning, and
+              real conversations — and I’d like this portfolio to be the start
+              of those conversations.
+            </p>
 
-          <div class="projects">
-            <article class="project">
-              <div class="project-media">
-                <!-- Optional: replace with real thumbnail -->
-                <div class="thumb"></div>
-              </div>
-              <div class="project-content">
-                <h3>Budgeting App</h3>
-                <p class="muted">
-                  Transaction tracking + analytics with a clean workflow and
-                  scalable structure.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">Python</span>
-                  <span class="tag">Flask</span>
-                  <span class="tag">SQLite</span>
-                </div>
-                <a class="text-link" href="projects.html">View case study →</a>
-              </div>
-            </article>
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xqeyzwae"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New portfolio inquiry from matecodestudio.com"
+              />
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Tell me a little about your project..."
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Send message
+              </button>
+            </form>
 
-            <article class="project">
-              <div class="project-media">
-                <div class="thumb"></div>
-              </div>
-              <div class="project-content">
-                <h3>Automation Toolkit</h3>
-                <p class="muted">
-                  Scripts that reduce manual work: file workflows, data cleanup,
-                  and reporting.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">Python</span>
-                  <span class="tag">Automation</span>
-                  <span class="tag">Reporting</span>
-                </div>
-                <a class="text-link" href="projects.html">View case study →</a>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project-media">
-                <div class="thumb"></div>
-              </div>
-              <div class="project-content">
-                <h3>Desktop App Prototype</h3>
-                <p class="muted">
-                  A true desktop app experience with clean navigation and local
-                  database storage.
-                </p>
-                <div class="deliverables">
-                  <span class="tag">PySide6</span>
-                  <span class="tag">SQLite</span>
-                  <span class="tag">UI</span>
-                </div>
-                <a class="text-link" href="projects.html">View case study →</a>
-              </div>
-            </article>
+            <p class="form-note">
+              Your message goes directly to my email through the contact form.
+            </p>
           </div>
-
-          <div class="cta-row">
-            <a class="btn primary" href="projects.html">Explore all projects</a>
-            <a class="btn secondary" href="contact.html">Work with me</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= FINAL CTA ================= -->
-      <section class="section section-soft">
-        <div class="container final">
-          <h2 class="h2">Let’s build something solid.</h2>
-          <p class="subhead">
-            If you value clarity, structure, and long-term reliability — choose
-            how you want to contact me.
-          </p>
-          <a class="btn primary" href="contact.html">Contact Options</a>
         </div>
       </section>
     </main>
 
-    <!-- ================= FOOTER (PAGES + LINKS) ================= -->
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="footer-brand">
-            <span class="brand-mark" aria-hidden="true">M</span>
-            <div>
-              <p class="footer-title">Mate Code Studio</p>
-              <p class="footer-sub">Independent Software Engineering Studio</p>
-            </div>
-          </div>
-          <p class="footer-text">
-            Building clean, maintainable software — web apps, desktop apps,
-            automation, and reliable data structures.
-          </p>
+    <footer class="site-footer">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          flex-wrap: wrap;
+        "
+      >
+        <p>© 2026 MateCodeStudio · Alex Mate</p>
+
+        <div class="social-links" style="margin-top: 0">
+          <a
+            href="http://linkedin.com/in/alex-mate-2426813a2/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="https://github.com/alex-mate"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://www.fiverr.com/matecode_studio?public_mode=true"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Fiverr"
+          >
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Fiverr</span>
+          </a>
         </div>
-
-        <div class="footer-links">
-          <div>
-            <p class="footer-head">Pages</p>
-            <a href="index.html">Home</a>
-            <a href="aboutme.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-          </div>
-
-          <div>
-            <p class="footer-head">Links</p>
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="#" target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <p>© <span id="year"></span> Mate Code Studio — Built by Alex.</p>
-        <p class="muted">Charcoal & Copper System</p>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+    <div id="lightbox" class="lightbox">
+      <button
+        id="lightboxClose"
+        class="lightbox-close"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+      <img id="lightboxImg" src="" alt="Expanded project image" />
+    </div>
 
-      // Mobile menu
-      const btn = document.querySelector(".menu-btn");
-      const nav = document.querySelector("[data-nav]");
-      btn.addEventListener("click", () => {
-        const open = nav.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    </script>
+    <script src="/static/script.js"></script>
   </body>
 </html>
