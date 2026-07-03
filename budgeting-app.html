@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budgeting App Case Study | MateCodeStudio</title>
+    <title>Budgeting App Case Study | Mate Code Studio</title>
     <meta
       name="description"
-      content="A MateCodeStudio case study showing how a Flask budgeting app was designed and built to help users track income, expenses, budgets, accounts, and transactions in one place."
+      content="A Mate Code Studio case study showing how a Flask dashboard application was built to organise accounts, budgets, transactions, and financial records."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="static/styles.css" />
+
   </head>
 
   <body>
@@ -24,27 +25,17 @@
 
     <header class="site-header" id="siteHeader">
       <div class="container nav-wrap">
-        <a
-          href="index.html"
-          class="brand"
-          aria-label="Back to MateCodeStudio homepage"
-        >
-          <span class="brand-title">MateCodeStudio</span>
-          <span class="brand-subtitle">Case Study · Flask Web App</span>
+        <a href="index.html" class="brand" aria-label="Back to Mate Code Studio homepage">
+          <span class="brand-title">Mate Code Studio</span>
+          <span class="brand-subtitle">Case Study · Dashboard & Web App</span>
         </a>
 
         <nav class="nav" aria-label="Case study navigation">
-          <a href="index.html#services">Services</a>
-          <a href="index.html#projects">Work</a>
+          <a href="services.html">Services</a>
+          <a href="index.html#solutions">Solutions</a>
+          <a href="index.html#case-studies">Case Studies</a>
+          <a href="index.html#maintenance">Maintenance</a>
           <a href="index.html#contact">Contact</a>
-          <button
-            id="themeToggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-            type="button"
-          >
-            🌙
-          </button>
         </nav>
       </div>
     </header>
@@ -53,38 +44,52 @@
       <section class="section case-hero">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Case study</p>
+            <p class="eyebrow">Dashboard case study</p>
             <h1>Budgeting App</h1>
             <p class="section-intro">
-              A Flask-based personal finance web application designed to help
-              users manage income, expenses, budgets, accounts, and transactions
-              from one structured dashboard.
+              A Flask-based dashboard application built to organise accounts, budgets, transactions, and financial records in one structured system.
             </p>
             <p class="section-intro">
-              This project shows the kind of software I enjoy building:
-              practical, data-driven tools that turn scattered information into
-              something easier to understand, manage, and improve over time.
+              Although this is a personal finance project, the same pattern applies directly to client work: replacing scattered spreadsheets and manual tracking with a clearer database-backed tool.
             </p>
-            <p class="mono-line">
-              Python · Flask · SQLite · HTML · CSS · JavaScript
-            </p>
+            <p class="mono-line">Python · Flask · SQLite · Dashboard UI · CRUD workflows · Data organisation</p>
 
             <div class="hero-actions case-actions reveal">
-              <a
-                href="https://github.com/alex-mate/Budgeting-app"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View code
-              </a>
-              <a href="index.html#contact" class="btn btn-secondary">
-                Discuss a similar project
-              </a>
-              <a href="index.html" class="btn btn-secondary"
-                >Back to portfolio</a
-              >
+              <a href="#screens" class="btn btn-primary">View screens</a>
+              <a href="https://github.com/alex-mate/Budgeting-app" class="btn btn-secondary" target="_blank" rel="noreferrer">View code</a>
+              <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Project snapshot</p>
+            <h2>A dashboard-style app that turns messy financial tracking into a structured workflow.</h2>
+            <p class="section-intro">
+              This case study shows how Mate Code Studio approaches internal tools: understand the workflow, structure the data, create practical user flows, and make information easier to review.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>Use case</h3>
+              <p>Personal finance tracking, but relevant to business dashboards, admin tools, and internal record systems.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Problem</h3>
+              <p>Financial data becomes hard to manage when accounts, budgets, notes, and transactions are spread across different places.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Solution</h3>
+              <p>A Flask application with authentication, budgets, transactions, filters, editable records, and dashboard views.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Business relevance</h3>
+              <p>The same build pattern can support client tools for bookings, leads, finances, inventory, or operational records.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -92,160 +97,37 @@
       <section class="section">
         <div class="container case-layout">
           <article class="case-block reveal">
-            <p class="eyebrow">The challenge</p>
-            <h2>
-              Personal finance data becomes difficult to understand when it is
-              spread across too many places.
-            </h2>
+            <p class="eyebrow">The problem</p>
+            <h2>Spreadsheets and notes work at first, but they become harder to manage as the workflow grows.</h2>
             <p>
-              Many people start tracking money with spreadsheets or notes. That
-              works at the beginning, but it often becomes harder to maintain as
-              the user adds more accounts, more categories, more transactions,
-              and more months of financial history.
+              Personal finance data can quickly become scattered across bank apps, spreadsheets, manual notes, and monthly calculations. That makes it harder to see what happened, where money went, and whether spending matched the planned budget.
             </p>
             <p>
-              The core problem was not only storing financial records. The real
-              challenge was creating a clearer way for users to see what
-              happened, where their money went, and how their budget compared
-              with their actual activity.
+              This mirrors a common small-business problem: the work starts simple, then the amount of data grows until a spreadsheet is no longer enough.
             </p>
+          </article>
+
+          <article class="case-block reveal">
+            <p class="eyebrow">The goal</p>
+            <h2>Build a working dashboard foundation with real app structure, not just static screens.</h2>
+            <ul class="bullet-list">
+              <li>Create user accounts and user-specific data</li>
+              <li>Store accounts, budgets, and transactions in SQLite</li>
+              <li>Support add, edit, delete, and filter workflows</li>
+              <li>Make financial activity easier to scan through dashboard views</li>
+              <li>Separate budget setup from transaction tracking for clearer use</li>
+              <li>Keep the first version practical and expandable</li>
+            </ul>
           </article>
 
           <article class="case-block reveal">
             <p class="eyebrow">The solution</p>
-            <h2>
-              A structured web app that brings accounts, budgets, and
-              transactions into one workflow.
-            </h2>
+            <h2>A database-backed Flask app with connected user flows and editable financial records.</h2>
             <p>
-              I built a Flask application that allows users to register, manage
-              their profile, set up budgets, add income and expense
-              transactions, and review their financial activity from a central
-              interface.
+              I built the application with Flask for routing, templates, form handling, user sessions, and database interactions. SQLite stores the structured records, while HTML, CSS, and JavaScript support the interface and user experience.
             </p>
             <p>
-              The goal was to create a practical foundation for a real budgeting
-              product: clear navigation, organized database-backed data,
-              editable records, and dashboard-style views that make the app
-              useful beyond a simple form-and-table project.
-            </p>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">Project goals</p>
-            <h2>What I wanted this app to prove</h2>
-            <ul class="bullet-list">
-              <li>
-                Build a complete Flask application with multiple user flows
-              </li>
-              <li>Use SQLite to store structured financial data</li>
-              <li>
-                Create authentication and user-specific account management
-              </li>
-              <li>
-                Make transaction tracking easier to search, edit, and understand
-              </li>
-              <li>
-                Present financial information in a cleaner dashboard-style
-                layout
-              </li>
-              <li>
-                Show that I can turn a practical idea into a working web app
-              </li>
-            </ul>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">Core features</p>
-            <h2>What the app includes</h2>
-            <ul class="bullet-list">
-              <li>User registration and login</li>
-              <li>Profile settings and account management</li>
-              <li>Budget setup by category and month</li>
-              <li>Income, expense, and savings-style transaction tracking</li>
-              <li>Transaction history with filtering and editable records</li>
-              <li>
-                Dashboard views for financial activity and yearly overview
-              </li>
-              <li>SQLite database structure for storing user data</li>
-              <li>
-                Responsive interface built with HTML, CSS, Bootstrap-style
-                layout, and JavaScript
-              </li>
-            </ul>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">Technical approach</p>
-            <h2>How I approached the build</h2>
-            <p>
-              I used Python and Flask for the backend because the project needed
-              clear routing, form handling, user sessions, database queries, and
-              multiple connected pages. SQLite was a good fit because the app
-              needed relational data without unnecessary deployment complexity.
-            </p>
-            <p>
-              The frontend was built with HTML, CSS, and JavaScript to create
-              the user interface, improve interactivity, and present the app as
-              a more polished product instead of a basic backend exercise.
-            </p>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">Development decisions</p>
-            <h2>Important decisions behind the project</h2>
-            <ul class="bullet-list">
-              <li>
-                Keep the first version focused on personal finance essentials
-              </li>
-              <li>
-                Use simple, readable routes instead of over-engineering the app
-              </li>
-              <li>
-                Prioritize editable data because users need to correct mistakes
-              </li>
-              <li>
-                Separate budget setup from transaction tracking for clearer user
-                flow
-              </li>
-              <li>
-                Design the project so future features could be added later
-              </li>
-            </ul>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">What I learned</p>
-            <h2>
-              This project improved the way I think about full web applications.
-            </h2>
-            <p>
-              The biggest lesson was that a useful app is not only about writing
-              code that works. It also needs clear structure, user-friendly
-              flows, sensible database design, and pages that help the user
-              understand what to do next.
-            </p>
-            <p>
-              Building this app helped me improve in Flask routing, SQL queries,
-              template structure, authentication flow, form handling, frontend
-              layout, and the overall process of turning a rough idea into a
-              working product.
-            </p>
-          </article>
-
-          <article class="case-block reveal">
-            <p class="eyebrow">Business value</p>
-            <h2>Why this project matters for client work</h2>
-            <p>
-              This app is important because the same thinking applies to real
-              client projects: businesses often have scattered data, manual
-              processes, messy spreadsheets, and workflows that need to become
-              easier to manage.
-            </p>
-            <p>
-              A budgeting app is one example, but the pattern is broader: take a
-              real process, organize the data, create a clear interface, and
-              build a tool that saves time or makes decisions easier.
+              The result is a working dashboard-style app where users can manage their profile, set budgets, add transactions, review history, and view financial activity from one place.
             </p>
           </article>
         </div>
@@ -254,71 +136,59 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Screens</p>
-            <h2>Project screenshots</h2>
+            <p class="eyebrow">Business value</p>
+            <h2>Why this project matters for small business software.</h2>
             <p class="section-intro">
-              These screens show the main user flows: authentication, dashboard,
-              profile settings, transaction entry, budget setup, and financial
-              overview pages.
+              The important part is not “budgeting” alone. The important part is the repeatable pattern: take scattered information, organise it, and turn it into a usable system.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card reveal">
+              <h3>Structured records</h3>
+              <p>Shows how messy information can be stored in a cleaner database-backed format.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Editable workflows</h3>
+              <p>Users can correct, update, and manage records instead of working around static files.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Dashboard thinking</h3>
+              <p>Important information is pulled into views that are easier to scan and act on.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Client relevance</h3>
+              <p>The same structure can support small CRMs, booking tools, finance trackers, admin panels, and internal dashboards.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="screens">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Screens</p>
+            <h2>Dashboard walkthrough</h2>
+            <p class="section-intro">
+              These screens show the main application flows: authentication, dashboard, profile settings, transaction entry, budget setup, and financial overview.
             </p>
           </div>
 
           <div class="case-gallery reveal">
-            <img
-              src="images/budgetingapp/login.png"
-              alt="Budgeting App login page"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/register.png"
-              alt="Budgeting App registration page"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/home.png"
-              alt="Budgeting App dashboard homepage"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/profile.png"
-              alt="Budgeting App profile and account settings page"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/add expense.png"
-              alt="Budgeting App add transaction page"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/transactions.png"
-              alt="Budgeting App transaction history page"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/yearly overview.png"
-              alt="Budgeting App yearly overview dashboard"
-              class="lightbox-img"
-            />
-            <img
-              src="images/budgetingapp/budget set up.png"
-              alt="Budgeting App budget setup page"
-              class="lightbox-img"
-            />
+            <figure class="case-shot"><img src="images/budgetingapp/login.png" alt="Budgeting App login page" class="lightbox-img" /><figcaption>Login — the app starts with protected user access.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/register.png" alt="Budgeting App registration page" class="lightbox-img" /><figcaption>Registration — user-specific records are created from the start.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/home.png" alt="Budgeting App dashboard homepage" class="lightbox-img" /><figcaption>Dashboard — key financial information is centralised in one view.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/profile.png" alt="Budgeting App profile and account settings page" class="lightbox-img" /><figcaption>Profile and account settings — supports basic account management.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/add expense.png" alt="Budgeting App add transaction page" class="lightbox-img" /><figcaption>Transaction entry — structured forms help keep records consistent.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/transactions.png" alt="Budgeting App transaction history page" class="lightbox-img" /><figcaption>Transaction history — records can be reviewed, filtered, edited, and managed.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/yearly overview.png" alt="Budgeting App yearly overview dashboard" class="lightbox-img" /><figcaption>Yearly overview — turns stored data into a clearer long-term view.</figcaption></figure>
+            <figure class="case-shot"><img src="images/budgetingapp/budget set up.png" alt="Budgeting App budget setup page" class="lightbox-img" /><figcaption>Budget setup — separates planning from daily transaction tracking.</figcaption></figure>
           </div>
 
           <div class="hero-actions case-actions reveal">
-            <a
-              href="https://github.com/alex-mate/Budgeting-app"
-              class="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View code
-            </a>
-            <a href="index.html#contact" class="btn btn-secondary">
-              Discuss a similar project
-            </a>
-            <a href="index.html" class="btn btn-secondary">Back to portfolio</a>
+            <a href="https://github.com/alex-mate/Budgeting-app" class="btn btn-primary" target="_blank" rel="noreferrer">View code</a>
+            <a href="index.html#contact" class="btn btn-secondary">Discuss a dashboard project</a>
+            <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
           </div>
         </div>
       </section>
@@ -327,29 +197,13 @@
         <div class="container">
           <div class="cta-card reveal">
             <p class="eyebrow">Need something similar?</p>
-            <h2>
-              I can help build practical dashboards, Flask apps, and automation
-              tools.
-            </h2>
+            <h2>Have a spreadsheet, admin process, or internal workflow that needs a proper dashboard?</h2>
             <p>
-              If you have a spreadsheet, workflow, internal process, or small
-              app idea that needs to become easier to use, send me a message. I
-              can help you shape the idea, plan the build, and turn it into a
-              working solution.
+              I can help turn scattered records, manual tracking, or repeated admin work into a simple Flask dashboard, internal tool, or automation workflow.
             </p>
-
-            <div class="hero-actions">
-              <a href="index.html#contact" class="btn btn-primary">
-                Start a project conversation
-              </a>
-              <a
-                href="https://www.fiverr.com/matecode_studio?public_mode=true"
-                target="_blank"
-                rel="noreferrer"
-                class="btn btn-secondary"
-              >
-                Hire me on Fiverr
-              </a>
+            <div class="hero-actions hero-actions-center">
+              <a href="index.html#contact" class="btn btn-primary">Discuss a dashboard project</a>
+              <a href="services.html" class="btn btn-secondary">Explore services</a>
             </div>
           </div>
         </div>
@@ -357,8 +211,8 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 MateCodeStudio · Alex Mate</p>
+      <div class="container footer-inner">
+        <p>© 2026 Mate Code Studio · Alex Mate</p>
       </div>
     </footer>
 
@@ -371,6 +225,7 @@
       >
         ×
       </button>
+
       <img id="lightboxImg" src="" alt="Expanded project image" />
     </div>
 
