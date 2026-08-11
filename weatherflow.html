@@ -3,228 +3,969 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeatherFlow Case Study | Mate Code Studio</title>
+
+    <title>WeatherFlow — Dashboard UI Case Study | Mate Code Studio</title>
+
     <meta
       name="description"
-      content="A Mate Code Studio case study showing how WeatherFlow was designed as a dashboard-style weather interface focused on clearer data presentation and faster scanning."
+      content="A Mate Code Studio interface case study exploring how WeatherFlow turns dense forecast data into a clear, easy-to-scan dashboard."
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://matecodestudio.com/weatherflow.html" />
+    <meta name="theme-color" content="#0f1113" />
 
-    <link rel="stylesheet" href="static/styles.css" />
+    <meta property="og:site_name" content="Mate Code Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="WeatherFlow — Dashboard UI Case Study" />
+    <meta property="og:description" content="A Mate Code Studio interface case study exploring how WeatherFlow turns dense forecast data into a clear, easy-to-scan dashboard." />
+    <meta property="og:url" content="https://matecodestudio.com/weatherflow.html" />
+    <meta property="og:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WeatherFlow — Dashboard UI Case Study" />
+    <meta name="twitter:description" content="A Mate Code Studio interface case study exploring how WeatherFlow turns dense forecast data into a clear, easy-to-scan dashboard." />
+    <meta name="twitter:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta name="twitter:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
+
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  media="print"
+  onload="this.media='all'"
+>
+
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  >
+</noscript>
+
+    <link rel="icon" href="/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="/static/case-study-launch.css?v=14" />
+    <link rel="stylesheet" href="/static/weatherflow-case.css?v=14" />
   </head>
 
-  <body>
-    <div class="cursor-glow"></div>
+  <body class="case-launch-page">
 
-    <header class="site-header" id="siteHeader">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="Back to Mate Code Studio homepage">
-          <span class="brand-title">Mate Code Studio</span>
-          <span class="brand-subtitle">Case Study · Dashboard Interface</span>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="case-header">
+      <div class="container case-nav">
+
+        <a
+          href="index.html"
+          class="case-brand"
+          aria-label="Mate Code Studio homepage"
+        >
+          <span class="case-brand-mark">
+            MCS
+          </span>
+
+          <span>
+            <strong>
+              Mate Code Studio
+            </strong>
+
+            <small>
+              Small Business Software & Web Studio
+            </small>
+          </span>
         </a>
 
-        <nav class="nav" aria-label="Case study navigation">
-          <a href="services.html">Services</a>
-          <a href="index.html#solutions">Solutions</a>
-          <a href="index.html#case-studies">Case Studies</a>
-          <a href="index.html#maintenance">Maintenance</a>
-          <a href="index.html#contact">Contact</a>
+        <nav
+          class="case-nav-links"
+          aria-label="Main navigation"
+        >
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="index.html#work">
+            Work
+          </a>
+
+          <a href="index.html#maintenance">
+            Maintenance
+          </a>
+
+          <a href="index.html#about">
+            About
+          </a>
+
+          <a href="index.html#contact">
+            Contact
+          </a>
         </nav>
+
       </div>
     </header>
 
     <main>
-      <section class="section case-hero">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Dashboard interface case study</p>
-            <h1>WeatherFlow</h1>
-            <p class="section-intro">
-              A weather dashboard concept designed to turn dense forecast information into a calmer, easier-to-scan interface.
-            </p>
-            <p class="section-intro">
-              This project is useful for Mate Code Studio because the same design thinking applies to business dashboards, reporting screens, admin panels, and internal tools where users need to understand information quickly.
-            </p>
-            <p class="mono-line">Dashboard UI · Data presentation · Search flow · Saved locations · Forecast scanning</p>
 
-            <div class="hero-actions case-actions reveal">
-              <a href="https://alex-mate.github.io/WeatherFlow/" class="btn btn-primary" target="_blank" rel="noreferrer">View live site</a>
-              <a href="#screens" class="btn btn-secondary">View screens</a>
-              <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section class="case-hero weather-case-hero">
+
+        <div class="container case-hero-grid">
+
+          <div class="case-hero-copy reveal">
+
+            <div class="case-project-label">
+
+              <span>
+                Interface Project
+              </span>
+
+              <span>
+                Dashboard UI
+              </span>
+
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="section case-preview-section">
-        <div class="container">
-          <div class="case-preview-card reveal">
-            <img src="images/weaatherflow/weatherflow-preview.png" alt="WeatherFlow dashboard preview showing current conditions, hourly forecast, weekly forecast, and weather metrics" class="lightbox-img" />
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Project snapshot</p>
-            <h2>A data-heavy interface built around clarity, order, and quick scanning.</h2>
-            <p class="section-intro">
-              WeatherFlow is not positioned as a weather business. It is a dashboard/interface case study that shows how information can be grouped, prioritised, and made easier to use.
+            <p class="case-eyebrow">
+              WeatherFlow
             </p>
+
+            <h1>
+              Making dense information
+              <em>easier to scan.</em>
+            </h1>
+
+            <p class="case-lead">
+              WeatherFlow is a weather dashboard project built around
+              information hierarchy, repeated interface patterns and quick data
+              scanning — the same principles that matter inside reporting
+              screens, admin panels and business dashboards.
+            </p>
+
+            <div class="case-hero-actions">
+
+              <a
+                href="https://alex-mate.github.io/WeatherFlow/"
+                target="_blank"
+                rel="noreferrer"
+                class="case-btn case-btn-primary"
+              >
+                View live project
+              </a>
+
+              <a
+                href="#screens"
+                class="case-btn case-btn-ghost"
+              >
+                Explore the interface
+              </a>
+
+            </div>
+
           </div>
 
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Interface problem</h3>
-              <p>Current conditions, hourly forecasts, weekly forecasts, saved places, and metrics can easily compete for attention.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Solution</h3>
-              <p>A structured dashboard that prioritises the main answer first, then supports deeper forecast scanning.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Focus</h3>
-              <p>Visual hierarchy, repeated card patterns, search flow, saved places, and data readability.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Business relevance</h3>
-              <p>The same approach applies to business reporting screens, admin panels, booking dashboards, and internal tools.</p>
-            </article>
+          <div class="case-hero-image reveal">
+
+            <div class="browser-frame">
+
+              <div class="browser-top">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <p>
+                  WeatherFlow · Dashboard
+                </p>
+
+              </div>
+
+              <img
+                src="images/weaatherflow/weatherflow-preview.webp"
+                alt="WeatherFlow dashboard showing current weather, metrics and forecast information"
+               width="1920" height="1410" decoding="async" />
+
+            </div>
+
           </div>
+
         </div>
+
+        <div class="container case-facts reveal">
+
+          <div>
+            <small>
+              Project type
+            </small>
+
+            <strong>
+              Interface Project
+            </strong>
+          </div>
+
+          <div>
+            <small>
+              Focus
+            </small>
+
+            <strong>
+              Data Hierarchy
+            </strong>
+          </div>
+
+          <div>
+            <small>
+              Interaction
+            </small>
+
+            <strong>
+              Search + Saved Places
+            </strong>
+          </div>
+
+          <div>
+            <small>
+              Business relevance
+            </small>
+
+            <strong>
+              Dashboard Interfaces
+            </strong>
+          </div>
+
+        </div>
+
       </section>
 
-      <section class="section">
-        <div class="container case-layout">
-          <article class="case-block reveal">
-            <p class="eyebrow">The problem</p>
-            <h2>Useful data loses value when the interface makes it hard to scan.</h2>
+      <!-- =====================================================
+           PROJECT
+      ====================================================== -->
+
+      <section
+        id="case-study"
+        class="case-section case-ivory"
+      >
+
+        <div class="container case-intro-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              The project
+            </p>
+
+            <h2>
+              Weather is the subject.
+              <em>Information design is the point.</em>
+            </h2>
+
+          </div>
+
+          <div class="case-intro-copy">
+
             <p>
-              Weather screens need to answer several questions quickly: what is happening now, what changes later today, what the next few days look like, and whether the user can move between locations easily.
+              A weather dashboard has to present a surprising amount of
+              information at once: current conditions, temperature, wind,
+              humidity, hourly changes, future forecasts and multiple
+              locations.
             </p>
+
             <p>
-              The challenge was to organise multiple layers of data without making every section fight for attention.
+              The challenge is similar to many business dashboards. Having the
+              data is not enough. The interface has to help someone understand
+              what matters first and where to look next.
             </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           PROBLEM / GOAL / SOLUTION
+      ====================================================== -->
+
+      <section class="case-section case-ivory case-story-section">
+
+        <div class="container case-story-grid">
+
+          <article class="case-story-card reveal">
+
+            <span>
+              01
+            </span>
+
+            <p class="case-story-label">
+              The challenge
+            </p>
+
+            <h3>
+              Too many equally loud data points create visual noise.
+            </h3>
+
+            <p>
+              Current conditions, secondary metrics, hourly forecasts and
+              weekly forecasts are all useful, but they should not compete for
+              the user's attention at the same level.
+            </p>
+
           </article>
 
-          <article class="case-block reveal">
-            <p class="eyebrow">The goal</p>
-            <h2>Create a product-style dashboard that feels calm even with many data points.</h2>
-            <ul class="bullet-list">
-              <li>Make the current condition easy to read first</li>
-              <li>Group supporting metrics into a clean structure</li>
-              <li>Support city search, saved locations, and recent searches</li>
-              <li>Make hourly and weekly forecast comparison easier</li>
-              <li>Use a consistent card system to reduce visual noise</li>
-              <li>Show dashboard/interface thinking that can transfer to business tools</li>
+          <article class="case-story-card reveal">
+
+            <span>
+              02
+            </span>
+
+            <p class="case-story-label">
+              The goal
+            </p>
+
+            <h3>
+              Create a predictable reading order.
+            </h3>
+
+            <ul>
+              <li>Prioritise current conditions</li>
+              <li>Group related metrics</li>
+              <li>Make forecast comparison quick</li>
+              <li>Support city search</li>
+              <li>Support saved and recent locations</li>
+              <li>Keep repeated information visually consistent</li>
             </ul>
+
           </article>
 
-          <article class="case-block reveal">
-            <p class="eyebrow">The solution</p>
-            <h2>A dashboard layout with a clear reading order and repeated interface patterns.</h2>
-            <p>
-              I structured the page around the user’s most likely reading order: search or confirm location, read the current conditions, scan key metrics, compare the next few hours, then review the weekly forecast.
+          <article class="case-story-card reveal">
+
+            <span>
+              03
+            </span>
+
+            <p class="case-story-label">
+              The solution
             </p>
+
+            <h3>
+              A dashboard built from repeatable interface patterns.
+            </h3>
+
             <p>
-              Repeated cards, spacing, and grouped metrics keep the screen predictable. The goal is to help users spend their attention on the information, not on decoding the layout.
+              The page establishes one visual hierarchy and repeats it
+              consistently through cards, metrics and forecast sections.
             </p>
+
+            <p>
+              That makes the interface easier to learn and reduces the amount
+              of effort needed to scan new information.
+            </p>
+
           </article>
+
         </div>
+
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Business value</p>
-            <h2>Why this concept matters for client dashboard work.</h2>
-            <p class="section-intro">
-              Many small businesses do not need “more data”. They need data arranged in a way that makes the next decision easier.
+      <!-- =====================================================
+           DELIBERATE DECISION
+      ====================================================== -->
+
+      <section class="case-section case-dark">
+
+        <div class="container decision-grid">
+
+          <div class="decision-heading reveal">
+
+            <p class="case-eyebrow">
+              A deliberate decision
             </p>
+
+            <h2>
+              Not every data point deserves
+              <em>the same visual weight.</em>
+            </h2>
+
           </div>
 
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Clear hierarchy</h3>
-              <p>Important information is placed first so users can understand the page faster.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Reusable UI patterns</h3>
-              <p>Consistent cards and sections make the interface easier to learn and maintain.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Faster scanning</h3>
-              <p>Forecast cards show how repeated data can be compared without long explanations.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Client relevance</h3>
-              <p>The same structure could support sales dashboards, booking views, operations panels, or reporting tools.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="decision-copy reveal">
 
-      <section class="section" id="screens">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Screens</p>
-            <h2>Dashboard walkthrough</h2>
-            <p class="section-intro">
-              These screens show the main WeatherFlow dashboard, saved/recent location flow, and forecast sections.
-            </p>
-          </div>
-
-          <div class="case-gallery reveal">
-            <figure class="case-shot">
-              <img src="images/weaatherflow/weatherflow-preview.png" alt="WeatherFlow main dashboard with city search, current conditions, hourly forecast, and weekly forecast" class="lightbox-img" />
-              <figcaption>Main dashboard — current conditions, key metrics, hourly forecast, and weekly forecast in one structured view.</figcaption>
-            </figure>
-            <figure class="case-shot">
-              <img src="images/weaatherflow/favorites-recent.png" alt="WeatherFlow favorites and recent cities interface with current conditions panel" class="lightbox-img" />
-              <figcaption>Saved and recent cities — helps users switch quickly between locations they care about.</figcaption>
-            </figure>
-          </div>
-
-          <div class="hero-actions case-actions reveal">
-            <a href="https://alex-mate.github.io/WeatherFlow/" class="btn btn-primary" target="_blank" rel="noreferrer">View live site</a>
-            <a href="https://github.com/alex-mate/weatherflow" class="btn btn-secondary" target="_blank" rel="noreferrer">View code</a>
-            <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta-section">
-        <div class="container">
-          <div class="cta-card reveal">
-            <p class="eyebrow">Need something similar?</p>
-            <h2>Need a dashboard or data-heavy interface that is easier to understand?</h2>
             <p>
-              I can help turn complex information into a cleaner, more useful interface for a business workflow, internal tool, reporting screen, or practical dashboard.
+              A common dashboard mistake is treating every piece of information
+              as equally important. The result is usually a screen full of
+              boxes competing for attention.
             </p>
-            <div class="hero-actions hero-actions-center">
-              <a href="index.html#contact" class="btn btn-primary">Discuss a dashboard project</a>
-              <a href="services.html" class="btn btn-secondary">Explore services</a>
+
+            <p>
+              WeatherFlow instead follows the order in which the user is most
+              likely to ask questions.
+            </p>
+
+            <div class="decision-result">
+
+              <span>
+                Reading order
+              </span>
+
+              <strong>
+                Location → current conditions → key metrics → hourly forecast →
+                weekly outlook
+              </strong>
+
             </div>
+
+            <p>
+              The same principle can be applied to sales dashboards,
+              operations screens, booking systems and internal reporting tools.
+            </p>
+
           </div>
+
         </div>
+
       </section>
+
+      <!-- =====================================================
+           INFORMATION FLOW
+      ====================================================== -->
+
+      <section class="case-section weather-flow-section">
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Information hierarchy
+            </p>
+
+            <h2>
+              Answer the biggest question
+              <em>first.</em>
+            </h2>
+
+            <p>
+              Each layer adds detail without forcing the user to process
+              everything at once.
+            </p>
+
+          </div>
+
+          <div class="weather-flow reveal">
+
+            <article>
+
+              <span>
+                01
+              </span>
+
+              <strong>
+                Now
+              </strong>
+
+              <p>
+                What is happening at the selected location right now?
+              </p>
+
+            </article>
+
+            <div class="weather-flow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>
+                02
+              </span>
+
+              <strong>
+                Details
+              </strong>
+
+              <p>
+                What additional metrics help explain the current conditions?
+              </p>
+
+            </article>
+
+            <div class="weather-flow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>
+                03
+              </span>
+
+              <strong>
+                Next
+              </strong>
+
+              <p>
+                How are conditions likely to change during the next few hours?
+              </p>
+
+            </article>
+
+            <div class="weather-flow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>
+                04
+              </span>
+
+              <strong>
+                Later
+              </strong>
+
+              <p>
+                What does the broader weekly outlook look like?
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           INTERFACE WALKTHROUGH
+      ====================================================== -->
+
+      <section
+        id="screens"
+        class="case-section case-ivory weather-screens"
+      >
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Interface walkthrough
+            </p>
+
+            <h2>
+              One dashboard.
+              <em>Three levels of interaction.</em>
+            </h2>
+
+            <p>
+              The screenshots below show the overall dashboard, its detailed
+              forecast structure and the location-management workflow.
+            </p>
+
+          </div>
+
+          <!-- MAIN DASHBOARD -->
+
+          <figure class="weather-screen-main reveal">
+
+            <div class="weather-screen-frame weather-screen-dashboard">
+
+              <img
+                src="images/weaatherflow/weatherflow-preview.webp"
+                alt="WeatherFlow complete weather dashboard"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1920" height="1410" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                01 · Main dashboard
+              </span>
+
+              <h3>
+                The full information hierarchy in one view.
+              </h3>
+
+              <p>
+                Current conditions take priority, while secondary metrics,
+                hourly information and the broader forecast remain accessible
+                without competing with the main answer.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- CLOSE UP -->
+
+          <figure class="weather-screen-main weather-screen-reverse reveal">
+
+            <div class="weather-screen-frame weather-screen-wide">
+
+              <img
+                src="images/weaatherflow/close-up.webp"
+                alt="WeatherFlow detailed weather information and forecast cards"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1429" height="421" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                02 · Forecast detail
+              </span>
+
+              <h3>
+                Repeated patterns make comparison faster.
+              </h3>
+
+              <p>
+                Consistent cards, spacing and labels help users compare
+                repeated data without having to relearn the interface for every
+                forecast period.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- SAVED LOCATIONS -->
+
+          <figure class="weather-screen-main reveal">
+
+            <div class="weather-screen-frame weather-screen-wide">
+
+              <img
+                src="images/weaatherflow/favorites-recent.webp"
+                alt="WeatherFlow saved and recent locations interface"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1459" height="495" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                03 · Saved & recent places
+              </span>
+
+              <h3>
+                Useful dashboards remember the user's context.
+              </h3>
+
+              <p>
+                Saved and recent locations reduce repeated searching and create
+                a quicker path back to information the user checks regularly.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           BUSINESS RELEVANCE
+      ====================================================== -->
+
+      <section class="case-section case-dark">
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Business relevance
+            </p>
+
+            <h2>
+              Replace weather data with business data and
+              <em>the design problem remains.</em>
+            </h2>
+
+            <p>
+              The project demonstrates interface patterns that transfer
+              naturally into business software.
+            </p>
+
+          </div>
+
+          <div class="value-grid">
+
+            <article class="value-card reveal">
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Sales dashboards
+              </h3>
+
+              <p>
+                Prioritise the numbers that matter now, then provide deeper
+                pipeline and historical context.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>
+                02
+              </span>
+
+              <h3>
+                Operations panels
+              </h3>
+
+              <p>
+                Group statuses, tasks and operational metrics into predictable
+                sections that can be scanned quickly.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>
+                03
+              </span>
+
+              <h3>
+                Booking interfaces
+              </h3>
+
+              <p>
+                Use repeated patterns to make dates, availability and customer
+                information easier to compare.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>
+                04
+              </span>
+
+              <h3>
+                Reporting tools
+              </h3>
+
+              <p>
+                Turn large sets of raw information into a clearer hierarchy
+                that supports quicker decisions.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           PRINCIPLE
+      ====================================================== -->
+
+      <section class="case-section principle-section">
+
+        <div class="container principle-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              Project principle
+            </p>
+
+            <h2>
+              A good dashboard does not show less data.
+              <em>It makes the important data easier to find.</em>
+            </h2>
+
+          </div>
+
+          <blockquote>
+
+            <p>
+              Interface hierarchy should reduce the time between looking at a
+              screen and understanding what the information is trying to tell
+              you.
+            </p>
+
+          </blockquote>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           CTA
+      ====================================================== -->
+
+      <section class="case-section case-contact">
+
+        <div class="container case-contact-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              Need something similar?
+            </p>
+
+            <h2>
+              Have business data that is
+              <em>difficult to understand at a glance?</em>
+            </h2>
+
+            <p>
+              Mate Code Studio builds practical dashboards and internal tools
+              that organise information around the decisions people actually
+              need to make.
+            </p>
+
+          </div>
+
+          <div class="case-contact-actions">
+
+            <a
+              href="index.html#contact"
+              class="case-btn case-btn-light"
+            >
+              Discuss a dashboard
+            </a>
+
+            <a
+              href="services.html"
+              class="case-btn case-btn-outline-light"
+            >
+              Explore software services
+            </a>
+
+            <a
+              href="https://alex-mate.github.io/WeatherFlow/"
+              target="_blank"
+              rel="noreferrer"
+              class="case-text-link"
+            >
+              View WeatherFlow live →
+            </a>
+
+            <a
+              href="https://github.com/alex-mate/weatherflow"
+              target="_blank"
+              rel="noreferrer"
+              class="case-text-link"
+            >
+              View source code →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Mate Code Studio · Alex Mate</p>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="case-footer">
+      <div class="container case-footer-grid">
+        <div>
+          <strong>Mate Code Studio</strong>
+
+          <p>
+            Software built with care. Delivered with confidence.
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <a href="services.html">Services</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#maintenance">Maintenance</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="case-footer-external">
+          <a
+            href="https://www.linkedin.com/in/alex-mate-2426813a2/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/alex-mate"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.fiverr.com/matecode_studio?public_mode=true"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fiverr
+          </a>
+        </div>
+      </div>
+
+      <div class="container case-footer-bottom">
+        <span>© 2026 Mate Code Studio · Alex Mate</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>The Quiet Workshop</span>
       </div>
     </footer>
 
-    <div id="lightbox" class="lightbox">
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div
+      id="lightbox"
+      class="lightbox case-lightbox"
+      aria-hidden="true"
+    >
+
       <button
         id="lightboxClose"
         class="lightbox-close"
@@ -234,9 +975,15 @@
         ×
       </button>
 
-      <img id="lightboxImg" src="" alt="Expanded project image" />
+      <img
+        id="lightboxImg"
+        src=""
+        alt="Expanded WeatherFlow interface"
+      />
+
     </div>
 
     <script src="/static/script.js"></script>
+
   </body>
 </html>

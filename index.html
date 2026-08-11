@@ -4,1153 +4,1210 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Mate Code Studio | Small Business Software & Web Studio
-    </title>
+    <title>Mate Code Studio | Small Business Software & Web Studio</title>
 
     <meta
       name="description"
-      content="Mate Code Studio helps small businesses build professional websites, capture enquiries, organise leads, and replace manual work with simple dashboards, automations, and web tools."
+      content="Mate Code Studio builds professional websites, practical business tools and automations for small businesses that want clearer systems and less manual admin."
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://matecodestudio.com/" />
+    <meta name="theme-color" content="#0f1113" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta property="og:site_name" content="Mate Code Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Mate Code Studio — Websites & Business Software for Small Businesses" />
+    <meta property="og:description" content="Mate Code Studio builds professional websites, practical business tools and automations for small businesses that want clearer systems and less manual admin." />
+    <meta property="og:url" content="https://matecodestudio.com/" />
+    <meta property="og:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mate Code Studio — Websites & Business Software for Small Businesses" />
+    <meta name="twitter:description" content="Mate Code Studio builds professional websites, practical business tools and automations for small businesses that want clearer systems and less manual admin." />
+    <meta name="twitter:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta name="twitter:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="/static/styles.css" />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  media="print"
+  onload="this.media='all'"
+>
+
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  >
+</noscript>
+
+    <link rel="icon" href="/favicon.ico" />
+
+    
+    
+
+    <!-- V10 Launch homepage styles -->
+    <link rel="stylesheet" href="/static/launch.css?v=10" />
+  
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://matecodestudio.com/#organization",
+      "name": "Mate Code Studio",
+      "url": "https://matecodestudio.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://matecodestudio.com/logo.png"
+      },
+      "email": "alex@matecodestudio.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Alex Mate"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/alex-mate-2426813a2/",
+        "https://github.com/alex-mate",
+        "https://www.fiverr.com/matecode_studio?public_mode=true"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://matecodestudio.com/#website",
+      "url": "https://matecodestudio.com/",
+      "name": "Mate Code Studio",
+      "publisher": {
+        "@id": "https://matecodestudio.com/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+    </script>
   </head>
 
-  <body>
-    <div class="cursor-glow"></div>
+  <body class="launch-page">
+    <header class="launch-header">
+      <div class="container launch-nav">
+        <a
+          href="#top"
+          class="launch-brand"
+          aria-label="Mate Code Studio homepage"
+        >
+          <span class="launch-brand-mark">MCS</span>
 
-    <div class="scroll-progress">
-      <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-    </div>
-
-    <header class="site-header" id="siteHeader">
-      <div class="container nav-wrap">
-        <a href="#top" class="brand brand-studio" aria-label="Mate Code Studio homepage">
-          <span class="brand-mark" aria-hidden="true">M</span>
-          <span class="brand-copy">
-            <span class="brand-title">Mate Code Studio</span>
-            <span class="brand-subtitle">Small Business Software & Web Studio</span>
+          <span>
+            <strong>Mate Code Studio</strong>
+            <small>Small Business Software & Web Studio</small>
           </span>
         </a>
 
-        <nav class="nav" aria-label="Main navigation">
+        <nav class="launch-links" aria-label="Main navigation">
           <a href="services.html">Services</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#case-studies">Case Studies</a>
+          <a href="#work">Work</a>
           <a href="#maintenance">Maintenance</a>
+          <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero hero-studio">
-        <div class="hero-bg"></div>
-
-        <div class="container hero-layout reveal">
-          <div class="hero-copy">
-            <p class="badge">
-              Small business websites · lead systems · dashboards · automation
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+      <section class="launch-hero dark-section">
+        <div class="container launch-hero-grid">
+          <div class="launch-hero-copy reveal">
+            <p class="launch-eyebrow">
+              Small Business Software & Web Studio
             </p>
 
             <h1>
-              Websites and business software for small companies.
+              Websites and software built around how your business
+              <em>actually works.</em>
             </h1>
 
-            <p class="hero-text hero-text-main">
-              Mate Code Studio helps small businesses look professional, capture enquiries, organise leads, and replace messy manual work with simple digital systems.
+            <p class="launch-lead">
+              Mate Code Studio builds professional websites, practical business
+              tools and automations for small companies that want to win more
+              enquiries, reduce repetitive admin and keep everyday work better
+              organised.
             </p>
 
-            <p class="hero-text">
-              The studio builds practical websites, lightweight dashboards, client pipeline tools, and automation workflows designed around real business workflows, not unnecessary complexity.
-            </p>
+            <div class="launch-actions">
+              <a
+                class="launch-btn launch-btn-primary"
+                href="#contact"
+              >
+                Discuss your project
+              </a>
 
-            <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">Discuss a project</a>
-              <a href="services.html" class="btn btn-secondary">Explore services</a>
+              <a
+                class="launch-btn launch-btn-ghost"
+                href="#work"
+              >
+                View our work
+              </a>
             </div>
 
-            <div class="hero-tags" aria-label="Business outcomes">
-              <span class="tag">Capture enquiries</span>
-              <span class="tag">Organise leads</span>
-              <span class="tag">Automate admin</span>
-              <span class="tag">Build dashboards</span>
-              <span class="tag">Launch business websites</span>
-              <span class="tag">Improve workflows</span>
+            <p class="launch-price-note">
+              <strong>Business websites from €550</strong>
+              <span>·</span>
+              Maintenance available after launch
+            </p>
+
+            <div class="launch-trust-points">
+              <span>Direct communication</span>
+              <span>Clear project scope</span>
+              <span>Built around your business</span>
             </div>
           </div>
 
-          <aside class="studio-mockup" aria-label="Example lead pipeline dashboard">
-            <div class="mockup-topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-              <strong>Lead Pipeline</strong>
+          <!-- MateOS visual -->
+          <aside
+            class="mateos-preview reveal"
+            aria-label="MateOS client pipeline preview"
+          >
+            <div class="preview-label">
+              <span>Built in-house</span>
+              <strong>MateOS</strong>
             </div>
 
-            <div class="mockup-stats">
-              <div>
-                <span>New enquiries</span>
-                <strong>12</strong>
+            <div class="preview-window">
+              <div class="preview-top">
+                <i></i>
+                <i></i>
+                <i></i>
+                <span>Client Pipeline</span>
               </div>
-              <div>
-                <span>Follow-ups</span>
-                <strong>7</strong>
+
+              <div class="preview-metrics">
+                <div>
+                  <small>Prospects</small>
+                  <strong>24</strong>
+                </div>
+
+                <div>
+                  <small>Follow-ups</small>
+                  <strong>7</strong>
+                </div>
+
+                <div>
+                  <small>Replies</small>
+                  <strong>4</strong>
+                </div>
               </div>
-              <div>
-                <span>Won</span>
-                <strong>3</strong>
+
+              <div class="preview-board">
+                <div>
+                  <b>NEW</b>
+
+                  <article>
+                    <small>Website lead</small>
+                    <strong>Local service business</strong>
+                    <span>Website reviewed</span>
+                  </article>
+                </div>
+
+                <div>
+                  <b>CONTACTED</b>
+
+                  <article class="preview-accent">
+                    <small>Outreach sent</small>
+                    <strong>Follow-up due</strong>
+                    <span>Conversation tracked</span>
+                  </article>
+                </div>
+
+                <div>
+                  <b>OPPORTUNITY</b>
+
+                  <article>
+                    <small>Positive reply</small>
+                    <strong>Discovery call</strong>
+                    <span>Next step ready</span>
+                  </article>
+                </div>
               </div>
             </div>
 
-            <div class="pipeline-board">
-              <div class="pipeline-column">
-                <h4>New lead</h4>
-                <article class="pipeline-card">
-                  <span>Website enquiry</span>
-                  <strong>Local service business</strong>
-                  <small>Needs a clearer quote flow</small>
-                </article>
-                <article class="pipeline-card">
-                  <span>WhatsApp enquiry</span>
-                  <strong>Flowers Bouquet By Anna</strong>
-                  <small>Product page update</small>
-                </article>
-              </div>
-
-              <div class="pipeline-column">
-                <h4>Follow-up</h4>
-                <article class="pipeline-card highlighted">
-                  <span>Automation idea</span>
-                  <strong>CSV report workflow</strong>
-                  <small>Manual admin to automate</small>
-                </article>
-              </div>
-
-              <div class="pipeline-column">
-                <h4>Won</h4>
-                <article class="pipeline-card">
-                  <span>Completed</span>
-                  <strong>Business website</strong>
-                  <small>Live and ready to share</small>
-                </article>
-              </div>
-            </div>
+            <p>
+              The internal system behind Mate Code Studio's lead and client
+              workflow.
+            </p>
           </aside>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Quick trust points">
-        <div class="container trust-grid">
-          <div class="trust-item">
-            <span>Studio focus</span>
-            Small business software & web systems
-          </div>
-
-          <div class="trust-item">
-            <span>Business outcome</span>
-            More enquiries, less manual admin
-          </div>
-
-          <div class="trust-item">
-            <span>Proof</span>
-            Live projects, case studies & 5-star client feedback
-          </div>
-
-          <div class="trust-item">
-            <span>After launch</span>
-            Optional maintenance and improvements
-          </div>
-        </div>
-      </section>
-
-      <section id="who" class="section section-tight">
+      <!-- =====================================================
+           SERVICES
+      ====================================================== -->
+      <section
+        id="services"
+        class="launch-section ivory-section"
+      >
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Who I help</p>
+          <div class="launch-heading reveal">
+            <p class="launch-eyebrow">What we help with</p>
 
             <h2>
-              Built for small businesses that need practical digital systems without enterprise complexity.
-            </h2>
-
-            <p class="section-intro">
-              I work best with businesses that need a professional website, a clearer enquiry flow, a simple way to track leads, or an internal tool that replaces repetitive spreadsheet work.
-            </p>
-          </div>
-
-          <div class="cards-grid outcome-grid">
-            <article class="info-card reveal">
-              <span class="card-kicker">01</span>
-              <h3>Local businesses</h3>
-              <p>
-                Professional websites and enquiry flows that explain your services clearly and make it easier for people to contact you.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">02</span>
-              <h3>Freelancers</h3>
-              <p>
-                Lead tracking, follow-ups, and simple client pipelines so opportunities do not disappear in notes, inboxes, or spreadsheets.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">03</span>
-              <h3>Service providers</h3>
-              <p>
-                Booking, enquiry, quote, and admin workflows that keep client communication more organised from first message to delivery.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">04</span>
-              <h3>Small teams</h3>
-              <p>
-                Lightweight dashboards and automations that replace repetitive manual work and make important information easier to manage.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Services</p>
-
-            <h2>
-              Practical development services for small business problems.
-            </h2>
-
-            <p class="section-intro">
-              The goal is not to overbuild. The goal is to create a useful digital system that fits the business: a website that brings enquiries, a dashboard that organises data, or an automation that removes repetitive work.
-            </p>
-          </div>
-
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Business websites</h3>
-
-              <p>
-                Responsive websites and landing pages for small businesses that need to explain their services, build trust, and guide visitors toward email, form, or WhatsApp enquiries.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Client enquiry systems</h3>
-
-              <p>
-                Simple lead capture and pipeline tools that help you track who contacted you, what stage they are in, and what follow-up is needed next.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Dashboards & internal tools</h3>
-
-              <p>
-                Lightweight Flask applications with login flows, forms, databases, dashboards, records, filters, and clean project structure for real business workflows.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Automation scripts</h3>
-
-              <p>
-                Python tools for CSV cleanup, Excel reports, file organisation, data processing, API requests, web scraping, and repetitive admin workflows.
-              </p>
-            </article>
-          </div>
-
-          <div class="section-actions reveal">
-            <a href="services.html" class="btn btn-primary">Explore services</a>
-            <a href="#contact" class="btn btn-secondary">Ask about a project</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="solutions" class="section section-tight">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Solutions</p>
-            <h2>Solutions for small business workflows.</h2>
-            <p class="section-intro">
-              Services are easier to understand when they are connected to the business problem. These are the common outcomes Mate Code Studio is built around.
-            </p>
-          </div>
-
-          <div class="cards-grid outcome-grid">
-            <article class="info-card reveal">
-              <span class="card-kicker">Enquiries</span>
-              <h3>Get more enquiries</h3>
-              <p>
-                Business websites, landing pages, contact forms, WhatsApp flows, and calls to action that make it easier for visitors to become leads.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">Leads</span>
-              <h3>Stop losing follow-ups</h3>
-              <p>
-                Simple CRM-style pipelines that organise enquiries, stages, notes, follow-ups, and client conversations in one place.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">Dashboards</span>
-              <h3>Replace messy spreadsheets</h3>
-              <p>
-                Lightweight dashboards for clients, bookings, tasks, finance, inventory, or operations when spreadsheets become hard to manage.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">Automation</span>
-              <h3>Reduce repetitive admin</h3>
-              <p>
-                Python workflows for Excel, CSV files, reports, cleanup, file organisation, API requests, and repeatable business tasks.
-              </p>
-            </article>
-          </div>
-
-          <div class="starter-offers reveal">
-            <div class="section-heading compact-heading">
-              <p class="eyebrow">Popular starting points</p>
-              <h2>Start with a focused project, then improve it over time.</h2>
-            </div>
-
-            <div class="starter-grid">
-              <article class="starter-card">
-                <h3>Business Website Starter</h3>
-                <p>A clean website for a small business that needs a professional online presence and enquiry flow.</p>
-              </article>
-              <article class="starter-card">
-                <h3>Lead Pipeline Starter</h3>
-                <p>A simple CRM-style tool to track enquiries, follow-ups, client stages, and next actions.</p>
-              </article>
-              <article class="starter-card">
-                <h3>Automation Starter</h3>
-                <p>A Python workflow that replaces a repetitive spreadsheet, file, reporting, or data cleanup task.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="case-studies" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Case studies</p>
-
-            <h2>
-              Business-focused examples of websites, dashboards, lead systems, and workflow tools.
-            </h2>
-
-            <p class="section-intro">
-              The work below shows the type of practical systems Mate Code Studio builds: websites, dashboards, automations, and lead tools designed around real business workflows.
-            </p>
-          </div>
-
-          <div class="featured-project reveal">
-            <div class="project-carousel" data-carousel="budgeting">
-              <div class="carousel-track">
-                <img
-                  src="images/budgetingapp/home.png"
-                  alt="Budgeting App dashboard screenshot"
-                  class="lightbox-img carousel-slide active"
-                />
-
-                <img
-                  src="images/budgetingapp/profile.png"
-                  alt="Budgeting App profile and account settings screenshot"
-                  class="lightbox-img carousel-slide"
-                />
-
-                <img
-                  src="images/budgetingapp/transactions.png"
-                  alt="Budgeting App transactions screenshot"
-                  class="lightbox-img carousel-slide"
-                />
-              </div>
-
-              <div class="carousel-controls">
-                <button
-                  class="carousel-btn prev"
-                  type="button"
-                  aria-label="Previous screenshot"
-                >
-                  ←
-                </button>
-
-                <div class="carousel-dots"></div>
-
-                <button
-                  class="carousel-btn next"
-                  type="button"
-                  aria-label="Next screenshot"
-                >
-                  →
-                </button>
-              </div>
-            </div>
-
-            <div class="featured-copy">
-              <p class="project-label">Dashboard-style web app</p>
-              <h3>Budgeting App</h3>
-
-              <p>
-                A Flask application built around accounts, transactions, categories, budgets, and dashboard views. It shows how structured software can replace scattered spreadsheets with a clearer workflow.
-              </p>
-
-              <div class="case-points">
-                <div>
-                  <span>Problem</span>
-                  <p>Financial information can become scattered across notes, accounts, and spreadsheets.</p>
-                </div>
-                <div>
-                  <span>Solution</span>
-                  <p>A structured dashboard with accounts, budgets, transactions, filters, and user flows.</p>
-                </div>
-                <div>
-                  <span>Business value</span>
-                  <p>Clearer data, easier tracking, and a more organised way to manage key information.</p>
-                </div>
-              </div>
-
-              <ul class="bullet-list">
-                <li>User accounts and profile management</li>
-                <li>Income, expense, and savings tracking</li>
-                <li>Budget setup by category and month</li>
-                <li>Transaction filters, notes, edit, and delete actions</li>
-                <li>Dashboard views for clearer financial decisions</li>
-              </ul>
-
-              <p class="mono-line">
-                Python · Flask · SQLite · HTML · CSS · JavaScript
-              </p>
-
-              <div class="hero-actions">
-                <a href="budgeting-app.html" class="btn btn-primary">
-                  Read case study
-                </a>
-
-                <a href="services.html" class="btn btn-secondary">
-                  Explore services
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <section class="project-spotlight reveal" aria-label="Current product build: MateLeads">
-            <div>
-              <p class="project-label">Current product build</p>
-              <h3>MateLeads</h3>
-              <p>
-                A CRM-style lead pipeline for freelancers and small businesses, built to organise prospects, outreach, follow-ups, stages, and email draft workflows.
-              </p>
-            </div>
-
-            <div class="spotlight-points">
-              <div>
-                <span>Problem</span>
-                <p>Freelancers and small teams often lose track of sales activity across spreadsheets, inboxes, notes, and memory.</p>
-              </div>
-              <div>
-                <span>Solution</span>
-                <p>A simple pipeline board with lead records, stages, follow-up visibility, and draft email workflow.</p>
-              </div>
-              <div>
-                <span>Business value</span>
-                <p>More organised outreach, fewer missed follow-ups, and a clearer path from prospect to client.</p>
-              </div>
-            </div>
-          </section>
-
-          <div class="section-heading reveal" style="margin-top: 72px">
-            <p class="eyebrow">Selected case studies</p>
-
-            <h2>Selected work across websites, dashboards, lead systems, and automation.</h2>
-
-            <p class="section-intro">
-              Each example is presented around the business problem it solves, not only the technology used to build it.
-            </p>
-          </div>
-
-          <div class="project-gallery">
-            <article class="project-card reveal">
-              <div class="project-thumb-wrap">
-                <img
-                  src="images/flowerbouquetbyana/home.jpg"
-                  alt="Flowers Bouquet By Anna homepage hero section showing handmade floral gifts"
-                  class="lightbox-img"
-                />
-              </div>
-
-              <div class="project-card-body">
-                <p class="project-label">Business website</p>
-                <h3>Flowers Bouquet By Anna</h3>
-
-                <p>
-                  A responsive bilingual website for a handmade floral gift business, designed to present products clearly, build trust, and guide visitors toward WhatsApp enquiries.
-                </p>
-
-                <div class="mini-case-line">
-                  <span>Value:</span> clearer brand presence and a simpler path from visitor interest to direct enquiry.
-                </div>
-              </div>
-
-              <div class="project-buttons">
-                <a href="flowerbouquetbyanna.html" class="btn btn-primary">
-                  Read case study
-                </a>
-
-                <a
-                  href="https://alex-mate.github.io/flowers-bouquet-by-anna/"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="btn btn-secondary"
-                >
-                  Live site
-                </a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-thumb-wrap">
-                <img
-                  src="images/weaatherflow/weatherflow-preview.png"
-                  alt="WeatherFlow dashboard showing current conditions and forecast panels"
-                  class="project-thumb lightbox-img"
-                />
-              </div>
-
-              <div class="project-card-body">
-                <p class="project-label">Data dashboard concept</p>
-                <h3>WeatherFlow</h3>
-
-                <p>
-                  A weather dashboard focused on clearer data presentation, location search, saved locations, recent searches, and fast scanning across forecast views.
-                </p>
-
-                <div class="mini-case-line">
-                  <span>Value:</span> turns complex API data into a clean interface that users can understand quickly.
-                </div>
-              </div>
-
-              <div class="project-buttons">
-                <a href="weatherflow.html" class="btn btn-primary">
-                  Read case study
-                </a>
-
-                <a
-                  href="https://alex-mate.github.io/WeatherFlow/"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="btn btn-secondary"
-                >
-                  Live site
-                </a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-thumb-wrap project-placeholder">
-                <span>Automation</span>
-              </div>
-
-              <div class="project-card-body">
-                <p class="project-label">Python workflow</p>
-                <h3>Automation Demo</h3>
-
-                <p>
-                  A planned automation case study focused on processing files, cleaning data, generating reports, and reducing repetitive manual work with Python.
-                </p>
-
-                <div class="mini-case-line">
-                  <span>Value:</span> saves time by turning repeatable admin tasks into predictable scripts.
-                </div>
-              </div>
-
-              <div class="project-buttons">
-                <span class="btn btn-secondary btn-static">Coming soon</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="client-feedback" class="section proof-section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Client feedback</p>
-
-            <h2>Real client work with 5-star feedback.</h2>
-
-            <p class="section-intro">
-              Mate Code Studio is built around practical delivery, clear communication, and useful tools that work after handover.
-            </p>
-          </div>
-
-          <div class="proof-layout reveal">
-            <article class="testimonial-card">
-              <div class="testimonial-topline">
-                <span class="testimonial-rating">★★★★★ 5.0</span>
-                <span class="testimonial-source">Fiverr client · United Kingdom</span>
-              </div>
-
-              <blockquote>
-                “Really good guy. He knows his stuff and everything worked. Crazy fast response time. Definitely recommend it.”
-              </blockquote>
-
-              <div class="testimonial-metrics" aria-label="Fiverr rating details">
-                <span>Communication 5.0</span>
-                <span>Quality 5.0</span>
-                <span>Value 5.0</span>
-              </div>
-            </article>
-
-            <div class="proof-cards">
-              <article class="proof-card">
-                <span class="card-kicker">Proof</span>
-                <h3>5-star client feedback</h3>
-                <p>First Fiverr project delivered successfully with strong communication, fast response time, and working delivery.</p>
-              </article>
-
-              <article class="proof-card">
-                <span class="card-kicker">Live work</span>
-                <h3>Business website delivered</h3>
-                <p>Flowers Bouquet By Anna is a live bilingual website for a handmade floral gift business.</p>
-              </article>
-
-              <article class="proof-card">
-                <span class="card-kicker">Product build</span>
-                <h3>MateLeads in progress</h3>
-                <p>A CRM-style pipeline being built around lead tracking, outreach, follow-ups, and email draft workflows.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="process" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Process</p>
-
-            <h2>A simple process for turning messy business problems into clear digital tools.</h2>
-
-            <p class="section-intro">
-              Good freelance development is not only about writing code. It is about understanding the workflow, choosing the right-sized solution, communicating clearly, and delivering work that makes sense after handover.
-            </p>
-          </div>
-
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>1. Understand the workflow</h3>
-
-              <p>
-                I clarify what needs to happen, what is currently manual or confusing, and what the finished system should help you do better.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>2. Plan the right-sized solution</h3>
-
-              <p>
-                I choose a practical approach that fits the project size, budget, timeline, and future maintenance needs.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>3. Build and test the core flow</h3>
-
-              <p>
-                I focus on working functionality, readable structure, responsive layouts, and testing the most important user journey.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>4. Explain and hand over</h3>
-
-              <p>
-                I aim to leave you with organised files, a clear result, and useful notes so the project is easier to use after delivery.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="credibility" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Why Mate Code Studio</p>
-
-            <h2>A business-first approach to small websites, dashboards, and automations.</h2>
-
-            <p class="section-intro">
-              Small projects still need professional communication, sensible planning, and clean delivery. My focus is to understand the real problem, avoid unnecessary complexity, and build something useful.
-            </p>
-          </div>
-
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Business-first thinking</h3>
-
-              <p>
-                I do not start with code. I start with the problem: what needs to be clearer, faster, easier, or more organised for the business.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Simple, practical systems</h3>
-
-              <p>
-                Small businesses do not always need complex software. I focus on tools that fit the real size of the problem and can improve over time.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Clear communication</h3>
-
-              <p>
-                You should know what is being built, why it matters, what stage the project is in, and what the next step is.
-              </p>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>Clean handover</h3>
-
-              <p>
-                Where possible, I provide clear structure, notes, and explanations so the final result is easier to use, maintain, and improve later.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="maintenance" class="section maintenance-home">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">After launch support</p>
-            <h2>A website or tool should not be left alone after delivery.</h2>
-            <p class="section-intro">
-              Optional maintenance gives small businesses a safer way to keep their website, dashboard, or workflow tool useful after launch: small updates, bug fixes, improvements, and support as the business changes.
-            </p>
-          </div>
-
-          <div class="maintenance-preview-grid">
-            <article class="info-card reveal">
-              <span class="card-kicker">Essential Care</span>
-              <h3>Keep it running</h3>
-              <p>Light support for small websites and simple tools: small content updates, basic checks, minor fixes, and email support.</p>
-            </article>
-
-            <article class="info-card reveal featured-care">
-              <span class="card-kicker">Recommended</span>
-              <h3>Improve & Support</h3>
-              <p>Ongoing improvement time for active websites, dashboards, lead systems, and business tools that need small monthly updates.</p>
-            </article>
-
-            <article class="info-card reveal">
-              <span class="card-kicker">Growth Support</span>
-              <h3>Build over time</h3>
-              <p>For clients who want a long-term development partner for new features, automation improvements, and workflow expansion.</p>
-            </article>
-          </div>
-
-          <div class="section-actions reveal">
-            <a href="services.html#maintenance" class="btn btn-primary">View maintenance options</a>
-            <a href="#contact" class="btn btn-secondary">Ask about support</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section low-priority-section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Technology</p>
-
-            <h2>The technology behind the work.</h2>
-
-            <p class="section-intro">
-              The technology stays behind the business goal: Python automation, Flask web apps, dashboards, landing pages, small business tools, and clean client-facing interfaces.
-            </p>
-          </div>
-
-          <div class="skills-grid">
-            <article class="skill-card reveal">
-              <div class="skill-icon">
-                <i class="devicon-python-plain colored"></i>
-              </div>
-
-              <h3>Python</h3>
-
-              <p>
-                Used for automation scripts, debugging, backend logic, file processing, API workflows, data cleanup, and practical business tools.
-              </p>
-            </article>
-
-            <article class="skill-card reveal">
-              <div class="skill-icon">
-                <i class="devicon-flask-original"></i>
-              </div>
-
-              <h3>Flask</h3>
-
-              <p>
-                Used for lightweight web applications, dashboards, routes, templates, forms, authentication flows, and small business software.
-              </p>
-            </article>
-
-            <article class="skill-card reveal">
-              <div class="skill-icon">
-                <i class="devicon-sqlite-plain colored"></i>
-              </div>
-
-              <h3>SQLite</h3>
-
-              <p>
-                Used for structured data storage in small web apps, dashboards, finance tools, prototypes, and internal business applications.
-              </p>
-            </article>
-
-            <article class="skill-card reveal">
-              <div class="skill-icon">
-                <i class="devicon-javascript-plain colored"></i>
-              </div>
-
-              <h3>JavaScript</h3>
-
-              <p>
-                Used for frontend interactivity, DOM behaviour, form logic, UI improvements, dynamic content, and client-side user experience.
-              </p>
-            </article>
-
-            <article class="skill-card reveal">
-              <div class="skill-icon skill-icon-pair">
-                <i class="devicon-html5-plain colored"></i>
-                <i class="devicon-css3-plain colored"></i>
-              </div>
-
-              <h3>HTML & CSS</h3>
-
-              <p>
-                Used for semantic structure, responsive layouts, accessibility, visual hierarchy, landing pages, case studies, and polished frontend presentation.
-              </p>
-            </article>
-
-            <article class="skill-card reveal">
-              <div class="skill-icon skill-icon-pair">
-                <i class="devicon-git-plain colored"></i>
-                <i class="devicon-github-original"></i>
-              </div>
-
-              <h3>Git, GitHub & deployment</h3>
-
-              <p>
-                Used for version control, project history, portfolio code, GitHub Pages deployments, and organised development workflows.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="certificates" class="section low-priority-section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Foundations</p>
-
-            <h2>Structured learning that supports real project work.</h2>
-
-            <p class="section-intro">
-              Structured learning supports the quality of the work, but the main focus of this site is practical delivery: useful websites, dashboards, automations, and business tools.
-            </p>
-          </div>
-
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>CS50x — Harvard</h3>
-
-              <p>
-                Built stronger foundations in programming logic, problem solving, algorithms, C, Python, SQL, Flask, and computer science thinking.
-              </p>
-
-              <a
-                href="https://courses.edx.org/certificates/462cd806f9fe49c7b8d437a1f8d09835?_gl=1*19jjz40*_gcl_au*MTgyMDIxNzU2OS4xNzcyNzk2NzQx*_ga*MTk1NDAxMDQ5MS4xNzcyNzk2NzQx*_ga_D3KS4KMDT0*czE3NzI3OTY3NDEkbzEkZzEkdDE3NzI3OTY3NDgkajUzJGwwJGgw"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-              >
-                Verify certificate ↗
-              </a>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>FreeCodeCamp</h3>
-
-              <p>
-                Strengthens responsive design, JavaScript, accessibility, frontend development, and project-based confidence.
-              </p>
-
-              <a
-                href="https://www.freecodecamp.org/fcc-8a82393c-d31c-4433-ba45-1410617c1e04"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-              >
-                View profile ↗
-              </a>
-
-              <a
-                href="https://www.freecodecamp.org/certification/fcc-8a82393c-d31c-4433-ba45-1410617c1e04/responsive-web-design"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-              >
-                Responsive Web Design certificate ↗
-              </a>
-
-              <a
-                href="https://www.freecodecamp.org/certification/fcc-8a82393c-d31c-4433-ba45-1410617c1e04/javascript-v9"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-              >
-                JavaScript Algorithms and Data Structures certificate ↗
-              </a>
-            </article>
-
-            <article class="info-card reveal">
-              <h3>The Odin Project</h3>
-
-              <p>
-                Deepens JavaScript, Git workflow, backend structure, Node.js, Express, and full-stack development skills.
-              </p>
-
-              <a
-                href="https://github.com/alex-mate"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-              >
-                View GitHub ↗
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">About</p>
-
-            <h2>
-              Mate Code Studio is a focused small business software and web studio.
-            </h2>
-
-            <p class="section-intro">
-              Mate Code Studio is run by Alex Mate and focuses on useful digital tools for small businesses: websites, automations, dashboards, and simple systems that solve real workflow problems.
-            </p>
-
-            <p class="section-intro">
-              My background is not only coding. I also bring experience from management, operations, and process-driven work, which helps me understand why businesses need tools that are clear, reliable, and easy to use.
-            </p>
-
-            <p class="section-intro">
-              My focus is simple: clear communication, practical solutions, clean structure, and work that helps the client move forward.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta-section">
-        <div class="container">
-          <div class="cta-card reveal">
-            <p class="eyebrow">Start a project</p>
-
-            <h2>
-              Have a business process that feels messy, manual, or hard to manage?
+              Less digital clutter.
+              <em>More useful systems.</em>
             </h2>
 
             <p>
-              Tell me what you are trying to organise, automate, or improve. Mate Code Studio can help you decide whether the right solution is a website, dashboard, lead system, automation, or ongoing maintenance support.
+              You do not need more software for the sake of it. You need the
+              right tools for the problems that are slowing your business down.
             </p>
+          </div>
 
-            <div class="next-steps" aria-label="What happens after you contact Mate Code Studio">
-              <h3>What happens after you contact me?</h3>
-              <p>
-                You do not need to know the technical solution before you reach out. Tell me what feels messy, manual, unclear, or difficult to manage in your business.
+          <div class="service-offer-grid">
+            <article class="offer-card reveal">
+              <span class="offer-number">01</span>
+
+              <p class="offer-kicker">
+                Get your business online
               </p>
 
-              <div class="next-steps-grid">
-                <div class="next-step-card">
-                  <span>1</span>
-                  <h4>Tell me what is not working</h4>
-                  <p>
-                    This could be a weak website, missed leads, repetitive admin,
-                    messy spreadsheets, or a process that is hard to manage.
-                  </p>
-                </div>
+              <h3>Professional business websites</h3>
 
-                <div class="next-step-card">
-                  <span>2</span>
-                  <h4>I suggest the simplest useful solution</h4>
-                  <p>
-                    Not every problem needs a big system. I’ll help identify whether you
-                    need a website, automation, dashboard, CRM-style tool, or small improvement.
-                  </p>
-                </div>
+              <p>
+                Clear, credible websites that explain what you offer and make it
+                easy for customers to get in touch.
+              </p>
 
-                <div class="next-step-card">
-                  <span>3</span>
-                  <h4>We define a clear first version</h4>
-                  <p>
-                    The goal is to agree a realistic scope that solves the main problem
-                    without overbuilding.
-                  </p>
-                </div>
+              <div class="offer-bottom">
+                <strong>From €550</strong>
 
-                <div class="next-step-card">
-                  <span>4</span>
-                  <h4>You get a practical result</h4>
-                  <p>
-                    The project is built, tested, explained, and can be supported after
-                    launch if you want ongoing maintenance.
-                  </p>
-                </div>
+                <a href="services.html">
+                  Explore websites →
+                </a>
               </div>
+            </article>
+
+            <article class="offer-card reveal">
+              <span class="offer-number">02</span>
+
+              <p class="offer-kicker">
+                Stop losing enquiries
+              </p>
+
+              <h3>Lead & enquiry systems</h3>
+
+              <p>
+                Simple pipelines that keep enquiries, conversations and
+                follow-ups organised instead of scattered across inboxes and
+                spreadsheets.
+              </p>
+
+              <div class="offer-bottom">
+                <strong>From €750</strong>
+
+                <a href="services.html">
+                  Explore lead systems →
+                </a>
+              </div>
+            </article>
+
+            <article class="offer-card reveal">
+              <span class="offer-number">03</span>
+
+              <p class="offer-kicker">
+                Replace messy admin
+              </p>
+
+              <h3>Dashboards & internal tools</h3>
+
+              <p>
+                Purpose-built tools for managing information and workflows your
+                business currently handles manually.
+              </p>
+
+              <div class="offer-bottom">
+                <strong>From €900</strong>
+
+                <a href="services.html">
+                  Explore business tools →
+                </a>
+              </div>
+            </article>
+
+            <article class="offer-card reveal">
+              <span class="offer-number">04</span>
+
+              <p class="offer-kicker">
+                Save repetitive work
+              </p>
+
+              <h3>Business automation</h3>
+
+              <p>
+                Focused automations for reports, files, spreadsheets, data
+                processing and repetitive administrative tasks.
+              </p>
+
+              <div class="offer-bottom">
+                <strong>Quoted by workflow</strong>
+
+                <a href="services.html">
+                  Explore automation →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SELECTED WORK
+====================================================== -->
+<section
+  id="work"
+  class="launch-section dark-section work-section"
+>
+  <div class="container">
+
+    <div class="launch-heading reveal">
+      <p class="launch-eyebrow">
+        Selected work
+      </p>
+
+      <h2>
+        Built for real problems.
+        <em>Designed to be useful.</em>
+      </h2>
+
+      <p>
+        A mix of client work, in-house software and clearly labelled
+        concept projects.
+      </p>
+    </div>
+
+    <div class="work-list">
+
+      <!-- =================================================
+           FLOWERS
+      ================================================== -->
+      <article class="work-feature reveal">
+
+        <div class="work-image work-image-photo">
+          <img
+            src="images/flowerbouquetbyana/home.webp"
+            alt="Flowers Bouquet By Anna website homepage"
+            loading="lazy"
+            decoding="async"
+           width="1269" height="963" />
+        </div>
+
+        <div class="work-copy">
+
+          <span class="project-type">
+            Client project
+          </span>
+
+          <h3>
+            Flowers Bouquet By Anna
+          </h3>
+
+          <p class="work-subtitle">
+            A clearer online presence for a handmade floral business.
+          </p>
+
+          <dl>
+
+            <div>
+              <dt>
+                Problem
+              </dt>
+
+              <dd>
+                Products and enquiries needed a more professional,
+                easier-to-share home online.
+              </dd>
             </div>
 
-            <form
-              class="contact-form"
-              action="https://formspree.io/f/xqeyzwae"
-              method="POST"
-            >
-              <input
-                type="hidden"
-                name="_subject"
-                value="New project inquiry from matecodestudio.com"
-              />
+            <div>
+              <dt>
+                Solution
+              </dt>
 
-              <input type="text" name="name" placeholder="Your name" required />
+              <dd>
+                A bilingual, mobile-friendly website with clear product
+                presentation and WhatsApp enquiry paths.
+              </dd>
+            </div>
+
+          </dl>
+
+          <a
+            href="flowerbouquetbyanna.html"
+            class="text-link"
+          >
+            Read case study →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           MATEOS
+      ================================================== -->
+      <article class="work-feature work-feature-reverse reveal">
+
+        <div class="work-image mateos-work-visual">
+
+          <div class="mini-pipeline">
+            <span>DISCOVERY</span>
+            <span>QUALIFY</span>
+            <span>OUTREACH</span>
+            <span>FOLLOW-UP</span>
+          </div>
+
+          <strong>
+            MateOS
+          </strong>
+
+          <p>
+            Companies → contacts → opportunities → email → replies
+          </p>
+
+        </div>
+
+        <div class="work-copy">
+
+          <span class="project-type">
+            In-house software
+          </span>
+
+          <h3>
+            MateOS
+          </h3>
+
+          <p class="work-subtitle">
+            The client acquisition system being built around the way
+            Mate Code Studio works.
+          </p>
+
+          <dl>
+
+            <div>
+              <dt>
+                Problem
+              </dt>
+
+              <dd>
+                Outreach, follow-ups and client context become difficult
+                to manage across disconnected tools.
+              </dd>
+            </div>
+
+            <div>
+              <dt>
+                Solution
+              </dt>
+
+              <dd>
+                One internal workflow for discovery, qualification,
+                pipeline management, outreach and conversations.
+              </dd>
+            </div>
+
+          </dl>
+
+          <span class="text-link muted-link">
+            Full case study coming with the MVP
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           VIKING RESTAURANT
+      ================================================== -->
+      <article class="work-feature reveal">
+
+       <div class="work-image work-image-photo">
+  <img
+    src="images/viking-restaurant/home-640.webp"
+    alt="Viking Restaurant website homepage"
+    loading="lazy"
+    decoding="async"
+    width="640"
+    height="1427"
+  />
+</div>
+
+        <div class="work-copy">
+
+          <span class="project-type concept">
+            Concept project
+          </span>
+
+          <h3>
+            Viking Restaurant
+          </h3>
+
+          <p class="work-subtitle">
+            A hospitality website designed around atmosphere,
+            storytelling and a complete customer journey.
+          </p>
+
+          <dl>
+
+            <div>
+              <dt>
+                Goal
+              </dt>
+
+              <dd>
+                Show how a distinctive restaurant brand can carry
+                consistently from first impression to menu and contact.
+              </dd>
+            </div>
+
+            <div>
+              <dt>
+                Experience
+              </dt>
+
+              <dd>
+                Multi-page journey with themed storytelling, full menu,
+                location, opening hours and enquiry flow.
+              </dd>
+            </div>
+
+          </dl>
+
+          <div class="work-links">
+
+            <a
+              href="viking-restaurant.html"
+              class="text-link"
+            >
+              Read case study →
+            </a>
+            <p></p>
+            <a
+              href="https://alex-mate.github.io/Viking-Restaurant/"
+              target="_blank"
+              rel="noreferrer"
+              class="text-link"
+            >
+              View live concept ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- =====================================================
+         MORE WORK
+    ====================================================== -->
+    <div class="more-work reveal">
+
+      <div class="more-work-heading">
+
+        <p class="launch-eyebrow">
+          More work
+        </p>
+
+        <h3>
+          Additional software
+          <em>and interface projects.</em>
+        </h3>
+
+        <p>
+          Smaller projects that demonstrate additional development
+          capabilities and software patterns.
+        </p>
+
+      </div>
+
+
+     <div class="more-work-grid">
+
+  <!-- ===============================================
+       BUDGETING APP
+  ================================================ -->
+  <article class="more-work-card">
+
+    <div class="more-work-card-main">
+
+      <span class="project-type">
+        Software project
+      </span>
+
+      <h4>
+        Budgeting App
+      </h4>
+
+      <p>
+        A database-backed application exploring authentication,
+        CRUD workflows, financial records, dashboards and reporting.
+      </p>
+
+    </div>
+
+    <div class="more-work-card-meta">
+
+      <div>
+        <small>
+          Demonstrates
+        </small>
+
+        <strong>
+          Dashboard & Internal Tool
+        </strong>
+      </div>
+
+      <a
+        href="budgeting-app.html"
+        class="text-link"
+      >
+        Read case study →
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- ===============================================
+       WEATHERFLOW
+  ================================================ -->
+  <article class="more-work-card">
+
+    <div class="more-work-card-main">
+
+      <span class="project-type concept">
+        Interface project
+      </span>
+
+      <h4>
+        WeatherFlow
+      </h4>
+
+      <p>
+        A data-heavy dashboard interface exploring visual hierarchy,
+        forecast scanning, repeated UI patterns and location-based
+        workflows.
+      </p>
+
+    </div>
+
+    <div class="more-work-card-meta">
+
+      <div>
+        <small>
+          Demonstrates
+        </small>
+
+        <strong>
+          Data & Dashboard Interface
+        </strong>
+      </div>
+
+      <div class="more-work-actions">
+
+        <a
+          href="weatherflow.html"
+          class="text-link"
+        >
+          Read case study →
+        </a>
+
+        <a
+          href="https://alex-mate.github.io/WeatherFlow/"
+          target="_blank"
+          rel="noreferrer"
+          class="work-live-link"
+        >
+          View live ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</div>
+
+    </div>
+
+  </div>
+</section>
+      <!-- =====================================================
+           CLIENT PROOF
+      ====================================================== -->
+      <section class="launch-section ivory-section proof-launch">
+        <div class="container proof-layout reveal">
+          <div>
+            <p class="launch-eyebrow">Client feedback</p>
+
+            <h2>
+              Practical delivery.
+              Clear communication.
+            </h2>
+
+            <p>
+              Early client proof matters more than invented claims. This
+              feedback comes from a completed paid project.
+            </p>
+          </div>
+
+          <blockquote>
+            <div
+              class="stars"
+              aria-label="5 out of 5 stars"
+            >
+              ★★★★★
+            </div>
+
+            <p>
+              “Really good guy. He knows his stuff and everything worked.
+              Crazy fast response time. Definitely recommend it.”
+            </p>
+
+            <footer>
+              Verified Fiverr client · United Kingdom
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PROCESS
+      ====================================================== -->
+      <section class="launch-section ivory-section process-launch">
+        <div class="container">
+          <div class="launch-heading reveal">
+            <p class="launch-eyebrow">Process</p>
+
+            <h2>
+              Clear from the first conversation
+              <em>to launch.</em>
+            </h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card reveal">
+              <span>01</span>
+
+              <h3>Understand</h3>
+
+              <p>
+                We talk about the business, the problem and what needs to
+                improve.
+              </p>
+            </article>
+
+            <article class="process-card reveal">
+              <span>02</span>
+
+              <h3>Define</h3>
+
+              <p>
+                I recommend the simplest useful solution and agree the scope,
+                cost and timeline with you.
+              </p>
+            </article>
+
+            <article class="process-card reveal">
+              <span>03</span>
+
+              <h3>Build</h3>
+
+              <p>
+                The project is designed, developed and tested with clear
+                progress updates.
+              </p>
+            </article>
+
+            <article class="process-card reveal">
+              <span>04</span>
+
+              <h3>Launch & support</h3>
+
+              <p>
+                We launch, hand everything over and decide whether ongoing
+                support makes sense.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           MAINTENANCE
+      ====================================================== -->
+      <section
+        id="maintenance"
+        class="launch-section dark-section maintenance-launch"
+      >
+        <div class="container">
+          <div class="launch-heading reveal">
+            <p class="launch-eyebrow">After launch</p>
+
+            <h2>
+              Your website or software should not be
+              <em>abandoned after delivery.</em>
+            </h2>
+
+            <p>
+              Maintenance is optional. For businesses that want ongoing help,
+              Mate Code Studio can keep the project healthy, make small
+              improvements and continue developing it as the business changes.
+            </p>
+          </div>
+
+          <div class="maintenance-grid">
+            <article class="maintenance-card reveal">
+              <p class="offer-kicker">
+                Essential Care
+              </p>
+
+              <h3>Keep it healthy.</h3>
+
+              <p>
+                For businesses that want routine checks, updates and a reliable
+                point of contact after launch.
+              </p>
+
+              <ul>
+                <li>Routine project checks</li>
+                <li>Small content updates</li>
+                <li>Basic issue support</li>
+              </ul>
+
+              <strong>From €30 / month</strong>
+            </article>
+
+            <article class="maintenance-card recommended reveal">
+              <span class="recommended-label">
+                Recommended
+              </span>
+
+              <p class="offer-kicker">
+                Improve & Support
+              </p>
+
+              <h3>Keep making it better.</h3>
+
+              <p>
+                For active websites and tools that need ongoing improvements
+                alongside regular support.
+              </p>
+
+              <ul>
+                <li>Everything in Essential</li>
+                <li>Monthly improvements</li>
+                <li>Priority support</li>
+              </ul>
+
+              <strong>From €75 / month</strong>
+            </article>
+
+            <article class="maintenance-card reveal">
+              <p class="offer-kicker">
+                Growth Support
+              </p>
+
+              <h3>Keep developing it.</h3>
+
+              <p>
+                For businesses that expect their website or internal tool to
+                evolve as operations grow.
+              </p>
+
+              <ul>
+                <li>Ongoing feature work</li>
+                <li>Workflow improvements</li>
+                <li>Development planning</li>
+              </ul>
+
+              <strong>From €150 / month</strong>
+            </article>
+          </div>
+
+          <p class="maintenance-note">
+            Maintenance is never forced. We decide together after launch
+            whether ongoing support is useful for your project.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           QUIET WORKSHOP / ABOUT
+      ====================================================== -->
+      <section
+        id="about"
+        class="launch-section ivory-section workshop-section"
+      >
+        <div class="container workshop-grid">
+          <div class="workshop-manifesto reveal">
+            <p class="launch-eyebrow">
+              The Quiet Workshop
+            </p>
+
+            <h2>
+              Thoughtful work.
+              Clear communication.
+              <em>No unnecessary complexity.</em>
+            </h2>
+
+            <p>
+              Mate Code Studio is deliberately small. You work directly with
+              the person designing and building your project, without layers of
+              account management or unnecessary process.
+            </p>
+          </div>
+
+          <div class="principles-grid reveal">
+            <article>
+              <span>01</span>
+
+              <h3>Business first</h3>
+
+              <p>
+                Technology is chosen around the problem, not the other way
+                around.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+
+              <h3>Built with care</h3>
+
+              <p>
+                Details matter, from how a form behaves on a phone to what
+                happens after an enquiry arrives.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+
+              <h3>Right-sized solutions</h3>
+
+              <p>
+                A small business should not be sold enterprise complexity when
+                a simpler system will do the job better.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container founder-row reveal">
+          <div class="founder-monogram">
+            AM
+          </div>
+
+          <div>
+            <p class="launch-eyebrow">
+              The person behind the studio
+            </p>
+
+            <h3>
+              I'm Alex Mate, founder and developer at Mate Code Studio.
+            </h3>
+
+            <p>
+              I build websites and practical software for small businesses,
+              combining software development with a business-first approach
+              shaped by years of working with people, processes and day-to-day
+              operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONTACT
+      ====================================================== -->
+      <section
+        id="contact"
+        class="launch-section contact-launch"
+      >
+        <div class="container contact-launch-grid">
+          <div class="reveal">
+            <p class="launch-eyebrow">
+              Start a project
+            </p>
+
+            <h2>
+              Have something in your business that
+              <em>should work better?</em>
+            </h2>
+
+            <p>
+              It does not need to start with a technical specification. Tell me
+              what is taking too much time, getting lost, confusing customers or
+              simply not working as well as it should.
+            </p>
+
+            <div class="contact-promise">
+              <strong>No obligation.</strong>
+
+              <span>
+                I’ll first tell you whether I think Mate Code Studio can
+                genuinely help.
+              </span>
+            </div>
+          </div>
+
+          <form
+            class="launch-form reveal"
+            action="https://formspree.io/f/xqeyzwae"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New project inquiry from matecodestudio.com"
+            />
+
+            <label>
+              Your name
+
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </label>
+
+            <label>
+              Your email
 
               <input
                 type="email"
                 name="email"
-                placeholder="Your email"
+                autocomplete="email"
                 required
               />
+            </label>
+
+            <label>
+              What would you like to improve?
 
               <textarea
                 name="message"
                 rows="6"
-                placeholder="Tell me what you want to build, organise, automate, or improve..."
+                placeholder="A website, enquiry process, repetitive admin, dashboard, automation..."
                 required
               ></textarea>
+            </label>
 
-              <button type="submit" class="btn btn-primary">
-                Send project request
-              </button>
-            </form>
+            <button
+              type="submit"
+              class="launch-btn launch-btn-primary"
+            >
+              Send project request
+            </button>
+            <p class="form-privacy-note">
+    Your details will only be used to respond to your enquiry
+    and discuss your project. Submissions are processed by Formspree
+    and delivered to Zoho Mail.
+    <a href="privacy.html">Read our Privacy Policy.</a>
+</p>
 
-            <p class="form-note">
-              No pressure. Send a short message and I’ll tell you what can realistically be built.
+            <p>
+              Prefer email?
+              <a href="mailto:alex@matecodestudio.com">
+                alex@matecodestudio.com
+              </a>
             </p>
-
-            <div class="hero-actions hero-actions-center">
-              <a
-                href="https://www.fiverr.com/matecode_studio?public_mode=true"
-                target="_blank"
-                rel="noreferrer"
-                class="btn btn-secondary"
-              >
-                Open Fiverr profile
-              </a>
-
-              <a href="#case-studies" class="btn btn-secondary">
-                View case studies
-              </a>
-
-              <a href="services.html#maintenance" class="btn btn-secondary">
-                Maintenance options
-              </a>
-            </div>
-          </div>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Mate Code Studio · Alex Mate</p>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="launch-footer">
+      <div class="container footer-launch-grid">
+        <div>
+          <strong>Mate Code Studio</strong>
 
-        <div class="social-links footer-socials">
+          <p>
+            Software built with care. Delivered with confidence.
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          
+          <a href="services.html">Services</a>
+          <a href="#work">Work</a>
+          <a href="#maintenance">Maintenance</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-external">
           <a
             href="https://www.linkedin.com/in/alex-mate-2426813a2/"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn"
           >
-            <i class="bi bi-linkedin"></i>
-            <span>LinkedIn</span>
+            LinkedIn
           </a>
 
           <a
             href="https://github.com/alex-mate"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub"
           >
-            <i class="bi bi-github"></i>
-            <span>GitHub</span>
+            GitHub
           </a>
 
           <a
             href="https://www.fiverr.com/matecode_studio?public_mode=true"
             target="_blank"
             rel="noreferrer"
-            aria-label="Fiverr"
           >
-            <i class="bi bi-briefcase-fill"></i>
-            <span>Fiverr</span>
+            Fiverr
           </a>
         </div>
       </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Mate Code Studio · Alex Mate</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>The Quiet Workshop</span>
+      </div>
     </footer>
-
-    <div id="lightbox" class="lightbox">
-      <button
-        id="lightboxClose"
-        class="lightbox-close"
-        aria-label="Close image"
-        type="button"
-      >
-        ×
-      </button>
-
-      <img id="lightboxImg" src="" alt="Expanded project image" />
-    </div>
 
     <script src="/static/script.js"></script>
   </body>

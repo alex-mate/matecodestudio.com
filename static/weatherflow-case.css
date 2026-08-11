@@ -1,0 +1,366 @@
+/* =========================================================
+   WEATHERFLOW CASE STUDY
+========================================================= */
+
+.weather-case-hero {
+    background:
+        radial-gradient(
+            circle at 82% 20%,
+            rgba(31, 58, 46, 0.52),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #0f1113,
+            #101713
+        );
+}
+
+/* Accessibility-safe brass variants
+   Dark backgrounds: #D2B47C
+   Light backgrounds: #7A5A2F
+*/
+.weather-case-hero,
+.weather-flow-section {
+    --weather-brass-on-dark: #d2b47c;
+}
+
+.weather-screens {
+    --weather-brass-on-light: #7a5a2f;
+}
+
+
+/* =========================================================
+   INFORMATION FLOW
+========================================================= */
+
+.weather-flow-section {
+    background: var(--forest);
+    color: var(--warm-ivory);
+}
+
+.weather-flow-section .case-heading h2 {
+    color: var(--warm-ivory);
+}
+
+.weather-flow-section .case-heading > p:last-child {
+    color: rgba(245, 242, 235, 0.7);
+}
+
+.weather-flow {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto
+        1fr auto
+        1fr auto
+        1fr;
+
+    gap: 18px;
+
+    align-items: center;
+}
+
+.weather-flow article {
+    min-height: 190px;
+
+    padding: 24px;
+
+    border: 1px solid rgba(245, 242, 235, 0.16);
+
+    border-radius: 10px;
+
+    background: rgba(15, 17, 19, 0.13);
+}
+
+.weather-flow article span {
+    color: var(--weather-brass-on-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 1.2rem;
+}
+
+.weather-flow article strong {
+    display: block;
+
+    margin-top: 34px;
+
+    color: var(--warm-ivory);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 1.35rem;
+}
+
+.weather-flow article p {
+    margin-top: 9px;
+
+    color: rgba(245, 242, 235, 0.7);
+
+    font-size: 0.76rem;
+
+    line-height: 1.6;
+}
+
+.weather-flow-arrow {
+    color: var(--weather-brass-on-dark);
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   SCREEN WALKTHROUGH
+========================================================= */
+
+.weather-screens {
+    padding-top: 85px;
+}
+
+.weather-screen-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(280px, 0.65fr);
+
+    gap: 64px;
+
+    align-items: center;
+
+    margin: 0;
+
+    padding: 72px 0;
+
+    border-top: 1px solid var(--ivory-border);
+}
+
+.weather-screen-main:last-child {
+    border-bottom: 1px solid var(--ivory-border);
+}
+
+.weather-screen-reverse {
+    grid-template-columns:
+        minmax(280px, 0.65fr)
+        minmax(0, 1.35fr);
+}
+
+.weather-screen-reverse .weather-screen-frame {
+    order: 2;
+}
+
+.weather-screen-reverse figcaption {
+    order: 1;
+}
+
+
+/* =========================================================
+   SCREEN FRAME
+========================================================= */
+
+.weather-screen-frame {
+    overflow: hidden;
+
+    border: 1px solid var(--ivory-border);
+
+    border-radius: 12px;
+
+    background: #ebe7df;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 17, 19, 0.11);
+}
+
+.weather-screen-dashboard {
+    height: 520px;
+}
+
+.weather-screen-wide {
+    min-height: 310px;
+}
+
+.weather-screen-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    cursor: zoom-in;
+
+    transition: transform 0.35s ease;
+}
+
+.weather-screen-dashboard img {
+    object-fit: cover;
+
+    object-position: top;
+}
+
+.weather-screen-wide img {
+    object-fit: contain;
+
+    background: #f0ede6;
+}
+
+.weather-screen-frame:hover img {
+    transform: scale(1.012);
+}
+
+
+/* =========================================================
+   SCREEN COPY
+========================================================= */
+
+.weather-screen-main figcaption {
+    display: block;
+
+    padding: 0;
+}
+
+.weather-screen-main figcaption > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--weather-brass-on-light);
+
+    font-size: 0.63rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.weather-screen-main figcaption h3 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            2.7rem
+        );
+
+    line-height: 1.08;
+}
+
+.weather-screen-main figcaption p {
+    margin-top: 18px;
+
+    color: var(--ink-soft);
+
+    font-size: 0.86rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .weather-flow {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .weather-flow-arrow {
+        display: none;
+    }
+
+    .weather-screen-main,
+    .weather-screen-reverse {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+    .weather-screen-reverse .weather-screen-frame,
+    .weather-screen-reverse figcaption {
+        order: initial;
+    }
+
+    .weather-screen-dashboard {
+        height: 470px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .weather-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-flow article {
+        min-height: auto;
+    }
+
+    .weather-screen-main {
+        padding: 48px 0;
+    }
+
+    .weather-screen-dashboard {
+        height: 340px;
+    }
+
+    .weather-screen-wide {
+        min-height: 200px;
+    }
+}
+
+/* =========================================================
+   WEATHERFLOW ACCESSIBILITY CONTRAST FIX
+========================================================= */
+
+/* Brass text on light / ivory backgrounds */
+.case-launch-page
+.case-ivory
+.case-eyebrow {
+    color: #7a5a2f !important;
+}
+
+.case-launch-page
+.case-ivory
+em {
+    color: #7a5a2f;
+}
+
+
+/* Brass text on WeatherFlow forest section */
+.case-launch-page
+.weather-flow-section
+.case-eyebrow {
+    color: #d2b47c !important;
+}
+
+.case-launch-page
+.weather-flow-section
+em {
+    color: #d2b47c;
+}
+
+body.case-launch-page
+.case-section.weather-flow-section
+.case-heading h2 em {
+  color: #e8d3a5 !important;
+}

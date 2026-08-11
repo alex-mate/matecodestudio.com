@@ -3,220 +3,1218 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budgeting App Case Study | Mate Code Studio</title>
+
+    <title>Budgeting App — Dashboard Case Study | Mate Code Studio</title>
+
     <meta
       name="description"
-      content="A Mate Code Studio case study showing how a Flask dashboard application was built to organise accounts, budgets, transactions, and financial records."
+      content="A Mate Code Studio case study exploring how a database-backed dashboard can turn scattered financial records into a structured, manageable workflow."
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+   
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://matecodestudio.com/budgeting-app.html" />
+    <meta name="theme-color" content="#0f1113" />
 
-    <link rel="stylesheet" href="static/styles.css" />
+    <meta property="og:site_name" content="Mate Code Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Budgeting App — Dashboard & Internal Tool Case Study" />
+    <meta property="og:description" content="A Mate Code Studio case study exploring how a database-backed dashboard can turn scattered financial records into a structured, manageable workflow." />
+    <meta property="og:url" content="https://matecodestudio.com/budgeting-app.html" />
+    <meta property="og:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Budgeting App — Dashboard & Internal Tool Case Study" />
+    <meta name="twitter:description" content="A Mate Code Studio case study exploring how a database-backed dashboard can turn scattered financial records into a structured, manageable workflow." />
+    <meta name="twitter:image" content="https://matecodestudio.com/images/mate-code-studio-social-preview.png" />
+    <meta name="twitter:image:alt" content="Mate Code Studio — websites and software built around how your business actually works." />
+
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  media="print"
+  onload="this.media='all'"
+>
+
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=optional"
+  >
+</noscript>
+
+    <link rel="icon" href="/favicon.ico" />
+
+   
+    <link rel="stylesheet" href="/static/case-study-launch.css?v=13" />
   </head>
 
-  <body>
-    <div class="cursor-glow"></div>
+  <body class="case-launch-page">
 
-    <header class="site-header" id="siteHeader">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="Back to Mate Code Studio homepage">
-          <span class="brand-title">Mate Code Studio</span>
-          <span class="brand-subtitle">Case Study · Dashboard & Web App</span>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="case-header">
+      <div class="container case-nav">
+
+        <a
+          href="index.html"
+          class="case-brand"
+          aria-label="Mate Code Studio homepage"
+        >
+          <span class="case-brand-mark">MCS</span>
+
+          <span>
+            <strong>Mate Code Studio</strong>
+            <small>Small Business Software & Web Studio</small>
+          </span>
         </a>
 
-        <nav class="nav" aria-label="Case study navigation">
+        <nav class="case-nav-links" aria-label="Main navigation">
           <a href="services.html">Services</a>
-          <a href="index.html#solutions">Solutions</a>
-          <a href="index.html#case-studies">Case Studies</a>
+          <a href="index.html#work">Work</a>
           <a href="index.html#maintenance">Maintenance</a>
+          <a href="index.html#about">About</a>
           <a href="index.html#contact">Contact</a>
         </nav>
+
       </div>
     </header>
 
     <main>
-      <section class="section case-hero">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Dashboard case study</p>
-            <h1>Budgeting App</h1>
-            <p class="section-intro">
-              A Flask-based dashboard application built to organise accounts, budgets, transactions, and financial records in one structured system.
-            </p>
-            <p class="section-intro">
-              Although this is a personal finance project, the same pattern applies directly to client work: replacing scattered spreadsheets and manual tracking with a clearer database-backed tool.
-            </p>
-            <p class="mono-line">Python · Flask · SQLite · Dashboard UI · CRUD workflows · Data organisation</p>
 
-            <div class="hero-actions case-actions reveal">
-              <a href="#screens" class="btn btn-primary">View screens</a>
-              <a href="https://github.com/alex-mate/Budgeting-app" class="btn btn-secondary" target="_blank" rel="noreferrer">View code</a>
-              <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section class="case-hero budget-case-hero">
+
+        <div class="container case-hero-grid">
+
+          <div class="case-hero-copy reveal">
+
+            <div class="case-project-label">
+              <span>Software Project</span>
+              <span>Dashboard & Internal Tool</span>
             </div>
+
+            <p class="case-eyebrow">
+              Budgeting App
+            </p>
+
+            <h1>
+              Turning scattered financial records into
+              <em>one structured workflow.</em>
+            </h1>
+
+            <p class="case-lead">
+              A database-backed Flask application built around accounts,
+              budgets, transactions, savings and reporting — demonstrating the
+              same patterns used when replacing spreadsheets and manual admin
+              with practical internal software.
+            </p>
+
+            <div class="case-hero-actions">
+
+              <a
+                href="#screens"
+                class="case-btn case-btn-primary"
+              >
+                Explore the app
+              </a>
+
+              <a
+                href="https://github.com/alex-mate/Budgeting-app"
+                target="_blank"
+                rel="noreferrer"
+                class="case-btn case-btn-ghost"
+              >
+                View code
+              </a>
+
+            </div>
+
           </div>
+
+          <div class="case-hero-image reveal">
+
+            <div class="browser-frame">
+
+              <div class="browser-top">
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <p>
+                  Budgeting App · Dashboard
+                </p>
+              </div>
+
+              <img
+                src="images/budgetingapp/home.webp"
+                alt="Budgeting App main dashboard"
+               width="1364" height="952" decoding="async" />
+
+            </div>
+
+          </div>
+
         </div>
+
+        <div class="container case-facts reveal">
+
+          <div>
+            <small>Project type</small>
+            <strong>Personal Software Project</strong>
+          </div>
+
+          <div>
+            <small>Core stack</small>
+            <strong>Flask + SQLite</strong>
+          </div>
+
+          <div>
+            <small>Core pattern</small>
+            <strong>CRUD + Dashboard</strong>
+          </div>
+
+          <div>
+            <small>Business relevance</small>
+            <strong>Internal Tools</strong>
+          </div>
+
+        </div>
+
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Project snapshot</p>
-            <h2>A dashboard-style app that turns messy financial tracking into a structured workflow.</h2>
-            <p class="section-intro">
-              This case study shows how Mate Code Studio approaches internal tools: understand the workflow, structure the data, create practical user flows, and make information easier to review.
+      <!-- =====================================================
+           PROJECT CONTEXT
+      ====================================================== -->
+
+      <section
+        id="case-study"
+        class="case-section case-ivory"
+      >
+
+        <div class="container case-intro-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              The project
             </p>
+
+            <h2>
+              The subject is personal finance.
+              <em>The useful part is the system behind it.</em>
+            </h2>
+
           </div>
 
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Use case</h3>
-              <p>Personal finance tracking, but relevant to business dashboards, admin tools, and internal record systems.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Problem</h3>
-              <p>Financial data becomes hard to manage when accounts, budgets, notes, and transactions are spread across different places.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Solution</h3>
-              <p>A Flask application with authentication, budgets, transactions, filters, editable records, and dashboard views.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Business relevance</h3>
-              <p>The same build pattern can support client tools for bookings, leads, finances, inventory, or operational records.</p>
-            </article>
+          <div class="case-intro-copy">
+
+            <p>
+              Budgeting App started as a way to bring accounts, income,
+              expenses, savings and budgets into one structured application.
+            </p>
+
+            <p>
+              But the same problem appears constantly inside small businesses:
+              information begins in spreadsheets, notes and disconnected tools.
+              As the amount of data grows, simple tasks become harder to track
+              and the business loses visibility over its own workflow.
+            </p>
+
+            <p>
+              That makes this project useful beyond budgeting. It demonstrates
+              the foundation of a small internal business tool.
+            </p>
+
           </div>
+
         </div>
+
       </section>
 
-      <section class="section">
-        <div class="container case-layout">
-          <article class="case-block reveal">
-            <p class="eyebrow">The problem</p>
-            <h2>Spreadsheets and notes work at first, but they become harder to manage as the workflow grows.</h2>
-            <p>
-              Personal finance data can quickly become scattered across bank apps, spreadsheets, manual notes, and monthly calculations. That makes it harder to see what happened, where money went, and whether spending matched the planned budget.
+      <!-- =====================================================
+           PROBLEM / GOAL / SOLUTION
+      ====================================================== -->
+
+      <section class="case-section case-ivory case-story-section">
+
+        <div class="container case-story-grid">
+
+          <article class="case-story-card reveal">
+
+            <span>01</span>
+
+            <p class="case-story-label">
+              The problem
             </p>
+
+            <h3>
+              Information becomes difficult to use when it lives in too many places.
+            </h3>
+
             <p>
-              This mirrors a common small-business problem: the work starts simple, then the amount of data grows until a spreadsheet is no longer enough.
+              Accounts, transactions, savings and monthly budgets all represent
+              related information, but managing each separately makes the full
+              picture difficult to understand.
             </p>
+
+            <p>
+              The challenge was to create one consistent system rather than a
+              collection of disconnected screens.
+            </p>
+
           </article>
 
-          <article class="case-block reveal">
-            <p class="eyebrow">The goal</p>
-            <h2>Build a working dashboard foundation with real app structure, not just static screens.</h2>
-            <ul class="bullet-list">
-              <li>Create user accounts and user-specific data</li>
-              <li>Store accounts, budgets, and transactions in SQLite</li>
-              <li>Support add, edit, delete, and filter workflows</li>
-              <li>Make financial activity easier to scan through dashboard views</li>
-              <li>Separate budget setup from transaction tracking for clearer use</li>
-              <li>Keep the first version practical and expandable</li>
+          <article class="case-story-card reveal">
+
+            <span>02</span>
+
+            <p class="case-story-label">
+              The goal
+            </p>
+
+            <h3>
+              Build a real application workflow, not just a dashboard mockup.
+            </h3>
+
+            <ul>
+              <li>Create secure user accounts</li>
+              <li>Store structured records in a database</li>
+              <li>Add, update and delete financial records</li>
+              <li>Separate planning from daily activity</li>
+              <li>Make historical information searchable</li>
+              <li>Turn stored data into useful overview screens</li>
             </ul>
+
           </article>
 
-          <article class="case-block reveal">
-            <p class="eyebrow">The solution</p>
-            <h2>A database-backed Flask app with connected user flows and editable financial records.</h2>
-            <p>
-              I built the application with Flask for routing, templates, form handling, user sessions, and database interactions. SQLite stores the structured records, while HTML, CSS, and JavaScript support the interface and user experience.
+          <article class="case-story-card reveal">
+
+            <span>03</span>
+
+            <p class="case-story-label">
+              The solution
             </p>
+
+            <h3>
+              A connected Flask application with database-backed workflows.
+            </h3>
+
             <p>
-              The result is a working dashboard-style app where users can manage their profile, set budgets, add transactions, review history, and view financial activity from one place.
+              The application combines authentication, data entry, budgets,
+              transaction management, savings and reporting in one interface.
             </p>
+
+            <p>
+              Each feature contributes to the same workflow rather than
+              operating as an isolated page.
+            </p>
+
           </article>
+
         </div>
+
       </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Business value</p>
-            <h2>Why this project matters for small business software.</h2>
-            <p class="section-intro">
-              The important part is not “budgeting” alone. The important part is the repeatable pattern: take scattered information, organise it, and turn it into a usable system.
+      <!-- =====================================================
+           STRATEGIC DECISION
+      ====================================================== -->
+
+      <section class="case-section case-dark">
+
+        <div class="container decision-grid">
+
+          <div class="decision-heading reveal">
+
+            <p class="case-eyebrow">
+              A deliberate decision
             </p>
+
+            <h2>
+              A dashboard is only useful if the data behind it
+              <em>can actually be managed.</em>
+            </h2>
+
           </div>
 
-          <div class="cards-grid">
-            <article class="info-card reveal">
-              <h3>Structured records</h3>
-              <p>Shows how messy information can be stored in a cleaner database-backed format.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Editable workflows</h3>
-              <p>Users can correct, update, and manage records instead of working around static files.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Dashboard thinking</h3>
-              <p>Important information is pulled into views that are easier to scan and act on.</p>
-            </article>
-            <article class="info-card reveal">
-              <h3>Client relevance</h3>
-              <p>The same structure can support small CRMs, booking tools, finance trackers, admin panels, and internal dashboards.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="decision-copy reveal">
 
-      <section class="section" id="screens">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Screens</p>
-            <h2>Dashboard walkthrough</h2>
-            <p class="section-intro">
-              These screens show the main application flows: authentication, dashboard, profile settings, transaction entry, budget setup, and financial overview.
-            </p>
-          </div>
-
-          <div class="case-gallery reveal">
-            <figure class="case-shot"><img src="images/budgetingapp/login.png" alt="Budgeting App login page" class="lightbox-img" /><figcaption>Login — the app starts with protected user access.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/register.png" alt="Budgeting App registration page" class="lightbox-img" /><figcaption>Registration — user-specific records are created from the start.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/home.png" alt="Budgeting App dashboard homepage" class="lightbox-img" /><figcaption>Dashboard — key financial information is centralised in one view.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/profile.png" alt="Budgeting App profile and account settings page" class="lightbox-img" /><figcaption>Profile and account settings — supports basic account management.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/add expense.png" alt="Budgeting App add transaction page" class="lightbox-img" /><figcaption>Transaction entry — structured forms help keep records consistent.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/transactions.png" alt="Budgeting App transaction history page" class="lightbox-img" /><figcaption>Transaction history — records can be reviewed, filtered, edited, and managed.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/yearly overview.png" alt="Budgeting App yearly overview dashboard" class="lightbox-img" /><figcaption>Yearly overview — turns stored data into a clearer long-term view.</figcaption></figure>
-            <figure class="case-shot"><img src="images/budgetingapp/budget set up.png" alt="Budgeting App budget setup page" class="lightbox-img" /><figcaption>Budget setup — separates planning from daily transaction tracking.</figcaption></figure>
-          </div>
-
-          <div class="hero-actions case-actions reveal">
-            <a href="https://github.com/alex-mate/Budgeting-app" class="btn btn-primary" target="_blank" rel="noreferrer">View code</a>
-            <a href="index.html#contact" class="btn btn-secondary">Discuss a dashboard project</a>
-            <a href="index.html#case-studies" class="btn btn-secondary">Back to case studies</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta-section">
-        <div class="container">
-          <div class="cta-card reveal">
-            <p class="eyebrow">Need something similar?</p>
-            <h2>Have a spreadsheet, admin process, or internal workflow that needs a proper dashboard?</h2>
             <p>
-              I can help turn scattered records, manual tracking, or repeated admin work into a simple Flask dashboard, internal tool, or automation workflow.
+              It would have been easy to focus mainly on charts and visual
+              summaries. But dashboards become valuable only when the
+              underlying workflow is reliable.
             </p>
-            <div class="hero-actions hero-actions-center">
-              <a href="index.html#contact" class="btn btn-primary">Discuss a dashboard project</a>
-              <a href="services.html" class="btn btn-secondary">Explore services</a>
+
+            <p>
+              Users therefore need to be able to create records, correct
+              mistakes, edit information, remove entries and review history.
+            </p>
+
+            <div class="decision-result">
+
+              <span>Chosen approach</span>
+
+              <strong>
+                Capture → organise → review → update → understand
+              </strong>
+
             </div>
+
+            <p>
+              That is the same principle I would apply to a business admin
+              tool, CRM, booking system or operational dashboard.
+            </p>
+
           </div>
+
         </div>
+
       </section>
+
+      <!-- =====================================================
+           WORKFLOW
+      ====================================================== -->
+
+      <section class="case-section budget-workflow-section">
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Application workflow
+            </p>
+
+            <h2>
+              Data moves through
+              <em>a predictable system.</em>
+            </h2>
+
+            <p>
+              The interface is built around actions rather than isolated
+              screens.
+            </p>
+
+          </div>
+
+          <div class="budget-workflow reveal">
+
+            <article>
+
+              <span>01</span>
+
+              <strong>
+                Capture
+              </strong>
+
+              <p>
+                Add income, expenses, savings and budget information through
+                structured forms.
+              </p>
+
+            </article>
+
+            <div class="budget-workflow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>02</span>
+
+              <strong>
+                Organise
+              </strong>
+
+              <p>
+                Store records consistently against the correct user, category
+                and period.
+              </p>
+
+            </article>
+
+            <div class="budget-workflow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>03</span>
+
+              <strong>
+                Review
+              </strong>
+
+              <p>
+                Browse transactions, budgets and historical information from
+                dedicated views.
+              </p>
+
+            </article>
+
+            <div class="budget-workflow-arrow">
+              →
+            </div>
+
+            <article>
+
+              <span>04</span>
+
+              <strong>
+                Understand
+              </strong>
+
+              <p>
+                Use dashboard and overview screens to make the stored
+                information easier to interpret.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           WHAT WAS BUILT
+      ====================================================== -->
+
+      <section class="case-section case-ivory">
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              What was built
+            </p>
+
+            <h2>
+              The pieces behind
+              <em>a usable internal tool.</em>
+            </h2>
+
+            <p>
+              The project combines several common business-software patterns
+              inside one application.
+            </p>
+
+          </div>
+
+          <div class="build-grid">
+
+            <article class="build-card reveal">
+
+              <span>01</span>
+
+              <h3>
+                Authentication
+              </h3>
+
+              <p>
+                Users register and sign in before accessing their own financial
+                records and application data.
+              </p>
+
+            </article>
+
+            <article class="build-card reveal">
+
+              <span>02</span>
+
+              <h3>
+                Structured database
+              </h3>
+
+              <p>
+                Information is stored as organised records instead of relying
+                on disconnected files or temporary page state.
+              </p>
+
+            </article>
+
+            <article class="build-card reveal">
+
+              <span>03</span>
+
+              <h3>
+                CRUD workflows
+              </h3>
+
+              <p>
+                Records can be created, reviewed, updated and removed as the
+                underlying information changes.
+              </p>
+
+            </article>
+
+            <article class="build-card reveal">
+
+              <span>04</span>
+
+              <h3>
+                Budget planning
+              </h3>
+
+              <p>
+                Budget configuration is separated from daily transaction entry,
+                creating a clearer planning workflow.
+              </p>
+
+            </article>
+
+            <article class="build-card reveal">
+
+              <span>05</span>
+
+              <h3>
+                History & filtering
+              </h3>
+
+              <p>
+                Transaction records can be reviewed and organised instead of
+                disappearing into an unstructured list.
+              </p>
+
+            </article>
+
+            <article class="build-card reveal">
+
+              <span>06</span>
+
+              <h3>
+                Dashboard views
+              </h3>
+
+              <p>
+                Stored information is brought together into summaries that are
+                easier to scan and understand.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           PRODUCT WALKTHROUGH
+      ====================================================== -->
+
+      <section
+        id="screens"
+        class="case-section case-ivory budget-screens"
+      >
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Product walkthrough
+            </p>
+
+            <h2>
+              From entering data
+              <em>to understanding it.</em>
+            </h2>
+
+            <p>
+              The strongest part of the project is the connected workflow
+              between forms, records and dashboard views.
+            </p>
+
+          </div>
+
+          <!-- DASHBOARD -->
+
+          <figure class="budget-screen-feature reveal">
+
+            <div class="budget-screen-frame">
+
+              <img
+                src="images/budgetingapp/home.webp"
+                alt="Budgeting App dashboard"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1364" height="952" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                01 · Dashboard
+              </span>
+
+              <h3>
+                One place to understand the current position.
+              </h3>
+
+              <p>
+                The main dashboard brings key financial information together so
+                the user does not need to open several separate records to
+                understand what is happening.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- BUDGET SETUP -->
+
+          <figure class="budget-screen-feature budget-screen-reverse reveal">
+
+            <div class="budget-screen-frame">
+
+              <img
+                src="images/budgetingapp/budget set up.webp"
+                alt="Budgeting App budget setup"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1035" height="656" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                02 · Planning
+              </span>
+
+              <h3>
+                Budget configuration lives in its own workflow.
+              </h3>
+
+              <p>
+                Planning is separated from daily transaction management so the
+                user can define the intended budget before reviewing actual
+                activity against it.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- ADD TRANSACTION -->
+
+          <figure class="budget-screen-feature reveal">
+
+            <div class="budget-screen-frame">
+
+              <img
+                src="images/budgetingapp/add expense.webp"
+                alt="Budgeting App add expense workflow"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1364" height="952" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                03 · Data entry
+              </span>
+
+              <h3>
+                Structured forms keep records consistent.
+              </h3>
+
+              <p>
+                Instead of manually formatting rows in a spreadsheet, the
+                application controls how new information enters the system.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- TRANSACTIONS -->
+
+          <figure class="budget-screen-feature budget-screen-reverse reveal">
+
+            <div class="budget-screen-frame">
+
+              <img
+                src="images/budgetingapp/transactions.webp"
+                alt="Budgeting App transaction history"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1044" height="959" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                04 · Records
+              </span>
+
+              <h3>
+                Historical information stays manageable.
+              </h3>
+
+              <p>
+                Transactions can be reviewed and managed after they are
+                created, providing the kind of editable record workflow that
+                many internal business systems need.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- YEARLY OVERVIEW -->
+
+          <figure class="budget-screen-feature reveal">
+
+            <div class="budget-screen-frame">
+
+              <img
+                src="images/budgetingapp/yearly overview.webp"
+                alt="Budgeting App yearly overview"
+                class="lightbox-img"
+                loading="lazy"
+                decoding="async"
+               width="1030" height="590" />
+
+            </div>
+
+            <figcaption>
+
+              <span>
+                05 · Reporting
+              </span>
+
+              <h3>
+                Stored records become a longer-term view.
+              </h3>
+
+              <p>
+                The yearly overview demonstrates how information captured
+                through everyday workflows can later support reporting and
+                higher-level analysis.
+              </p>
+
+            </figcaption>
+
+          </figure>
+
+          <!-- SUPPORTING SCREENS -->
+
+          <div class="budget-supporting">
+
+            <div class="budget-supporting-copy reveal">
+
+              <p class="case-eyebrow">
+                Supporting workflows
+              </p>
+
+              <h3>
+                The dashboard is supported by the smaller actions around it.
+              </h3>
+
+              <p>
+                Account access, comparisons and savings management are not the
+                headline features, but they demonstrate how additional modules
+                can connect to the same underlying system.
+              </p>
+
+            </div>
+
+            <div class="budget-support-grid">
+
+              <figure class="budget-support-card reveal">
+
+                <img
+                  src="images/budgetingapp/login.webp"
+                  alt="Budgeting App login screen"
+                  class="lightbox-img"
+                  loading="lazy"
+                  decoding="async"
+                 width="1058" height="545" />
+
+                <figcaption>
+                  Authentication
+                </figcaption>
+
+              </figure>
+
+              <figure class="budget-support-card reveal">
+
+                <img
+                  src="images/budgetingapp/compare.webp"
+                  alt="Budgeting App comparison screen"
+                  class="lightbox-img"
+                  loading="lazy"
+                  decoding="async"
+                 width="1025" height="732" />
+
+                <figcaption>
+                  Financial comparison
+                </figcaption>
+
+              </figure>
+
+              <figure class="budget-support-card reveal">
+
+                <img
+                  src="images/budgetingapp/savings progress.webp"
+                  alt="Budgeting App savings progress"
+                  class="lightbox-img"
+                  loading="lazy"
+                  decoding="async"
+                 width="1020" height="358" />
+
+                <figcaption>
+                  Savings progress
+                </figcaption>
+
+              </figure>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           BUSINESS RELEVANCE
+      ====================================================== -->
+
+      <section class="case-section case-dark">
+
+        <div class="container">
+
+          <div class="case-heading reveal">
+
+            <p class="case-eyebrow">
+              Business relevance
+            </p>
+
+            <h2>
+              Replace the financial labels and
+              <em>the pattern still works.</em>
+            </h2>
+
+            <p>
+              The application is about personal finance, but its architecture
+              maps naturally onto many small-business workflows.
+            </p>
+
+          </div>
+
+          <div class="value-grid">
+
+            <article class="value-card reveal">
+
+              <span>01</span>
+
+              <h3>
+                One source of truth
+              </h3>
+
+              <p>
+                Related records live inside one system instead of being spread
+                across multiple files and tools.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>02</span>
+
+              <h3>
+                Repeatable workflows
+              </h3>
+
+              <p>
+                Structured forms and predictable actions make routine data
+                management easier to repeat correctly.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>03</span>
+
+              <h3>
+                Better visibility
+              </h3>
+
+              <p>
+                Dashboard and reporting views turn stored records into
+                information that is easier to review.
+              </p>
+
+            </article>
+
+            <article class="value-card reveal">
+
+              <span>04</span>
+
+              <h3>
+                Room to grow
+              </h3>
+
+              <p>
+                A database-backed application can gain additional workflows and
+                modules as the requirements become clearer.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           EXAMPLES
+      ====================================================== -->
+
+      <section class="case-section case-ivory">
+
+        <div class="container case-intro-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              Beyond budgeting
+            </p>
+
+            <h2>
+              The same foundation can support
+              <em>real business operations.</em>
+            </h2>
+
+          </div>
+
+          <div class="case-intro-copy">
+
+            <p>
+              Replace transactions with bookings, customers, jobs, stock,
+              enquiries or service records and the underlying problem is
+              remarkably similar.
+            </p>
+
+            <p>
+              Data needs to be captured consistently, stored safely, changed
+              when necessary and presented in a way that helps someone do their
+              job.
+            </p>
+
+            <div class="budget-use-cases">
+
+              <span>Client management</span>
+              <span>Booking dashboards</span>
+              <span>Lead pipelines</span>
+              <span>Inventory records</span>
+              <span>Job tracking</span>
+              <span>Reporting tools</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           PROJECT PRINCIPLE
+      ====================================================== -->
+
+      <section class="case-section principle-section">
+
+        <div class="container principle-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              Project principle
+            </p>
+
+            <h2>
+              Good internal software turns repeated actions into
+              <em>a predictable workflow.</em>
+            </h2>
+
+          </div>
+
+          <blockquote>
+
+            <p>
+              A useful dashboard is not just a collection of charts. It is the
+              visible part of a system that helps people capture, organise,
+              change and understand the information they work with every day.
+            </p>
+
+          </blockquote>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           CTA
+      ====================================================== -->
+
+      <section class="case-section case-contact">
+
+        <div class="container case-contact-grid">
+
+          <div>
+
+            <p class="case-eyebrow">
+              Need something similar?
+            </p>
+
+            <h2>
+              Still managing an important workflow through
+              <em>spreadsheets and manual admin?</em>
+            </h2>
+
+            <p>
+              Mate Code Studio builds focused dashboards and internal tools for
+              small businesses that need a clearer way to manage records,
+              workflows and everyday information.
+            </p>
+
+          </div>
+
+          <div class="case-contact-actions">
+
+            <a
+              href="index.html#contact"
+              class="case-btn case-btn-light"
+            >
+              Discuss an internal tool
+            </a>
+
+            <a
+              href="services.html"
+              class="case-btn case-btn-outline-light"
+            >
+              Explore software services
+            </a>
+
+            <a
+              href="https://github.com/alex-mate/Budgeting-app"
+              target="_blank"
+              rel="noreferrer"
+              class="case-text-link"
+            >
+              View Budgeting App code →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Mate Code Studio · Alex Mate</p>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="case-footer">
+      <div class="container case-footer-grid">
+        <div>
+          <strong>Mate Code Studio</strong>
+
+          <p>
+            Software built with care. Delivered with confidence.
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <a href="services.html">Services</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#maintenance">Maintenance</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="case-footer-external">
+          <a
+            href="https://www.linkedin.com/in/alex-mate-2426813a2/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/alex-mate"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.fiverr.com/matecode_studio?public_mode=true"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fiverr
+          </a>
+        </div>
+      </div>
+
+      <div class="container case-footer-bottom">
+        <span>© 2026 Mate Code Studio · Alex Mate</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>The Quiet Workshop</span>
       </div>
     </footer>
 
-    <div id="lightbox" class="lightbox">
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div
+      id="lightbox"
+      class="lightbox case-lightbox"
+      aria-hidden="true"
+    >
+
       <button
         id="lightboxClose"
         class="lightbox-close"
@@ -226,9 +1224,15 @@
         ×
       </button>
 
-      <img id="lightboxImg" src="" alt="Expanded project image" />
+      <img
+        id="lightboxImg"
+        src=""
+        alt="Expanded project image"
+      />
+
     </div>
 
     <script src="/static/script.js"></script>
+
   </body>
 </html>

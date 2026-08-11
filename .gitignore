@@ -1,0 +1,6 @@
+.performance-backup/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+assets/Cv.Mate Alex.pdf
