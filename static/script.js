@@ -239,7 +239,7 @@ function initMobileNavigation() {
     </span>
   `;
 
-  navContainer.appendChild(menuButton);
+  navContainer.insertBefore(menuButton, navLinks);
 
 
   // -----------------------------------------
@@ -342,7 +342,15 @@ function initMobileNavigation() {
     "keydown",
     (event) => {
       if (event.key === "Escape") {
+        const restoreFocus =
+          navContainer.classList.contains("mobile-open") &&
+          navContainer.contains(document.activeElement);
+
         closeMenu();
+
+        if (restoreFocus) {
+          menuButton.focus();
+        }
       }
     },
   );
@@ -470,8 +478,14 @@ const toggle =
     "themeToggle",
   );
 
-const savedTheme =
-  localStorage.getItem("theme");
+let savedTheme = null;
+if (toggle) {
+  try {
+    savedTheme = localStorage.getItem("theme");
+  } catch {
+    // Storage can be unavailable; the default theme still works.
+  }
+}
 
 function applyTheme(theme) {
   if (theme === "light") {
@@ -508,10 +522,11 @@ if (toggle) {
           ? "dark"
           : "light";
 
-      localStorage.setItem(
-        "theme",
-        nextTheme,
-      );
+      try {
+        localStorage.setItem("theme", nextTheme);
+      } catch {
+        // Keep the toggle usable when preferences cannot be saved.
+      }
 
       applyTheme(nextTheme);
     },
@@ -539,7 +554,10 @@ const lightboxClose =
   );
 
 
-function openLightbox(img) {
+let lightboxOpener = null;
+let lightboxPreviousOverflow = "";
+
+function openLightbox(img, opener = img) {
   if (
     !lightbox ||
     !lightboxImg
@@ -563,6 +581,13 @@ function openLightbox(img) {
     img.alt ||
     "Expanded project image";
 
+  if (lightbox.tagName === "DIALOG") {
+    lightboxOpener = opener;
+    lightboxPreviousOverflow = document.body.style.overflow;
+    lightbox.showModal();
+    lightboxClose.focus();
+  }
+
   document.body.style.overflow =
     "hidden";
 }
@@ -570,6 +595,11 @@ function openLightbox(img) {
 
 function closeLightbox() {
   if (!lightbox) {
+    return;
+  }
+
+  if (lightbox.tagName === "DIALOG") {
+    lightbox.close();
     return;
   }
 
@@ -592,10 +622,11 @@ document
     ".lightbox-img",
   )
   .forEach((img) => {
-    img.addEventListener(
+    const opener = img.closest(".lightbox-trigger") || img;
+    opener.addEventListener(
       "click",
       () => {
-        openLightbox(img);
+        openLightbox(img, opener);
       },
     );
   });
@@ -610,6 +641,18 @@ if (lightboxClose) {
 
 
 if (lightbox) {
+  if (lightbox.tagName === "DIALOG") {
+    lightbox.addEventListener("close", () => {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = lightboxPreviousOverflow;
+      if (lightboxOpener?.isConnected) {
+        lightboxOpener.focus({ preventScroll: true });
+      }
+      lightboxOpener = null;
+    });
+  }
+
   lightbox.addEventListener(
     "click",
     (event) => {
@@ -632,6 +675,7 @@ document.addEventListener(
         "active",
       )
     ) {
+      event.preventDefault();
       closeLightbox();
     }
   },
@@ -654,7 +698,7 @@ const prefersReducedMotion =
 
 
 if (reveals.length > 0) {
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     reveals.forEach(
       (element) => {
         element.classList.add(
@@ -684,7 +728,7 @@ if (reveals.length > 0) {
           );
         },
         {
-          threshold: 0.1,
+          threshold: 0,
           rootMargin:
             "0px 0px -30px 0px",
         },
@@ -692,6 +736,7 @@ if (reveals.length > 0) {
 
     reveals.forEach(
       (element) => {
+        element.classList.add("reveal-ready");
         revealObserver.observe(
           element,
         );

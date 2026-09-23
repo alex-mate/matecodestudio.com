@@ -1,0 +1,27 @@
+/* Shared, optional motion. Content remains readable without JavaScript. */
+body[class] .reveal {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body .reveal.reveal-ready {
+    transition: transform 0.35s ease;
+  }
+
+  body .reveal.reveal-ready:not(.visible) {
+    transform: translateY(16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body *, body *::before, body *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body .reveal {
+    transform: none !important;
+  }
+}

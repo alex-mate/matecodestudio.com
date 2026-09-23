@@ -2269,6 +2269,47 @@ figcaption p {
 }
 
 /* Clear keyboard focus without changing the visual language. */
+.case-launch-page .lightbox-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.viking-screen-image > .lightbox-trigger,
+.budget-screen-frame > .lightbox-trigger,
+.weather-screen-frame > .lightbox-trigger {
+  height: 100%;
+}
+
+/* Keep the focus ring inside screenshot frames that clip overflow. */
+.case-launch-page .lightbox-trigger:focus-visible {
+  outline: 3px solid var(--brass-on-green);
+  outline-offset: -3px;
+}
+
+.case-launch-page .lightbox-trigger:focus-visible img {
+  outline: 3px solid var(--brass-on-green);
+  outline-offset: -3px;
+}
+
+.case-launch-page dialog.case-lightbox {
+  padding-inline: min(40px, 4vw);
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.case-launch-page dialog.case-lightbox::backdrop {
+  background: transparent;
+}
+
 .case-launch-page a:focus-visible,
 .case-launch-page button:focus-visible,
 .case-launch-page .lightbox-img:focus-visible {
@@ -2289,4 +2330,162 @@ figcaption p {
 .case-footer a:active,
 .case-footer a:focus {
   text-decoration: none !important;
+}
+
+/* Comparable desktop walkthroughs share frame sizes; phone and wide-detail
+   images retain their own proportions. Full screenshots open in the dialog. */
+.case-launch-page :is(.viking-screen-image, .budget-screen-frame, .weather-screen-dashboard, .mateos-screen-media) {
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .case-launch-page :is(.viking-screen-image, .budget-screen-frame, .weather-screen-dashboard, .mateos-screen-media) {
+    height: 460px;
+  }
+}
+
+@media (max-width: 620px) {
+  .case-launch-page :is(.viking-screen-image, .budget-screen-frame, .weather-screen-dashboard, .mateos-screen-media) {
+    height: 340px;
+  }
+}
+
+/* Shared public case-study hierarchy. */
+:where(.case-launch-page) {
+  --case-section-space: 72px;
+  --case-title-size: clamp(2rem, 3.2vw, 3rem);
+  --case-hero-size: clamp(2.5rem, 3.8vw, 3.25rem);
+}
+
+:where(.case-launch-page) .case-section {
+  padding-block: var(--case-section-space);
+}
+
+:where(.case-launch-page) .case-hero {
+  padding-top: 56px;
+}
+
+:where(.case-launch-page) .case-hero-grid {
+  gap: 48px;
+}
+
+:where(.case-launch-page) .case-hero h1 {
+  margin-block: 0;
+  font-size: var(--case-hero-size);
+  line-height: 1.1;
+}
+
+:where(.case-launch-page) :is(.case-heading, .case-intro-grid, .decision-heading, .case-contact) h2 {
+  margin-block: 0;
+  font-size: var(--case-title-size);
+  line-height: 1.15;
+}
+
+:where(.case-launch-page) :is(.case-intro-grid, .decision-heading, .case-contact) h2 {
+  font-size: clamp(2rem, 2.8vw, 2.5rem);
+}
+
+:where(.case-launch-page) .case-heading {
+  margin-bottom: 32px;
+}
+
+:where(.case-launch-page) .case-facts {
+  margin-top: 40px;
+}
+
+:where(.case-launch-page) .principle-section {
+  padding-block: 40px;
+}
+
+:where(.case-launch-page) .case-story-section {
+  padding-top: 0;
+}
+
+:where(.case-launch-page) .case-story-label {
+  margin-top: 0;
+}
+
+:where(.case-launch-page) :is(.build-card, .value-card) {
+  min-height: 0;
+  padding: 24px;
+}
+
+:where(.case-launch-page) :is(.build-card, .value-card) h3 {
+  margin: 0 0 12px;
+}
+
+/* Numbering expresses sequence here, with the action beside its number. */
+:where(.case-launch-page) :is(.journey-flow, .budget-workflow) article {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  align-content: start;
+}
+
+:where(.case-launch-page) :is(.journey-flow, .budget-workflow) article strong {
+  margin-top: 0;
+}
+
+:where(.case-launch-page) :is(.journey-flow, .budget-workflow) article p {
+  grid-column: 2;
+  margin: 0;
+}
+
+:where(.case-launch-page) .journey-flow {
+  margin-top: 32px;
+  align-items: stretch;
+}
+
+:where(.case-launch-page) :is(.viking-screen-feature, .budget-screen-feature) {
+  padding-block: 40px;
+  gap: 40px;
+}
+
+:where(.case-launch-page) :is(.viking-screen-feature, .budget-screen-feature) figcaption h3,
+:where(.case-launch-page) :is(.viking-mobile-copy, .budget-supporting-copy) h3 {
+  font-size: clamp(1.65rem, 2.3vw, 2.1rem);
+  line-height: 1.2;
+}
+
+:where(.case-launch-page) :is(.viking-mobile-showcase, .budget-supporting) {
+  margin-top: 48px;
+}
+
+/* A closing principle supports the evidence; it is not another hero. */
+:where(.case-launch-page) .principle-grid h2 {
+  margin-block: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+:where(.case-launch-page) .principle-grid blockquote p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  :where(.case-launch-page) :is(.case-hero-grid, .case-intro-grid, .decision-grid, .principle-grid, .case-contact-grid) {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  :where(.case-launch-page) {
+    --case-section-space: 52px;
+    --case-title-size: 2rem;
+    --case-hero-size: clamp(2.25rem, 9.5vw, 3rem);
+  }
+
+  :where(.case-launch-page) .case-hero {
+    padding-top: 42px;
+  }
+
+  :where(.case-launch-page) :is(.viking-screen-feature, .budget-screen-feature) {
+    padding-block: 32px;
+    gap: 24px;
+  }
 }

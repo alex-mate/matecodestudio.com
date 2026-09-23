@@ -217,7 +217,7 @@ button {
 }
 
 .launch-section {
-  padding: 110px 0;
+  padding: 76px 0;
 }
 
 .launch-eyebrow {
@@ -240,7 +240,7 @@ button {
 .launch-heading {
   max-width: 780px;
 
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 .launch-heading h2,
@@ -249,10 +249,9 @@ button {
 .proof-layout h2 {
   color: inherit;
 
-  font-size:
-    clamp(2.3rem, 5vw, 4.35rem);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
 
-  line-height: 1.03;
+  line-height: 1.15;
 }
 
 .launch-heading > p:last-child,
@@ -281,7 +280,7 @@ button {
 .launch-hero {
   position: relative;
 
-  padding: 105px 0 100px;
+  padding: 64px 0;
 
   overflow: hidden;
 }
@@ -305,6 +304,8 @@ button {
   filter: blur(10px);
 
   pointer-events: none;
+
+  display: none;
 }
 
 .launch-hero-grid {
@@ -319,7 +320,7 @@ button {
 
   align-items: center;
 
-  gap: 76px;
+  gap: 48px;
 }
 
 .launch-hero h1 {
@@ -327,16 +328,15 @@ button {
 
   color: var(--warm-ivory);
 
-  font-size:
-    clamp(3.4rem, 6.2vw, 6.1rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.75rem);
 
-  line-height: 0.98;
+  line-height: 1.1;
 }
 
 .launch-lead {
   max-width: 680px;
 
-  margin-top: 28px;
+  margin-top: 22px;
 
   color: var(--dark-muted) !important;
 
@@ -352,7 +352,7 @@ button {
 
   gap: 12px;
 
-  margin-top: 34px;
+  margin-top: 24px;
 }
 
 .launch-btn {
@@ -710,9 +710,12 @@ article.preview-accent {
 .offer-card {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+
   min-height: 310px;
 
-  padding: 34px;
+  padding: 34px 34px 30px;
 
   border-right:
     1px solid #d8d2c8;
@@ -774,17 +777,15 @@ article.preview-accent {
 > p:not(.offer-kicker) {
   max-width: 490px;
 
+  margin-bottom: 14px;
+
   color: var(--ink-soft);
 
   line-height: 1.75;
 }
 
 .offer-bottom {
-  position: absolute;
-
-  left: 34px;
-  right: 34px;
-  bottom: 30px;
+  margin-top: auto;
 
   display: flex;
 
@@ -1086,8 +1087,8 @@ article.preview-accent {
 ========================================================= */
 
 .proof-launch {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .proof-layout {
@@ -1104,12 +1105,7 @@ article.preview-accent {
 .proof-layout h2 {
   color: var(--ink);
 
-  font-size:
-    clamp(
-      2.2rem,
-      4vw,
-      3.7rem
-    );
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
 }
 
 .proof-layout
@@ -1182,6 +1178,11 @@ blockquote footer {
 }
 
 .process-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  align-content: start;
+
   padding:
     28px 24px 10px 0;
 }
@@ -1197,7 +1198,7 @@ blockquote footer {
 }
 
 .process-card h3 {
-  margin: 34px 0 12px;
+  margin: 0;
 
   color: var(--ink);
 
@@ -1209,6 +1210,7 @@ blockquote footer {
 }
 
 .process-card p {
+  grid-column: 2;
   color: var(--ink-soft);
 
   font-size: 0.84rem;
@@ -1457,7 +1459,7 @@ blockquote footer {
 
   align-items: center;
 
-  margin-top: 90px;
+  margin-top: 48px;
 
   padding-top: 40px;
 
@@ -1795,7 +1797,7 @@ blockquote footer {
   }
 
   .launch-hero-grid {
-    gap: 55px;
+    gap: 32px;
   }
 
   .work-feature-reverse
@@ -1819,7 +1821,7 @@ blockquote footer {
   .workshop-grid,
   .contact-launch-grid,
   .proof-layout {
-    gap: 48px;
+    gap: 28px;
   }
 
   .footer-launch-grid {
@@ -1842,12 +1844,11 @@ blockquote footer {
   }
 
   .launch-section {
-    padding: 78px 0;
+    padding: 52px 0;
   }
 
   .launch-hero {
-    padding:
-      76px 0 70px;
+    padding: 42px 0 52px;
   }
 
   .launch-brand small {
@@ -1860,19 +1861,14 @@ blockquote footer {
   }
 
   .launch-hero h1 {
-    font-size:
-      clamp(
-        2.8rem,
-        14vw,
-        4.1rem
-      );
+    font-size: clamp(2.25rem, 9.5vw, 3rem);
   }
 
   .launch-heading h2,
   .workshop-manifesto h2,
   .contact-launch h2,
   .proof-layout h2 {
-    font-size: 2.45rem;
+    font-size: 2rem;
   }
 
   .service-offer-grid,
@@ -1884,12 +1880,7 @@ blockquote footer {
   .offer-card {
     min-height: 330px;
 
-    padding: 28px;
-  }
-
-  .offer-bottom {
-    left: 28px;
-    right: 28px;
+    padding: 28px 28px 30px;
   }
 
   .preview-board {
@@ -1983,7 +1974,7 @@ blockquote footer {
 
   align-items: start;
 
-  margin-top: 110px;
+  margin-top: 64px;
 
   padding-top: 60px;
 
@@ -2014,8 +2005,7 @@ blockquote footer {
     "Playfair Display",
     serif;
 
-  font-size:
-    clamp(2rem, 3.5vw, 3.3rem);
+  font-size: clamp(1.65rem, 2.4vw, 2.2rem);
 
   line-height: 1.02;
 
@@ -2056,7 +2046,7 @@ blockquote footer {
 ========================================================= */
 
 .more-work-card {
-  min-height: 300px;
+  min-height: 0;
 
   display: grid;
 
@@ -2108,7 +2098,7 @@ blockquote footer {
 ========================================================= */
 
 .more-work-card-main h4 {
-  margin: 28px 0 14px;
+  margin: 14px 0;
 
   color: var(--warm-ivory);
 
@@ -2197,7 +2187,7 @@ blockquote footer {
 
     gap: 38px;
 
-    margin-top: 85px;
+    margin-top: 56px;
   }
 
   .more-work-heading {
@@ -2214,7 +2204,7 @@ blockquote footer {
 @media (max-width: 620px) {
 
   .more-work {
-    margin-top: 70px;
+    margin-top: 48px;
 
     padding-top: 45px;
   }
@@ -2365,6 +2355,10 @@ blockquote footer {
 --------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
   .launch-page *,
   .launch-page *::before,
   .launch-page *::after {
